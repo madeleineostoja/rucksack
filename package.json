@@ -1,11 +1,11 @@
 {
-  "name": "rucksack",
-  "version": "0.1.0",
+  "name": "rucksack-css",
+  "version": "0.2.0",
   "description": "A little bag of CSS superpowers",
   "keywords": [
+    "rucksack",
     "postcss",
     "css",
-    "postcss-plugin",
     "framework",
     "boilerplate"
   ],
