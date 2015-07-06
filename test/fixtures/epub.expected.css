@@ -1,0 +1,17 @@
+.foo {
+  dont: care;
+  -epub-hyphens: all;
+  hyphens: all;
+  -epub-line-break: normal;
+  line-break: normal;
+  -epub-text-align-last: center;
+  text-align-last: center;
+  -epub-text-emphasis: red triangle;
+  text-emphasis: red triangle;
+  -epub-text-emphasis-color: red;
+  text-emphasis-color: red;
+  -epub-text-emphasis-style: triangle;
+  text-emphasis-style: triangle;
+  -epub-word-break: break-all;
+  word-break: break-all;
+}

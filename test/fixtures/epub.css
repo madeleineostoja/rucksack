@@ -1,0 +1,10 @@
+.foo {
+  dont: care;
+  hyphens: all;
+  line-break: normal;
+  text-align-last: center;
+  text-emphasis: red triangle;
+  text-emphasis-color: red;
+  text-emphasis-style: triangle;
+  word-break: break-all;
+}

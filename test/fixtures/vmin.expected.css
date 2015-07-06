@@ -1,0 +1,9 @@
+.foo {
+  width: 50vm;
+  width: 50vmin;
+}
+
+.bar {
+  width: calc(100vm - 1px);
+  width: calc(100vmin - 1px);
+}

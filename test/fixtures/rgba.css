@@ -1,0 +1,11 @@
+.foo {
+  background: rgba(153, 221, 153, 0.8);
+  color: rgba(0, 0, 0, .4);
+}
+
+.bar {
+  background: rgba(153, 221, 153, 0.8);
+  background: rgba(153, 221, 153, 0.8);
+  color: #ffffff;
+  color: rgba(0, 0, 0, .4);
+}

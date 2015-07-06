@@ -1,0 +1,15 @@
+.foo > li:at-least(4) {
+  content: 'test';
+}
+
+.bar > li:at-most(4) {
+  content: 'test';
+}
+
+.baz > li:between(4, 6) {
+  content: 'test';
+}
+
+.fab > li:exactly(4) {
+  content: 'test';
+}

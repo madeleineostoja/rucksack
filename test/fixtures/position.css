@@ -1,0 +1,15 @@
+.foo {
+  absolute: 10px 20px 30px 40px;
+}
+
+.bar {
+  fixed: 0;
+}
+
+.baz {
+  absolute: 30px auto;
+}
+
+.fab {
+  relative: 50% 0 20px;
+}

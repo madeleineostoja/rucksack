@@ -1,0 +1,7 @@
+.foo {
+  clear: fix;
+}
+
+.bar {
+  clear: fix-legacy;
+}

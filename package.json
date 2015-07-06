@@ -1,0 +1,56 @@
+{
+  "name": "rucksack",
+  "version": "0.1.0",
+  "description": "A little bag of CSS superpowers",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "framework",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simplaio/rucksack.git"
+  },
+  "author": "Sean King <sean@simpla.io>",
+  "maintainers": [
+    {
+      "name": "Sean King",
+      "email": "sean@simpla.io",
+      "web": "http://simpla.io"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/simplaio/rucksack/issues"
+  },
+  "homepage": "https://github.com/simplaio/rucksack",
+  "dependencies": {
+    "autoprefixer": "^5.2.0",
+    "postcss": "^4.1.9",
+    "postcss-alias": "^0.1.0",
+    "postcss-clearfix": "^0.1.0",
+    "postcss-color-rgba-fallback": "^1.3.0",
+    "postcss-easings": "^0.2.0",
+    "postcss-epub": "^2.3.0",
+    "postcss-fontpath": "^0.1.0",
+    "postcss-hexrgba": "^0.1.0",
+    "postcss-modular-scale": "^2.4.0",
+    "postcss-normalize": "^0.1.0",
+    "postcss-opacity": "^2.0.0",
+    "postcss-position": "^0.2.0",
+    "postcss-pseudoelements": "^2.2.0",
+    "postcss-quantity-queries": "^0.3.1",
+    "postcss-vmin": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp-eslint": "^0.12.0",
+    "gulp-mocha": "^2.0.1",
+    "chai": "^2.3.0",
+    "gulp": "^3.8.11"
+  },
+  "scripts": {
+    "test": "gulp check"
+  }
+}

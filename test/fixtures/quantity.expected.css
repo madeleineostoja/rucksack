@@ -1,0 +1,15 @@
+.foo > li:nth-last-child(n+4), .foo > li:nth-last-child(n+4) ~ li {
+  content: 'test';
+}
+
+.bar > li:nth-last-child(-n+4):first-child, .bar > li:nth-last-child(-n+4):first-child ~ li {
+  content: 'test';
+}
+
+.baz > li:nth-last-child(n+4):nth-last-child(-n+6):first-child, .baz > li:nth-last-child(n+4):nth-last-child(-n+6):first-child ~ li {
+  content: 'test';
+}
+
+.fab > li:nth-last-child(4):first-child, .fab > li:nth-last-child(4):first-child ~ li {
+  content: 'test';
+}

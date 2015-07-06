@@ -1,0 +1,11 @@
+.foo {
+  transition: all 1s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.bar {
+  transition: all 1s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.baz {
+  transition: cubic-bezier(0.47, 0, 0.745, 0.715), cubic-bezier(1, 0, 0, 1);
+}

@@ -1,0 +1,20 @@
+@alias {
+  fs: font-size;
+  fw: font-weight;
+  bg: background;
+  f: foo;
+}
+
+.foo {
+  fs: 16px;
+  fw: 400;
+  fw: 700;
+  bg: #fff;
+}
+
+.bar {
+  f: 16px;
+  fd: 400;
+  bn: #fff;
+  bg: url('http://lorempixel.com/400/600') center center no-repeat;
+}

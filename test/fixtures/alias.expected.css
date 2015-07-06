@@ -1,0 +1,13 @@
+.foo {
+  font-size: 16px;
+  font-weight: 400;
+  font-weight: 700;
+  background: #fff;
+}
+
+.bar {
+  foo: 16px;
+  fd: 400;
+  bn: #fff;
+  background: url('http://lorempixel.com/400/600') center center no-repeat;
+}

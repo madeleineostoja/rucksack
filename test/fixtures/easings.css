@@ -1,0 +1,11 @@
+.foo {
+  transition: all 1s easeInSine;
+}
+
+.bar {
+  transition: all 1s ease-in-sine;
+}
+
+.baz {
+  transition: ease-in-sine, easeInOutExpo;
+}
