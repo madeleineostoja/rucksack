@@ -12,7 +12,7 @@ A little bag of CSS superpowers
 MIT © [Simpla](https://twitter.com/simplaio)
 
 [npm-image]: https://badge.fury.io/js/rucksack.svg
-[npm-url]: https://npmjs.org/package/rucksack
+[npm-url]: https://npmjs.org/package/rucksack-css
 [travis-image]: https://travis-ci.org/simplaio/rucksack.svg?branch=master
 [travis-url]: https://travis-ci.org/simplaio/rucksack
 [daviddm-image]: https://david-dm.org/simplaio/rucksack.svg?theme=shields.io
