@@ -65,12 +65,9 @@ var rucksack = $postcss.plugin('rucksack', function(options) {
   }
 
   // Build PostCSS bundle
-  var i = 0;
-  while (i < plugins.length) {
-    var processor = plugins[i];
-    postcss.use(processor);
-    i++;
-  }
+  plugins.forEach(function(plugin){
+    postcss.use(plugin);
+  });
 
   return postcss;
 
