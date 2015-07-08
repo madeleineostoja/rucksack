@@ -96,4 +96,8 @@ describe('Rucksack', function () {
    test('autoprefixer', { autoprefixer: true }, done);
   });
 
+  it('swaps default colors', function (done) {
+   test('colors', {}, done);
+  });
+
 });
