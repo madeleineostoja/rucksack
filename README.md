@@ -220,6 +220,25 @@ Swap out those ugly default colors with replacements from [Material Design Color
 
 --
 
+### Options
+
+Pass booleans to toggle optional extras on/off
+```js
+.rucksack({
+  /* options */
+})
+```
+
+`autoprefixer: true`: Toggle autoprefixing on/off (default: `true`).
+
+`normalize: true`: Toggle normalizing on/off (default: `true`).
+
+`fallbacks: true`: Toggle legacy fallbacks on/off (default: `true`).
+
+`colors: true`: Toggle color replacements on/off (default: `true`).
+
+--
+
 ### Documentation
 Full docs coming soon!
 
