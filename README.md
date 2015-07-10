@@ -1,21 +1,240 @@
-# Rucksack 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+<p align="center">
+ <img src="http://simplaio.github.io/rucksack/logo.png" alt="rucksack logo" height="325" />
+</p>
 
-A little bag of CSS superpowers
+<p align="center">
+  <a href="https://npmjs.org/package/rucksack-css" target="_blank"><img src="https://badge.fury.io/js/rucksack.svg" alt="NPM version" /></a>
+  <a href="https://travis-ci.org/simplaio/rucksack" target="_blank"><img src="https://travis-ci.org/simplaio/rucksack.svg?branch=master" alt="Build satus" /></a>
+  <a href="https://david-dm.org/simplaio/rucksack" target="_blank"><img src="https://david-dm.org/simplaio/rucksack.svg?theme=shields.io" alt="Dependency Status" /></a>
+</p>
 
-[ DOCS COMING SOON ]
+<br/>
+
+A little bag of CSS superpowers, built on [PostCSS][postcss].
+
+Rucksack makes CSS development less painful, with the features and shortcuts it should have come with out of the box.
+
+Made with &#9829; by the folks at [Simpla][simpla].
+
+--
+
+### Install
+
+```sh
+$ npm install --save rucksack-css postcss
+```
+
+--
+
+### Usage
+
+General usage:
+
+1. Add [PostCSS][postcss] to your build workflow
+2. Include Rucksack as a PostCSS plugin
+  
+<br/>
+
+###### Node
+```js
+var postcss = require('postcss'),
+    rucksack = require('rucksack-css');
+
+postcss([ rucksack() ])
+  .process(css, { from: 'src/style.css', to: 'style.css' })
+  .then(function (result) {
+      fs.writeFileSync('style.css', result.css);
+      if ( result.map ) fs.writeFileSync('style.css.map', result.map);
+  });
+```
+
+<br/>
+
+###### Gulp
+Use [gulp-postcss][gulp-postcss]
+```js
+var postcss = require('gulp-postcss'),
+    rucksack = require('rucksack-css');
+
+gulp.task('css', function () {
+  return gulp.src('src/*.css')
+    .pipe( postcss([ rucksack() ]) )
+    .pipe( gulp.dest('.') );
+});
+```
+
+<br/>
+
+###### Grunt
+Use [grunt-postcss][grunt-postcss]
+```js
+grunt.initConfig({
+  css: {
+    options: {
+      processors: [require('rucksack-css')]
+    },
+    dist: {
+      src: 'src/*.css'
+    }
+  }
+});
+```
+
+<br/>
+
+###### CLI
+Use [PostCSS CLI][postcss-cli] to process CSS on the command line
+```sh
+$ postcss --use rucksack-css -o style.css style.css
+```
+
+<br/>
+
+###### Stylus
+Use Rucksack as a Stylus plugin with [PostStylus][poststylus]
+```js
+stylus(css).use(poststylus('rucksack-css'))
+```
+
+See the [PostStylus Docs][poststylus] for more examples for your environment.
+
+--
+
+### Core Features
+
+_Create aliases for CSS properties_
+```css
+@alias {
+  fs: font-size;
+  bg: background;
+}
+
+.foo {
+  fs: 16px;
+  bg: #fff;
+}
+```
+
+_Use shorthand syntax for positioning properties_
+```css
+.foo {
+  absolute: 0 20px;
+}
+```
+  
+_Apply clearfix natively for self-clearing children_
+```css
+.foo {
+  clear: fix;
+}
+```
+
+_Write RGBA declarations with hex shortcuts_
+```css
+.foo {
+  color: rgba(#fff, 0.8);
+}
+```
+
+_Shorten `@font-face` `src` sets to a single rule (expands to the [FontSpring][fontspring] syntax)_
+```css
+@font-face {
+  font-family: 'My Font';
+  font-path: '/path/to/font/file';
+  font-weight: normal;
+  font-style: normal;
+}
+```
+
+_Use the whole library of modern easing functions_
+```css
+.foo {
+  transition: all 250ms ease-out-elastic;
+}
+```
+
+_Select items based on quantity_
+```css
+ul li:at-least(4) {
+  color: blue;
+}
+
+ul li:between(4,6) {
+  color: red;
+}
+```
+
+_Build a modular scale, to create instant visual rhythm_
+```css
+:root {
+  /* 1rem and 0.75rem base sizes */
+  --ms-bases: 1, 0.75;
+  /* golden ratio scale */
+  --ms-ratio: 1.618;
+}
+ 
+.foo {
+  font-size: ms(3)rem;
+}
+```
+
+--
+
+### Optional Extras
+
+###### Autoprefixing
+Automatically apply vendor prefixes to relevant properties based on data from [CanIUse][caniuse].
+
+###### Normalization
+Automatically apply the latest Normalize.css stylesheet to standardize browser inconsistencies.
+
+###### Legacy Fallbacks
+Automatically insert legacy fallbacks for modern properties.
+```css
+/* before */
+.foo {
+  color: rgba(0,0,0,0.8);
+  width: 50vmin;
+}
+
+.foo::before{
+  opacity: 0.8;
+}
+
+/* after */
+.foo {
+  color: rgb(0,0,0);
+  color: rgba(0,0,0,0.8);
+  width: 50vm;
+  width: 50vmin;
+}
+
+.foo:before{
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+```
+
+###### New Default Colors
+Swap out those ugly default colors with replacements from [Material Design Colors][material-colors].
+
+--
+
+### Documentation
+Full docs coming soon!
 
 --
 
 ### License
 
-MIT © [Simpla](https://twitter.com/simplaio)
+MIT © [Simpla][simpla]
 
-[npm-image]: https://badge.fury.io/js/rucksack.svg
-[npm-url]: https://npmjs.org/package/rucksack-css
-[travis-image]: https://travis-ci.org/simplaio/rucksack.svg?branch=master
-[travis-url]: https://travis-ci.org/simplaio/rucksack
-[daviddm-image]: https://david-dm.org/simplaio/rucksack.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/simplaio/rucksack
-[PostCSS]: https://github.com/postcss/postcss
-
+[simpla]: http://simpla.io
+[postcss]: https://github.com/postcss/postcss
+[gulp-postcss]: https://github.com/postcss/gulp-postcss
+[grunt-postcss]: https://github.com/nDmitry/grunt-postcss
+[postcss-cli]: https://github.com/code42day/postcss-cli
+[poststylus]: https://github.com/seaneking/poststylus
+[fontspring]: http://blog.fontspring.com/2011/02/further-hardening-of-the-bulletproof-syntax/
+[caniuse]: http://caniuse.com
+[material-colors]: https://www.google.com/design/spec/style/color.html
