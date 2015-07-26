@@ -62,6 +62,10 @@ describe('Rucksack', function () {
    test('quantity', {}, done);
   });
 
+  it('does responsive type', function (done) {
+   test('responsive-type', {}, done);
+  });
+
   // Fallback plugins
   it('polyfills rgba', function (done) {
    test('rgba', { fallbacks: true }, done);

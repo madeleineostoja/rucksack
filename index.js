@@ -10,7 +10,8 @@ var core = [
   require('postcss-fontpath'),
   require('postcss-hexrgba'),
   require('postcss-position'),
-  require('postcss-quantity-queries')
+  require('postcss-quantity-queries'),
+  require('postcss-responsive-type')
 ];
 
 // CSS fallbacks set (optional)
