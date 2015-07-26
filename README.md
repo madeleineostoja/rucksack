@@ -32,7 +32,7 @@ General usage:
 
 1. Add [PostCSS][postcss] to your build workflow
 2. Include Rucksack as a PostCSS plugin
-  
+
 <br/>
 
 ###### Node
@@ -102,58 +102,55 @@ See the [PostStylus Docs][poststylus] for more examples for your environment.
 
 ### Core Features
 
-_Create aliases for CSS properties_
-```css
-@alias {
-  fs: font-size;
-  bg: background;
-}
-
-.foo {
-  fs: 16px;
-  bg: #fff;
-}
-```
-
-_Use shorthand syntax for positioning properties_
+_Shorthand syntax for positioning properties_
 ```css
 .foo {
   absolute: 0 20px;
+  relative: 20% 0 30px;
 }
 ```
-  
-_Apply clearfix natively for self-clearing children_
+
+_Automagical responsive typography_
+```css
+.foo {
+  font-size: responsive;
+}
+```
+![Responsive Type Demo][type-demo]
+
+
+
+
+_Native clearfix_
 ```css
 .foo {
   clear: fix;
 }
 ```
 
-_Write RGBA declarations with hex shortcuts_
+_Hex shortcuts for RGBA_
 ```css
 .foo {
   color: rgba(#fff, 0.8);
 }
 ```
 
-_Shorten `@font-face` `src` sets to a single rule (expands to the [FontSpring][fontspring] syntax)_
+_One-rule `@font-face` `src` sets (expands to [FontSpring syntax][fontspring])_
 ```css
 @font-face {
   font-family: 'My Font';
   font-path: '/path/to/font/file';
-  font-weight: normal;
-  font-style: normal;
 }
 ```
 
-_Use the whole library of modern easing functions_
+_Whole library of modern easing functions_
 ```css
 .foo {
   transition: all 250ms ease-out-elastic;
 }
 ```
 
-_Select items based on quantity_
+_Powerful quantity pseudo-selectors_
 ```css
 ul li:at-least(4) {
   color: blue;
@@ -164,17 +161,16 @@ ul li:between(4,6) {
 }
 ```
 
-_Build a modular scale, to create instant visual rhythm_
+_CSS property aliases_
 ```css
-:root {
-  /* 1rem and 0.75rem base sizes */
-  --ms-bases: 1, 0.75;
-  /* golden ratio scale */
-  --ms-ratio: 1.618;
+@alias {
+  fs: font-size;
+  bg: background;
 }
- 
+
 .foo {
-  font-size: ms(3)rem;
+  fs: 16px;
+  bg: #fff;
 }
 ```
 
@@ -254,6 +250,7 @@ MIT © [Simpla][simpla]
 [grunt-postcss]: https://github.com/nDmitry/grunt-postcss
 [postcss-cli]: https://github.com/code42day/postcss-cli
 [poststylus]: https://github.com/seaneking/poststylus
+[type-demo]: /type-demo.gif?raw=true
 [fontspring]: http://blog.fontspring.com/2011/02/further-hardening-of-the-bulletproof-syntax/
 [caniuse]: http://caniuse.com
 [material-colors]: https://www.google.com/design/spec/style/color.html
