@@ -54,10 +54,6 @@ describe('Rucksack', function () {
    test('hexrgba', {}, done);
   });
 
-  it('applies a modular scale', function (done) {
-   test('modular-scale', {}, done);
-  });
-
   it('expands position shorthands', function (done) {
    test('position', {}, done);
   });

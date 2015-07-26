@@ -9,7 +9,6 @@ var core = [
   require('postcss-easings'),
   require('postcss-fontpath'),
   require('postcss-hexrgba'),
-  require('postcss-modular-scale'),
   require('postcss-position'),
   require('postcss-quantity-queries')
 ];
