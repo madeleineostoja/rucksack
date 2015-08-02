@@ -42,8 +42,6 @@ gulp.task('rucksack', function() {
 });
 ```
 
-<br/>
-
 ###### Grunt
 Use [grunt-rucksack][grunt-rucksack]
 
@@ -63,8 +61,6 @@ grunt.initConfig({
 grunt.registerTask('default', ['rucksack']);
 ```
 
-<br/>
-
 ###### Broccoli
 Use [broccoli-rucksack][broccoli-rucksack]
 
@@ -73,16 +69,12 @@ var rucksack = require('broccoli-rucksack');
 tree = rucksack(tree, [options]);
 ```
 
-<br/>
-
 ###### CLI
 Process CSS directly on the command line
 
 ```sh
 $ rucksack src/style.css style.css [options]
 ```
-
-<br/>
 
 ###### PostCSS
 Rucksack is built on PostCSS, and can be used as a PostCSS plugin.
@@ -99,8 +91,6 @@ postcss([ rucksack() ])
   });
 ```
  See the [PostCSS Docs][postcss] for examples for your environment.
-
- <br/>
 
 ###### Stylus
 Stylus can be used as a Stylus plugin with [PostStylus][poststylus]
