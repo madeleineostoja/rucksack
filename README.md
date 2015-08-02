@@ -93,7 +93,7 @@ postcss([ rucksack() ])
  See the [PostCSS Docs][postcss] for examples for your environment.
 
 ###### Stylus
-Stylus can be used as a Stylus plugin with [PostStylus][poststylus]
+Rucksack can be used as a Stylus plugin with [PostStylus][poststylus]
 
 ```js
 stylus(css).use(poststylus('rucksack-css'))
