@@ -35,7 +35,7 @@ colors = colors({ palette: 'material' });
 var defaults = {
     fallbacks: true,
     autoprefixer: true,
-    normalize: true,
+    normalize: false,
     colors: true
 };
 

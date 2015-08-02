@@ -119,8 +119,6 @@ _Automagical responsive typography_
 ![Responsive Type Demo][type-demo]
 
 
-
-
 _Native clearfix_
 ```css
 .foo {
@@ -225,13 +223,13 @@ Pass booleans to toggle optional extras on/off
 })
 ```
 
-`autoprefixer: true`: Toggle autoprefixing on/off (default: `true`).
+`autoprefixer`: Toggle autoprefixing on/off (default: `true`).
 
-`normalize: true`: Toggle normalizing on/off (default: `true`).
+`normalize`: Toggle normalizing on/off (default: `false`).
 
-`fallbacks: true`: Toggle legacy fallbacks on/off (default: `true`).
+`fallbacks`: Toggle legacy fallbacks on/off (default: `true`).
 
-`colors: true`: Toggle color replacements on/off (default: `true`).
+`colors`: Toggle color replacements on/off (default: `true`).
 
 --
 
