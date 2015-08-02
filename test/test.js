@@ -5,20 +5,20 @@ var postcss = require('postcss'),
     expect = require('chai').expect,
     fs = require('fs'),
     path = require('path'),
-    plugin = require('../index.js');
+    spawn = require('child_process').spawn,
+    rucksack = require('../index.js');
 
-var test = function (fixture, opts, done) {
+var test = function(fixture, opts, done) {
   var input = fixture + '.css',
       expected = fixture + '.expected.css';
 
-  opts.hasOwnProperty('normalize') ? opts : opts.normalize = false;
   opts.hasOwnProperty('autoprefixer') ? opts : opts.autoprefixer = false;
   opts.hasOwnProperty('fallbacks') ? opts : opts.fallbacks = false;
 
   input = fs.readFileSync(path.join(__dirname, 'fixtures', input), 'utf8');
   expected = fs.readFileSync(path.join(__dirname, 'fixtures', expected), 'utf8');
 
-  postcss([ plugin(opts) ])
+  postcss([ rucksack(opts) ])
     .process(input)
     .then(function (result) {
       expect(result.css).to.eql(expected);
@@ -31,69 +31,118 @@ var test = function (fixture, opts, done) {
 };
 
 
+var cli = function(cmd, callback) {
+  process.chdir(__dirname);
+
+  var ps,
+      out = '',
+      err = '';
+
+  ps = spawn(process.execPath, [
+      path.resolve(__dirname, '../bin/cmd.js')
+  ].concat(cmd));
+
+  ps.stdout.on('data', function(buffer) {
+     out += buffer;
+  });
+
+  ps.stderr.on('data', function(buffer) {
+    err += buffer;
+  });
+
+  ps.on('exit', function(code) {
+    callback.call(this, err, out, code);
+  });
+};
+
+var cliTest = function(fixture, args, done) {
+  var input = fixture + '.css',
+      expected = fixture + '.expected.css';
+
+  input = path.join(__dirname, 'fixtures', input);
+  expected = path.join(__dirname, 'fixtures', expected);
+
+  cli([input, args], function(err, out, code) {
+    expect(out).to.eql(fs.readFileSync(expected, 'utf8'));
+    expect(err).to.be.empty;
+    expect(code).to.eql(0);
+    done();
+  });
+};
+
 describe('Rucksack', function () {
 
   // Core plugins
-  it('sets aliases', function (done) {
+  it('sets aliases', function(done) {
    test('alias', {}, done);
   });
 
-  it('applies clear:fix', function (done) {
+  it('applies clear:fix', function(done) {
    test('clearfix', {}, done);
   });
 
-  it('applies easings', function (done) {
+  it('applies easings', function(done) {
    test('easings', {}, done);
   });
 
-  it('sets font-path', function (done) {
+  it('sets font-path', function(done) {
    test('fontpath', {}, done);
   });
 
-  it('expands rgba(hex,a)', function (done) {
+  it('expands rgba(hex,a)', function(done) {
    test('hexrgba', {}, done);
   });
 
-  it('expands position shorthands', function (done) {
+  it('expands position shorthands', function(done) {
    test('position', {}, done);
   });
 
-  it('applies quanity queries', function (done) {
+  it('applies quanity queries', function(done) {
    test('quantity', {}, done);
   });
 
-  it('does responsive type', function (done) {
+  it('does responsive type', function(done) {
    test('responsive-type', {}, done);
   });
 
   // Fallback plugins
-  it('polyfills rgba', function (done) {
+  it('polyfills rgba', function(done) {
    test('rgba', { fallbacks: true }, done);
   });
 
-  it('polyfills -epub', function (done) {
+  it('polyfills -epub', function(done) {
    test('epub', { fallbacks: true }, done);
   });
 
-  it('polyfills opacity', function (done) {
+  it('polyfills opacity', function(done) {
    test('opacity', { fallbacks: true }, done);
   });
 
-  it('polyfills pseudo-elements', function (done) {
+  it('polyfills pseudo-elements', function(done) {
    test('pseudo', { fallbacks: true }, done);
   });
 
-  it('polyfills vmin', function (done) {
+  it('polyfills vmin', function(done) {
    test('vmin', { fallbacks: true }, done);
   });
 
   // Addons
-  it('autoprefixes', function (done) {
+  it('autoprefixes', function(done) {
    test('autoprefixer', { autoprefixer: true }, done);
   });
 
-  it('swaps default colors', function (done) {
+  it('swaps default colors', function(done) {
    test('colors', {}, done);
   });
+
+  // CLI tool
+  it('processes css on the command line', function(done) {
+    cliTest('position', '', done);
+  });
+
+  it('handles options on the command line', function(done) {
+    cliTest('cliopts', '--no-autoprefixer', done);
+  });
+
 
 });
