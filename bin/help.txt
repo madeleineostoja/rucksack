@@ -1,0 +1,13 @@
+Usage: rucksack [input] [output] {OPTIONS}
+
+Options:
+
+    --no-autoprefixer   Disable automatic vendor prefixing.
+
+    --no-fallbacks      Disable legacy fallbacks.
+
+    --no-colors         Disable default color replacements.
+
+    --version,    -v    Show the version number.
+
+    --help,       -h    Show this help screen.

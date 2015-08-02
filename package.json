@@ -2,6 +2,7 @@
   "name": "rucksack-css",
   "version": "0.4.3",
   "description": "A little bag of CSS superpowers",
+  "main": "index.js",
   "keywords": [
     "rucksack",
     "postcss",
@@ -19,15 +20,22 @@
     {
       "name": "Sean King",
       "email": "sean@simpla.io",
-      "web": "http://simpla.io"
+      "web": "https://twitter.com/seaneking"
     }
   ],
   "bugs": {
     "url": "https://github.com/simplaio/rucksack/issues"
   },
+  "bin": {
+    "cli": "./bin/cli"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
   "homepage": "https://github.com/simplaio/rucksack",
   "dependencies": {
     "autoprefixer": "^5.2.0",
+    "minimist": "^1.1.2",
     "postcss": "^4.1.9",
     "postcss-alias": "^0.1.0",
     "postcss-clearfix": "^0.1.0",
@@ -42,7 +50,9 @@
     "postcss-pseudoelements": "^2.2.0",
     "postcss-quantity-queries": "^0.3.1",
     "postcss-responsive-type": "^0.1.0",
-    "postcss-vmin": "^1.0.0"
+    "postcss-vmin": "^1.0.0",
+    "read-file-stdin": "^0.2.0",
+    "write-file-stdout": "0.0.2"
   },
   "devDependencies": {
     "gulp-eslint": "^0.12.0",

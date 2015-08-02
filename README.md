@@ -73,6 +73,15 @@ tree = rucksack(tree, [options]);
 
 <br/>
 
+###### CLI
+Process CSS directly on the command line
+
+```sh
+$ rucksack src/style.css style.css [options]
+```
+
+<br/>
+
 ###### PostCSS
 Rucksack is built on PostCSS, and can be used as a PostCSS plugin.
 
@@ -92,7 +101,7 @@ postcss([ rucksack() ])
  <br/>
 
 ###### Stylus
-Use Rucksack directly as a Stylus plugin with [PostStylus][poststylus]
+Stylus can be used as a Stylus plugin with [PostStylus][poststylus]
 
 ```js
 stylus(css).use(poststylus('rucksack-css'))
@@ -135,7 +144,7 @@ _Hex shortcuts for RGBA_
 }
 ```
 
-_One-rule `@font-face` `src` sets (expands to [FontSpring syntax][fontspring])_
+_Shorthand `@font-face` src sets (becomes [FontSpring syntax][fontspring])_
 ```css
 @font-face {
   font-family: 'My Font';
@@ -152,11 +161,11 @@ _Whole library of modern easing functions_
 
 _Powerful quantity pseudo-selectors_
 ```css
-ul li:at-least(4) {
+li:at-least(4) {
   color: blue;
 }
 
-ul li:between(4,6) {
+li:between(4,6) {
   color: red;
 }
 ```
@@ -228,11 +237,6 @@ Pass booleans to toggle optional extras on/off
 `fallbacks`: Toggle legacy fallbacks on/off (default: `true`).
 
 `colors`: Toggle color replacements on/off (default: `true`).
-
---
-
-### Documentation
-Full docs coming soon!
 
 --
 
