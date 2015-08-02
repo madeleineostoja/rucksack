@@ -21,7 +21,7 @@ Made with &#9829; by the folks at [Simpla][simpla].
 ### Install
 
 ```sh
-$ npm install --save rucksack-css postcss
+$ npm install --save rucksack-css
 ```
 
 --
