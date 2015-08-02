@@ -28,14 +28,54 @@ $ npm install --save rucksack-css postcss
 
 ### Usage
 
-General usage:
+###### Gulp
+Use [gulp-rucksack][gulp-rucksack]
+```js
+var gulp = require('gulp');
+var rucksack = require('gulp-rucksack');
 
-1. Add [PostCSS][postcss] to your build workflow
-2. Include Rucksack as a PostCSS plugin
+gulp.task('rucksack', function() {
+  return gulp.src('src/style.css')
+    .pipe(rucksack())
+    .pipe(gulp.dest('style.css'));
+});```
 
 <br/>
 
-###### Node
+###### Grunt
+Use [grunt-rucksack][grunt-rucksack]
+
+```js
+require('load-grunt-tasks')(grunt);
+
+grunt.initConfig({
+	rucksack: {
+		compile: {
+			files: {
+				'style.css': 'src/style.css'
+			}
+		}
+	}
+});
+
+grunt.registerTask('default', ['rucksack']);
+```
+
+<br/>
+
+###### Broccoli
+Use [broccoli-rucksack][broccoli-rucksack]
+
+```js
+var rucksack = require('broccoli-rucksack');
+tree = rucksack(tree, [options]);
+```
+
+<br/>
+
+###### PostCSS
+Rucksack is built on PostCSS, and can be used as a PostCSS plugin.
+
 ```js
 var postcss = require('postcss'),
     rucksack = require('rucksack-css');
@@ -47,51 +87,13 @@ postcss([ rucksack() ])
       if ( result.map ) fs.writeFileSync('style.css.map', result.map);
   });
 ```
+ See the [PostCSS Docs][postcss] for examples for your environment.
 
-<br/>
-
-###### Gulp
-Use [gulp-postcss][gulp-postcss]
-```js
-var postcss = require('gulp-postcss'),
-    rucksack = require('rucksack-css');
-
-gulp.task('css', function () {
-  return gulp.src('src/*.css')
-    .pipe( postcss([ rucksack() ]) )
-    .pipe( gulp.dest('.') );
-});
-```
-
-<br/>
-
-###### Grunt
-Use [grunt-postcss][grunt-postcss]
-```js
-grunt.initConfig({
-  css: {
-    options: {
-      processors: [require('rucksack-css')]
-    },
-    dist: {
-      src: 'src/*.css'
-    }
-  }
-});
-```
-
-<br/>
-
-###### CLI
-Use [PostCSS CLI][postcss-cli] to process CSS on the command line
-```sh
-$ postcss --use rucksack-css -o style.css style.css
-```
-
-<br/>
+ <br/>
 
 ###### Stylus
-Use Rucksack as a Stylus plugin with [PostStylus][poststylus]
+Use Rucksack directly as a Stylus plugin with [PostStylus][poststylus]
+
 ```js
 stylus(css).use(poststylus('rucksack-css'))
 ```
@@ -102,14 +104,6 @@ See the [PostStylus Docs][poststylus] for more examples for your environment.
 
 ### Core Features
 
-_Shorthand syntax for positioning properties_
-```css
-.foo {
-  absolute: 0 20px;
-  relative: 20% 0 30px;
-}
-```
-
 _Automagical responsive typography_
 ```css
 .foo {
@@ -118,6 +112,14 @@ _Automagical responsive typography_
 ```
 ![Responsive Type Demo][type-demo]
 
+
+_Shorthand syntax for positioning properties_
+```css
+.foo {
+  absolute: 0 20px;
+  relative: 20% 0 30px;
+}
+```
 
 _Native clearfix_
 ```css
@@ -179,8 +181,6 @@ _CSS property aliases_
 ###### Autoprefixing
 Automatically apply vendor prefixes to relevant properties based on data from [CanIUse][caniuse].
 
-###### Normalization
-Automatically apply the latest Normalize.css stylesheet to standardize browser inconsistencies.
 
 ###### Legacy Fallbacks
 Automatically insert legacy fallbacks for modern properties.
@@ -225,8 +225,6 @@ Pass booleans to toggle optional extras on/off
 
 `autoprefixer`: Toggle autoprefixing on/off (default: `true`).
 
-`normalize`: Toggle normalizing on/off (default: `false`).
-
 `fallbacks`: Toggle legacy fallbacks on/off (default: `true`).
 
 `colors`: Toggle color replacements on/off (default: `true`).
@@ -244,10 +242,10 @@ MIT © [Simpla][simpla]
 
 [simpla]: http://simpla.io
 [postcss]: https://github.com/postcss/postcss
-[gulp-postcss]: https://github.com/postcss/gulp-postcss
-[grunt-postcss]: https://github.com/nDmitry/grunt-postcss
-[postcss-cli]: https://github.com/code42day/postcss-cli
-[poststylus]: https://github.com/seaneking/poststylus
+[gulp-rucksack]: https://github.com/simplaio/gulp-rucksack
+[grunt-rucksack]: https://github.com/simplaio/grunt-rucksack
+[broccoli-rucksack]: https://github.com/simplaio/broccoli-rucksack
+[poststylus]: https://github.com/simplaio/poststylus
 [type-demo]: /type-demo.gif?raw=true
 [fontspring]: http://blog.fontspring.com/2011/02/further-hardening-of-the-bulletproof-syntax/
 [caniuse]: http://caniuse.com
