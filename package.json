@@ -37,8 +37,6 @@
     "postcss-epub": "^2.3.0",
     "postcss-fontpath": "^0.1.0",
     "postcss-hexrgba": "^0.1.0",
-    "postcss-modular-scale": "^2.4.0",
-    "postcss-normalize": "^0.1.0",
     "postcss-opacity": "^2.0.0",
     "postcss-position": "^0.2.0",
     "postcss-pseudoelements": "^2.2.0",

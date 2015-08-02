@@ -25,18 +25,16 @@ var fallbacks = [
 
 // Individual add-ons (optional)
 var autoprefixer = require('autoprefixer'),
-    normalize = require('postcss-normalize'),
     colors = require('postcss-color-palette');
 
-// Be happy eslint (define custom palette)
+// Define a custom color palette
 colors = colors({ palette: 'material' });
 
 // Default options
 var defaults = {
-    fallbacks: true,
-    autoprefixer: true,
-    normalize: false,
-    colors: true
+  fallbacks: true,
+  autoprefixer: true,
+  colors: true
 };
 
 // Build PostCSS plugin
@@ -63,10 +61,6 @@ var rucksack = $postcss.plugin('rucksack', function(options) {
 
   if (options.autoprefixer) {
     plugins.push(autoprefixer);
-  }
-
-  if (options.normalize) {
-    plugins.push(normalize);
   }
 
   if (options.colors) {

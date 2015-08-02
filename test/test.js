@@ -88,10 +88,6 @@ describe('Rucksack', function () {
   });
 
   // Addons
-  it('applies normalize.css', function (done) {
-   test('normalize', { normalize: true }, done);
-  });
-
   it('autoprefixes', function (done) {
    test('autoprefixer', { autoprefixer: true }, done);
   });
