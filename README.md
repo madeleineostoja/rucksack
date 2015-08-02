@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://npmjs.org/package/rucksack-css" target="_blank"><img src="https://badge.fury.io/js/rucksack-css.svg" alt="NPM version" /></a>
-  <a href="https://travis-ci.org/simplaio/rucksack" target="_blank"><img src="https://travis-ci.org/simplaio/rucksack.svg?branch=master" alt="Build satus" /></a>
-  <a href="https://david-dm.org/simplaio/rucksack" target="_blank"><img src="https://david-dm.org/simplaio/rucksack.svg?theme=shields.io" alt="Dependency Status" /></a>
+  <a href="https://npmjs.org/package/rucksack-css"><img src="https://badge.fury.io/js/rucksack-css.svg" alt="NPM version" /></a>
+  <a href="https://travis-ci.org/simplaio/rucksack"><img src="https://travis-ci.org/simplaio/rucksack.svg?branch=master" alt="Build satus" /></a>
+  <a href="https://david-dm.org/simplaio/rucksack"><img src="https://david-dm.org/simplaio/rucksack.svg?theme=shields.io" alt="Dependency Status" /></a>
 </p>
 
 <br/>
@@ -30,6 +30,7 @@ $ npm install --save rucksack-css postcss
 
 ###### Gulp
 Use [gulp-rucksack][gulp-rucksack]
+
 ```js
 var gulp = require('gulp');
 var rucksack = require('gulp-rucksack');
@@ -38,7 +39,8 @@ gulp.task('rucksack', function() {
   return gulp.src('src/style.css')
     .pipe(rucksack())
     .pipe(gulp.dest('style.css'));
-});```
+});
+```
 
 <br/>
 
@@ -224,19 +226,19 @@ Swap out those ugly default colors with replacements from [Material Design Color
 --
 
 ### Options
+You can toggle Rucksack's addons on or off by passing booleans to the relevant property.
 
-Pass booleans to toggle optional extras on/off
 ```js
 .rucksack({
   /* options */
 })
 ```
 
-`autoprefixer`: Toggle autoprefixing on/off (default: `true`).
+`autoprefixer`: Endable/disable autoprefixing (default: `true`).
 
-`fallbacks`: Toggle legacy fallbacks on/off (default: `true`).
+`fallbacks`: Enable/disable legacy fallbacks (default: `true`).
 
-`colors`: Toggle color replacements on/off (default: `true`).
+`colors`: Enable/disable color replacements (default: `true`).
 
 --
 
