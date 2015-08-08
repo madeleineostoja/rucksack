@@ -1,6 +1,6 @@
 {
   "name": "rucksack-css",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "A little bag of CSS superpowers",
   "main": "index.js",
   "keywords": [
@@ -27,7 +27,7 @@
     "url": "https://github.com/simplaio/rucksack/issues"
   },
   "bin": {
-    "cli": "./bin/cli"
+    "rucksack": "./bin/cmd.js"
   },
   "engines": {
     "node": ">= 0.10.0"
