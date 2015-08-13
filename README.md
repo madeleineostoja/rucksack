@@ -241,7 +241,7 @@ MIT © [Simpla][simpla]
 [gulp-rucksack]: https://github.com/simplaio/gulp-rucksack
 [grunt-rucksack]: https://github.com/simplaio/grunt-rucksack
 [broccoli-rucksack]: https://github.com/simplaio/broccoli-rucksack
-[poststylus]: https://github.com/simplaio/poststylus
+[poststylus]: https://github.com/seaneking/poststylus
 [type-demo]: /type-demo.gif?raw=true
 [fontspring]: http://blog.fontspring.com/2011/02/further-hardening-of-the-bulletproof-syntax/
 [caniuse]: http://caniuse.com
