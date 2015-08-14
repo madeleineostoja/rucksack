@@ -11,7 +11,6 @@ $(function(){
       var target = $(this).attr('href').replace('#', '');
 
       if (location.hash.indexOf(target) === -1){
-        console.log(target);
         $('.content').scrollTo($('a[name="' + target + '"]'), 250, {
           offset: -20
         });

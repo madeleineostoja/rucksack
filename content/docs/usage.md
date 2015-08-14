@@ -15,7 +15,7 @@ $ npm install rucksack-css --save
 
 <div style="overflow: auto;">
 
-{{% usage title="With Gulp" id="gulp" img="/img/usage/gulp.png" %}}
+{{% usage title="With Gulp" id="gulp" img="http://simplaio.github.io/rucksack/img/usage/gulp.png" %}}
 
 Rucksack has a Gulp plugin - [gulp-rucksack](https://github.com/simplaio/gulp-rucksack)
 
@@ -56,7 +56,7 @@ gulp.task('rucksack', function() {
 
 {{% /usage %}}
 
-{{% usage title="With Grunt" id="grunt" img="/img/usage/grunt.png" %}}
+{{% usage title="With Grunt" id="grunt" img="http://simplaio.github.io/rucksack/img/usage/grunt.png" %}}
 
 Rucksack has a Grunt plugin - [grunt-rucksack](https://github.com/simplaio/grunt-rucksack)
 
@@ -85,7 +85,7 @@ grunt.registerTask('default', ['rucksack']);
 
 {{% /usage %}}
 
-{{% usage title="With Broccoli" id="broccoli" img="/img/usage/broccoli.png" %}}
+{{% usage title="With Broccoli" id="broccoli" img="http://simplaio.github.io/rucksack/img/usage/broccoli.png" %}}
 
 Rucksack has a Broccoli plugin - [broccoli-rucksack](https://github.com/simplaio/broccoli-rucksack)
 
@@ -102,7 +102,7 @@ tree = rucksack(tree, [options]);
 
 {{% /usage %}}
 
-{{% usage title="Command Line" id="cli" img="/img/usage/cli.png" %}}
+{{% usage title="Command Line" id="cli" img="http://simplaio.github.io/rucksack/img/usage/cli.png" %}}
 
 Process CSS directly on the command line with the Rucksack CLI tool. It's comes bundled with Rucksack, so you can try it out straight away.
 
@@ -125,7 +125,7 @@ Options:
 
 {{% /usage %}}
 
-{{% usage title="With PostCSS" id="postcss" img="/img/usage/postcss.png" %}}
+{{% usage title="With PostCSS" id="postcss" img="http://simplaio.github.io/rucksack/img/usage/postcss.png" %}}
 
 Rucksack is built on PostCSS, and can be used as a PostCSS plugin.
 
@@ -145,7 +145,7 @@ See the [PostCSS Docs](https://github.com/postcss/postcss) for examples for your
 
 {{% /usage %}}
 
-{{% usage title="With Stylus" id="stylus" img="/img/usage/stylus.png" %}}
+{{% usage title="With Stylus" id="stylus" img="http://simplaio.github.io/rucksack/img/usage/stylus.png" %}}
 
 Rucksack can be used as a Stylus plugin with [PostStylus](https://github.com/seaneking/poststylus)
 
