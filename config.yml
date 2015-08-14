@@ -1,12 +1,12 @@
 ---
 baseurl: "http://simplaio.github.io/rucksack"
-languageCode: "en-gb"
+languageCode: "en-au"
 title: "Rucksack | CSS Superpowers"
-contentdir: "docs"
 dataDir: "src/data"
 staticdir: "src/static"
+layoutdir: "src/layouts"
 
 params:
-  description: "Rucksack ia a little bag of CSS superpowers, built on PostCSS"
+  description: "A little bag of CSS superpowers, built on PostCSS"
   author: "Simpla"
 ---

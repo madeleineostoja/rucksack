@@ -1,3 +1,5 @@
+'use strict';
+
 // DOM Ready
 $(function() {
 
@@ -24,42 +26,27 @@ $(function() {
 
     // Extend jQuery .on() & .bind() handlers with delay argument, for smooth resizing
     // Usage = .on('resize', function(){}, 100);
-    (function ($) {
-        var methods = { on: $.fn.on, bind: $.fn.bind };
-        $.each(methods, function(k){
-            $.fn[k] = function () {
-                var args = [].slice.call(arguments),
-                    delay = args.pop(),
-                    fn = args.pop(),
-                    timer;
+    (function($) {
+      var bindings = { on: $.fn.on, bind: $.fn.bind };
+      $.each(bindings, function(k){
+        $.fn[k] = function () {
+          var args = [].slice.call(arguments),
+            delay = args.pop(),
+            fn = args.pop(),
+            timer;
 
-                args.push(function () {
-                    var self = this,
-                        arg = arguments;
-                    clearTimeout(timer);
-                    timer = setTimeout(function(){
-                        fn.apply(self, [].slice.call(arg));
-                    }, delay);
-                });
+          args.push(function () {
+            var self = this,
+              arg = arguments;
+            clearTimeout(timer);
+            timer = setTimeout(function(){
+              fn.apply(self, [].slice.call(arg));
+            }, delay);
+          });
 
-                return methods[k].apply(this, isNaN(delay) ? arguments : args);
-            };
-        });
-    }(jQuery));
-
-    // Animate all anchors
-    $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 30
-            }, 300);
-            return false;
-          }
-        }
-    });
-
+          return bindings[k].apply(this, isNaN(delay) ? arguments : args);
+        };
+      });
+    })(jQuery);
 
   });

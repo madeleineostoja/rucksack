@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<title>Rucksack | CSS Superpowers</title>
+<meta name="title" content="Rucksack | CSS Superpowers">
+<meta name="description" content="A little bag of CSS superpowers, built on PostCSS">
+<meta name="author" content="Simpla">
+<meta name="copyright" content="2015 Simpla">
+
+
+<meta property="og:title" content="Rucksack | CSS Superpowers"/>
+<meta property="og:url" content="http://simplaio.github.io/rucksack"/>
+<meta property="og:image" content="/img/full-logo.png"/>
+<meta property="og:description" content="A little bag of CSS superpowers, built on PostCSS"/>
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Rucksack | CSS Superpowers" />
+<meta name="twitter:description" content="A little bag of CSS superpowers, built on PostCSS" />
+<meta name="twitter:image" content="/img/full-logo.png" />
+<meta name="twitter:url" content="http://simplaio.github.io/rucksack" />
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<link rel="shortcut icon" href="/img/favicon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="Rucksack">
+<meta name="application-name" content="Rucksack">
+<meta name="msapplication-TileColor" content="#f2672e">
+<meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+    
+    <link rel="stylesheet" href="/style.css">
+
+    
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+
+    
+    <script src="/js/vendor.min.js"></script>
+    <script src="/js/user.min.js"></script>
+
+  </head>
+
+  <body lang="en-gb">
+
+
+<section class="splash">
+
+  <a href="https://github.com/simplaio/rucksack" class="splash__github" data-icon="&#xe603;" title="Visit the GitHub Repo" target="_blank"></a>
+
+  <img class="splash__logo" src="img/logo.png" alt="Rucksack logo" />
+
+  <div class="splash__name">
+    <h1 class="splash__name__title">rucksack</h1>
+    <h2 class="splash__name__tagline">A little bag of CSS superpowers</h2>
+  </div>
+
+
+  <a href="/docs" class="splash__docs">Read The Docs</a>
+
+  <div class="splash__share">
+    <a class="splash__share__link" data-icon="&#xe600;" onclick="popup('https://twitter.com/share?url=http://simplaio.github.io/rucksack&related=simplaio&text=Rucsack%20-%20A%20little%20bag%20of%20CSS%20superpowers', 'Share Rucksack on Twitter', 540, 420);">Tweet It</a>
+    <a class="splash__share__link" data-icon="&#xe601;" onclick="popup('http://www.facebook.com/sharer/sharer.php?u=http://simplaio.github.io/rucksack', 'Share Rucksack on Facebook', 540, 420);">Share It</a>
+  </div>
+
+</section>
+
+<section class="intro">
+  <p>Rucksack makes CSS development fun again, with the features and shortcuts the language should have come with out of the box. It's built on PostCSS, it's modular, it doesn't add any bloat to your CSS, and it's lightening fast.</p>
+  <p>Made with <span class="intro__heart" data-icon="&#xe602;"></span> by the folks at <a href="http://simpla.io" target="_blank">Simpla</a></p>
+</section>
+
+<section class="features">
+
+  
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#responsive-type">Responsive Typography</a></h1>
+
+      
+
+      <pre><code class="language-css">.foo {
+  font-size: responsive;
+}
+
+
+/* Resize your browser! */
+</code></pre>
+
+
+    </div>
+
+  
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#shorthand-position">Shorthand Positioning</a></h1>
+
+      
+
+      <pre><code class="language-css">.foo {
+  absolute: 0;
+}
+
+.bar {
+  relative: 20% auto;
+}
+</code></pre>
+
+
+    </div>
+
+  
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#clearfix">Native Clearfix</a></h1>
+
+      
+
+      <pre><code class="language-css">.foo {
+  clear: fix;
+}
+</code></pre>
+
+
+    </div>
+
+  
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#alias">Property Aliases</a></h1>
+
+      
+
+      <pre><code class="language-css">@alias {
+  fs: font-size;
+  br: border-radius;
+}
+
+.foo {
+  fs: 16px;
+}
+</code></pre>
+
+
+    </div>
+
+  
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#quantity-pseudo">Quanitity Queries</a></h1>
+
+      
+
+      <pre><code class="language-css">li:at-most(4) {
+  color: blue;
+}
+
+li:at-least(5) {
+  color: red;
+}
+</code></pre>
+
+
+    </div>
+
+  
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#hexgrba">Hex RGBA Shortcuts</a></h1>
+
+      
+
+      <pre><code class="language-css">.foo {
+  color: rgba(#fff, 0.8);
+}
+</code></pre>
+
+
+    </div>
+
+  
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#font-src">Font Src Expansion</a></h1>
+
+      
+
+      <pre><code class="language-css">@font-face {
+  font-family: 'My Font';
+  font-path: '/my/font/file';
+  font-weight: normal;
+  font-style: normal;
+}
+</code></pre>
+
+
+    </div>
+
+  
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#easings">All The Easings!</a></h1>
+
+      
+
+      <pre><code class="language-css">.foo {
+  transition: ease-in-cubic;
+}
+
+.bar {
+  transition: ease-out-back;
+}
+</code></pre>
+
+
+    </div>
+
+  
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#colors">New Default Colors</a></h1>
+
+      
+        <span class="features__feature__optional">add-on</span>
+      
+
+      <pre><code class="language-css">.foo{
+  color: blue;
+}
+
+/* Becomes (from Material) */
+.foo {
+  color: #2196F3;
+}
+</code></pre>
+
+
+    </div>
+
+  
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#fallbacks">Legacy Fallbacks</a></h1>
+
+      
+        <span class="features__feature__optional">add-on</span>
+      
+
+      <pre><code class="language-css">.foo {
+  opacity: 0.8;
+}
+
+/* Becomes */
+.foo {
+  -ms-filter: &quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=80)&quot;;
+  opacity: 0.8;
+}
+</code></pre>
+
+
+    </div>
+
+  
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#autoprefixing">Automatic Prefixing</a></h1>
+
+      
+        <span class="features__feature__optional">add-on</span>
+      
+
+      <pre><code class="language-css">.foo{
+  transition: all;
+}
+
+/* Becomes (from CanIUse) */
+.foo {
+  -webkit-transition: all;
+          transition: all;
+}
+</code></pre>
+
+
+    </div>
+
+  
+
+</section>
+  <footer class="footer">
+    <span class="footer-copyright">MIT © <a href="http://simpla.io" target="blank">Simpla</a> 2015</span>
+  </footer>
+
+  </body>
+</html>
+

@@ -1,4 +1,47 @@
-{{ partial head.html }}
+{{ partial "head.html" . }}
+
+<section class="splash">
+
+  <a href="https://github.com/simplaio/rucksack" class="splash__github" data-icon="&#xe603;" title="Visit the GitHub Repo" target="_blank"></a>
+
+  <img class="splash__logo" src="img/logo.png" alt="Rucksack logo" />
+
+  <div class="splash__name">
+    <h1 class="splash__name__title">rucksack</h1>
+    <h2 class="splash__name__tagline">A little bag of CSS superpowers</h2>
+  </div>
 
 
-{{ partial footer.html}}
+  <a href="/docs" class="splash__docs">Read The Docs</a>
+
+  <div class="splash__share">
+    <a class="splash__share__link" data-icon="&#xe600;" onclick="popup('https://twitter.com/share?url=http://simplaio.github.io/rucksack&related=simplaio&text=Rucsack%20-%20A%20little%20bag%20of%20CSS%20superpowers', 'Share Rucksack on Twitter', 540, 420);">Tweet It</a>
+    <a class="splash__share__link" data-icon="&#xe601;" onclick="popup('http://www.facebook.com/sharer/sharer.php?u=http://simplaio.github.io/rucksack', 'Share Rucksack on Facebook', 540, 420);">Share It</a>
+  </div>
+
+</section>
+
+<section class="intro">
+  <p>Rucksack makes CSS development fun again, with the features and shortcuts the language should have come with out of the box. It's built on PostCSS, it's modular, it doesn't add any bloat to your CSS, and it's lightening fast.</p>
+  <p>Made with <span class="intro__heart" data-icon="&#xe602;"></span> by the folks at <a href="http://simpla.io" target="_blank">Simpla</a></p>
+</section>
+
+<section class="features">
+
+  {{ range where .Data.Pages "Section" "home" }}
+
+    <div class="features__feature">
+      <h1 class="features__feature__title"><a href="docs#{{ .Params.anchor }}">{{ .Title }}</a></h1>
+
+      {{ if isset .Params "addon" }}
+        <span class="features__feature__optional">add-on</span>
+      {{ end }}
+
+      {{ .Content }}
+
+    </div>
+
+  {{ end }}
+
+</section>
+{{ partial "footer.html" }}

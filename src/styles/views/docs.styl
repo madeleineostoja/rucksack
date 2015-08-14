@@ -1,0 +1,101 @@
+sidebarBreak = 800px
+
+.docs
+  display flex
+  height 100vh
+  +below(sidebarBreak)
+    flex-direction column
+
+.sidebar
+  background orange
+  color white
+  overflow scroll
+  +below(sidebarBreak)
+    flex 0.5
+    transform translateZ(0)
+
+  &__github
+    fs scale3
+    fixed 0.3em 0.5em auto auto
+    color lightBlack
+    z-index 1
+    &:hover
+      color black
+    +below(sidebarBreak)
+      color medWhite
+      &:hover
+        color white
+
+  &__logo
+    display block
+    height 8em
+    margin 2em auto
+    +below(sidebarBreak)
+      height 6em
+      margin 1em auto
+
+  &__nav
+    padding 0
+    margin 0
+    list-style none
+    text-align center
+    &__item
+      fs small
+      text-transform uppercase
+      padding 2em 4em
+      display block
+      border-bottom 1px dashed medWhite
+      &:hover
+        background lightWhite
+
+  &__credit
+    margin 4.5em auto 2em
+    width 60%
+    color brightWhite
+    line-height 1.5
+    text-align center
+    fs small
+    &__heart
+      color white
+      fs scale0
+      padding 0 0.2em
+    a
+      border-bottom 1px solid brightWhite
+      &:hover
+        color white
+
+.content
+  overflow scroll
+  padding 1.5em 4.5em 0
+  flex 1
+  position relative
+  scroll-behavior smooth
+  +below(sidebarBreak)
+    padding 0 2.5em 0
+
+  &__section
+    margin 5em 0
+    overflow visible
+    max-width 900px
+    &__title
+      fs scale2
+      color darkGrey
+      padding-bottom 0.5em
+      margin-bottom 1em
+      border-bottom 1px solid lightGrey
+    &__anchor
+      color lightBlack
+      cursor pointer
+      margin-left .15em
+      &:hover
+        color orange
+    h2
+      fs scale1
+      color medGrey
+      padding-top .7em
+
+
+  .footer
+    relative auto -2.5em auto auto
+    text-align right
+    padding-right 0

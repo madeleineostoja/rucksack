@@ -1,0 +1,12 @@
+<div class="usage__trigger">
+  <a data-remodal-target='{{ .Get "id" }}'>
+    <img src='{{ .Get "img" }}' class="usage__trigger__logo" />
+    <span class="usage__trigger__title">{{ .Get "title" }}</span>
+  </a>
+</div>
+
+<div class="usage__modal remodal" data-remodal-id='{{ .Get "id" }}'>
+  <span class="remodal-close" data-remodal-action="close" data-icon="x"></span>
+  <img src='{{ .Get "img" }}' alt="" class="usage__modal__logo" />
+  {{ .Inner }}
+</div>

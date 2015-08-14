@@ -1,0 +1,127 @@
+// Footer
+.footer
+  margin-top 60px
+  padding 20px 30px
+  fs small
+  color medGrey
+  +below(mobile)
+    text-align center
+    padding 20px
+
+// Usage modals shortcode
+.usage__trigger
+  display block
+  lost-column 1/4 4 3em no-flex
+  margin-top 2em
+  margin-bottom @margin-top
+  text-align center
+  border-bottom 0
+  +below(1040px)
+    lost-column 1/3 3 3em no-flex
+  +below(550px)
+    lost-column 1/2 2 2em no-flex
+    margin-top 1em
+    margin-bottom @margin-top
+  a
+    cursor pointer
+    display inline-block
+    padding 10px
+  &__logo
+    display block
+    max-height 100px
+    margin 0 auto
+    +below(420px)
+      max-height 60px
+  &__title
+    fs scale1
+    color darkGrey
+    display block
+    margin-top 0.8em
+    a:hover &
+      color orange
+    +below(420px)
+      fs scale0
+
+.usage__modal
+  width 90%
+  max-width 650px
+  &__logo
+    max-height 130px
+    margin 1em auto 3em
+    +below(420px)
+      max-height 100px
+  p
+    margin 1.5em 0 0.5em
+
+// Easings demo shortcode
+.easing
+  margin 2em 1em
+  padding 2em 1em
+  &__track
+    height 2px
+    background lightGrey
+    br 999px
+    position relative
+    overflow visible
+    &__marker
+      height 1.1em
+      width @height
+      absolute 50% auto auto 0
+      transform translateY(-50%)
+      background orange
+      br 999px
+      transition left 400ms
+      .easing:hover &
+        left 100%
+  &__name
+    display inline-block
+    margin-top 1em
+
+.ease-in-sine
+  transition-timing-function ease-in-sine
+.ease-out-sine
+  transition-timing-function ease-out-sine
+.ease-in-out-sine
+  transition-timing-function ease-in-out-sine
+.ease-in-quad
+  transition-timing-function ease-in-quad
+.ease-out-quad
+  transition-timing-function ease-out-quad
+.ease-in-out-quad
+  transition-timing-function ease-in-out-quad
+.ease-in-cubic
+  transition-timing-function ease-in-cubic
+.ease-out-cubic
+  transition-timing-function ease-out-cubic
+.ease-in-out-cubic
+  transition-timing-function ease-in-out-cubic
+.ease-in-quart
+  transition-timing-function ease-in-quart
+.ease-out-quart
+  transition-timing-function ease-out-quart
+.ease-in-out-quart
+  transition-timing-function ease-in-out-quart
+.ease-in-quint
+  transition-timing-function ease-in-quint
+.ease-out-quint
+  transition-timing-function ease-out-quint
+.ease-in-out-quint
+  transition-timing-function ease-in-out-quint
+.ease-in-expo
+  transition-timing-function ease-in-expo
+.ease-out-expo
+  transition-timing-function ease-out-expo
+.ease-in-out-expo
+  transition-timing-function ease-in-out-expo
+.ease-in-circ
+  transition-timing-function ease-in-circ
+.ease-out-circ
+  transition-timing-function ease-out-circ
+.ease-in-out-circ
+  transition-timing-function ease-in-out-circ
+.ease-in-back
+  transition-timing-function ease-in-back
+.ease-out-back
+  transition-timing-function ease-out-back
+.ease-in-out-back
+  transition-timing-function ease-in-out-back

@@ -4,6 +4,9 @@
     "jquery": "*",
     "html5shiv": "*",
     "respond": "*",
-    "html5-placeholder-polyfill": "*"
+    "html5-placeholder-polyfill": "*",
+    "prism": "~1.0.1",
+    "remodal": "~1.0.2",
+    "jquery.scrollTo": "~2.1.1"
   }
 }

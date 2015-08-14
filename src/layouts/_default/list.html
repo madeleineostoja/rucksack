@@ -1,0 +1,41 @@
+{{ partial "head.html" . }}
+
+<section class="docs">
+
+    <aside class="sidebar">
+
+      <a href="https://github.com/simplaio/rucksack" class="sidebar__github" data-icon="&#xe603;" title="Visit the GitHub Repo" target="_blank"></a>
+
+      <a href="/"><img src="img/logo.png" alt="Rucksack Logo" class="sidebar__logo"></a>
+
+      <nav>
+        <ul class="sidebar__nav">
+          {{ range where .Data.Pages "Section" "docs" }}
+            <li><a class="sidebar__nav__item" href="#{{ .Params.anchor }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+
+      <div class="sidebar__credit">Made with <span class="sidebar__credit__heart" data-icon="&#xe602;"></span> by the folks at <a clas="sidebar__credit__simpla" href="http://simpla.io" target="_blank">Simpla</div>
+
+
+
+    </aside>
+
+    <section class="content">
+
+      {{ range where .Data.Pages "Section" "docs" }}
+        <article class="content__section">
+          <a name="{{ .Params.anchor }}"></a>
+
+          <h1 class="content__section__title">{{ .Title }} <a href="#{{ .Params.anchor }}" class="content__section__anchor">#</a></h1>
+
+          {{ .Content }}
+
+        </article>
+      {{ end }}
+
+      {{ partial "footer.html" }}
+    </section>
+
+</section>

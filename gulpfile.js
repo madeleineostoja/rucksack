@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     wiredep = require('wiredep'),
-    exec = require('child_process').exec, 
+    exec = require('child_process').exec,
     livereload = require('gulp-livereload'),
 
     // Stylus plugins
@@ -15,49 +15,65 @@ var gulp = require('gulp'),
 
 // Paths
 var paths = {
-  styles: ['src/styles/*.styl', 'src/styles/**/*'],
-  js: ['src/js/*.js', wiredep().js] 
+
+  // Styles
+  fetchStyles: 'src/styles/style.styl',
+  watchStyles: 'src/styles/**/*.styl',
+
+  // Js
+  vendorJs: wiredep().js,
+  userJs: 'src/js/*js',
+
+  // Hugo
+  markup: 'src/**/*.html',
+  content: 'content/**/*.md'
+
 };
 
+// Add custom bower deps to vendor paths
+paths.vendorJs.push(
+  'bower_components/remodal/dist/remodal.js',
+  'bower_components/smoothscroll/dist/smoothscroll.js'
+);
 
 var dests = {
-  css: 'src/static/',
-  js: 'src/static/'
+  css: 'public/',
+  js: 'public/js'
 };
 
 
 // Stylus
 gulp.task('stylus', function () {
-  gulp.src(paths.styles[0])
+  gulp.src(paths.fetchStyles)
     .pipe(stylus({
       use: [
-        postStylus(['rucksack-css', 'lost']),
+        postStylus(['rucksack-css', 'postcss-normalize', 'lost']),
         rupture()
       ],
       compress: true
     }))
-    .pipe(gulp.dest(dests.css))
+    .pipe(gulp.dest(dests.css));
 });
 
 // User js
 gulp.task('js:user', function() {
-  return gulp.src(paths.js[0])
+  return gulp.src(paths.userJs)
     .pipe(uglify())
     .pipe(concat({ path: 'user.min.js'}))
-    .pipe(gulp.dest(dests.js))
+    .pipe(gulp.dest(dests.js));
 });
 
 // Vendor js
 gulp.task('js:vendor', function() {
-  return gulp.src(paths.js[1])
+  return gulp.src(paths.vendorJs)
     .pipe(uglify())
     .pipe(concat({ path: 'vendor.min.js'}))
-    .pipe(gulp.dest(dests.js))
+    .pipe(gulp.dest(dests.js));
 });
 
 // Hugo build
 gulp.task('hugo', function (fetch) {
-  return exec('hugo server --watch --port=8080', function (err, stdout) {
+  return exec('hugo', function (err, stdout) {
       console.log(stdout);
       fetch(err);
   });
@@ -65,9 +81,11 @@ gulp.task('hugo', function (fetch) {
 
 // Watch
 gulp.task('watch', function(){
-  gulp.watch(paths.js[0], ['js:user']);
-  gulp.watch(paths.js[1], ['js:vendor']);
-  gulp.watch(paths.styles[1], ['stylus']);
+  gulp.watch(paths.userJs, ['js:user']);
+  gulp.watch(paths.vendorJs, ['js:vendor']);
+  gulp.watch(paths.watchStyles, ['stylus']);
+  gulp.watch(paths.markup, ['hugo']);
+  gulp.watch(paths.content, ['hugo']);
 });
 
 // Define cli tasks

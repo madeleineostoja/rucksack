@@ -5,8 +5,679 @@
     <link>http://simplaio.github.io/rucksack/</link>
     <description>Recent content on Rucksack | CSS Superpowers</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en-au</language>
     <atom:link href="http://simplaio.github.io/rucksack/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Installation &amp; Usage</title>
+      <link>http://simplaio.github.io/rucksack/docs/usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/usage/</guid>
+      <description>&lt;p&gt;Integrating Rucksack into your workflow is easy. Just install it as an &lt;a href=&#34;https://www.npmjs.com/package/rucksack-css&#34;&gt;npm module&lt;/a&gt;, then either integrate it into your build tool of choice or process your CSS directly on the command line.&lt;/p&gt;
+
+&lt;p&gt;Since it&amp;rsquo;s built on the &lt;a href=&#34;https://github.com/postcss/postcss&#34;&gt;PostCSS ecosystem&lt;/a&gt; it plays nice with all other CSS pre and post processors, and can even integrate into Stylus directly.&lt;/p&gt;
+
+&lt;p&gt;First install the npm module, then set up your workflow of choice:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install rucksack-css --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div style=&#34;overflow: auto;&#34;&gt;
+
+&lt;div class=&#34;usage__trigger&#34;&gt;
+  &lt;a data-remodal-target=&#39;gulp&#39;&gt;
+    &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/gulp.png&#39; class=&#34;usage__trigger__logo&#34; /&gt;
+    &lt;span class=&#34;usage__trigger__title&#34;&gt;With Gulp&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;usage__modal remodal&#34; data-remodal-id=&#39;gulp&#39;&gt;
+  &lt;span class=&#34;remodal-close&#34; data-remodal-action=&#34;close&#34; data-icon=&#34;x&#34;&gt;&lt;/span&gt;
+  &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/gulp.png&#39; alt=&#34;&#34; class=&#34;usage__modal__logo&#34; /&gt;
+  &lt;p&gt;Rucksack has a Gulp plugin - &lt;a href=&#34;https://github.com/simplaio/gulp-rucksack&#34;&gt;gulp-rucksack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Install with npm&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install gulp-rucksack --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then setup your gulp task&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var gulp = require(&#39;gulp&#39;),
+    rucksack = require(&#39;gulp-rucksack&#39;);
+
+gulp.task(&#39;rucksack&#39;, function() {
+  return gulp.src(&#39;src/style.css&#39;)
+    .pipe(rucksack())
+    .pipe(gulp.dest(&#39;style.css&#39;));
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Gulp Rucksack comes with full sourcemap support&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var gulp = require(&#39;gulp&#39;),
+    rucksack = require(&#39;gulp-rucksack&#39;),
+    sourcemaps = require(&#39;gulp-sourcemaps&#39;);
+
+gulp.task(&#39;rucksack&#39;, function() {
+  return gulp.src(&#39;src/style.css&#39;)
+    .pipe(sourcemaps.init())
+    .pipe(rucksack())
+    .pipe(sourcemaps.write(&#39;.&#39;))
+    .pipe(gulp.dest(&#39;style.css&#39;));
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&#34;usage__trigger&#34;&gt;
+  &lt;a data-remodal-target=&#39;grunt&#39;&gt;
+    &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/grunt.png&#39; class=&#34;usage__trigger__logo&#34; /&gt;
+    &lt;span class=&#34;usage__trigger__title&#34;&gt;With Grunt&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;usage__modal remodal&#34; data-remodal-id=&#39;grunt&#39;&gt;
+  &lt;span class=&#34;remodal-close&#34; data-remodal-action=&#34;close&#34; data-icon=&#34;x&#34;&gt;&lt;/span&gt;
+  &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/grunt.png&#39; alt=&#34;&#34; class=&#34;usage__modal__logo&#34; /&gt;
+  &lt;p&gt;Rucksack has a Grunt plugin - &lt;a href=&#34;https://github.com/simplaio/grunt-rucksack&#34;&gt;grunt-rucksack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Install it via npm&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install grunt-rucksack --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then load up your Grunt task&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;require(&#39;load-grunt-tasks&#39;)(grunt);
+
+grunt.initConfig({
+    rucksack: {
+        compile: {
+            files: {
+                &#39;style.css&#39;: &#39;src/style.css&#39;
+            }
+        }
+    }
+});
+
+grunt.registerTask(&#39;default&#39;, [&#39;rucksack&#39;]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&#34;usage__trigger&#34;&gt;
+  &lt;a data-remodal-target=&#39;broccoli&#39;&gt;
+    &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/broccoli.png&#39; class=&#34;usage__trigger__logo&#34; /&gt;
+    &lt;span class=&#34;usage__trigger__title&#34;&gt;With Broccoli&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;usage__modal remodal&#34; data-remodal-id=&#39;broccoli&#39;&gt;
+  &lt;span class=&#34;remodal-close&#34; data-remodal-action=&#34;close&#34; data-icon=&#34;x&#34;&gt;&lt;/span&gt;
+  &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/broccoli.png&#39; alt=&#34;&#34; class=&#34;usage__modal__logo&#34; /&gt;
+  &lt;p&gt;Rucksack has a Broccoli plugin - &lt;a href=&#34;https://github.com/simplaio/broccoli-rucksack&#34;&gt;broccoli-rucksack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Install via npm&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install broccoli-rucksack --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then setup your tree&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var rucksack = require(&#39;broccoli-rucksack&#39;);
+tree = rucksack(tree, [options]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&#34;usage__trigger&#34;&gt;
+  &lt;a data-remodal-target=&#39;cli&#39;&gt;
+    &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/cli.png&#39; class=&#34;usage__trigger__logo&#34; /&gt;
+    &lt;span class=&#34;usage__trigger__title&#34;&gt;Command Line&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;usage__modal remodal&#34; data-remodal-id=&#39;cli&#39;&gt;
+  &lt;span class=&#34;remodal-close&#34; data-remodal-action=&#34;close&#34; data-icon=&#34;x&#34;&gt;&lt;/span&gt;
+  &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/cli.png&#39; alt=&#34;&#34; class=&#34;usage__modal__logo&#34; /&gt;
+  &lt;p&gt;Process CSS directly on the command line with the Rucksack CLI tool. It&amp;rsquo;s comes bundled with Rucksack, so you can try it out straight away.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ rucksack src/style.css style.css [options]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Options:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  --no-autoprefixer   Disable automatic vendor prefixing.
+
+  --no-fallbacks      Disable legacy fallbacks.
+
+  --no-colors         Disable default color replacements.
+
+  --version,    -v    Show the version number.
+
+  --help,       -h    Show help screen.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&#34;usage__trigger&#34;&gt;
+  &lt;a data-remodal-target=&#39;postcss&#39;&gt;
+    &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/postcss.png&#39; class=&#34;usage__trigger__logo&#34; /&gt;
+    &lt;span class=&#34;usage__trigger__title&#34;&gt;With PostCSS&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;usage__modal remodal&#34; data-remodal-id=&#39;postcss&#39;&gt;
+  &lt;span class=&#34;remodal-close&#34; data-remodal-action=&#34;close&#34; data-icon=&#34;x&#34;&gt;&lt;/span&gt;
+  &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/postcss.png&#39; alt=&#34;&#34; class=&#34;usage__modal__logo&#34; /&gt;
+  &lt;p&gt;Rucksack is built on PostCSS, and can be used as a PostCSS plugin.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var postcss = require(&#39;postcss&#39;),
+    rucksack = require(&#39;rucksack-css&#39;);
+
+postcss([ rucksack() ])
+  .process(css, { from: &#39;src/style.css&#39;, to: &#39;style.css&#39; })
+  .then(function (result) {
+      fs.writeFileSync(&#39;style.css&#39;, result.css);
+      if ( result.map ) fs.writeFileSync(&#39;style.css.map&#39;, result.map);
+  });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;See the &lt;a href=&#34;https://github.com/postcss/postcss&#34;&gt;PostCSS Docs&lt;/a&gt; for examples for your environment.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&#34;usage__trigger&#34;&gt;
+  &lt;a data-remodal-target=&#39;stylus&#39;&gt;
+    &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/stylus.png&#39; class=&#34;usage__trigger__logo&#34; /&gt;
+    &lt;span class=&#34;usage__trigger__title&#34;&gt;With Stylus&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;usage__modal remodal&#34; data-remodal-id=&#39;stylus&#39;&gt;
+  &lt;span class=&#34;remodal-close&#34; data-remodal-action=&#34;close&#34; data-icon=&#34;x&#34;&gt;&lt;/span&gt;
+  &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/stylus.png&#39; alt=&#34;&#34; class=&#34;usage__modal__logo&#34; /&gt;
+  &lt;p&gt;Rucksack can be used as a Stylus plugin with &lt;a href=&#34;https://github.com/seaneking/poststylus&#34;&gt;PostStylus&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var poststylus = require(&#39;poststylus&#39;);
+
+stylus(css).use(
+  poststylus(&#39;rucksack-css&#39;)
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;See the &lt;a href=&#34;https://github.com/seaneking/poststylus&#34;&gt;PostStylus Docs&lt;/a&gt; for examples for your environment.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Responsive Typography</title>
+      <link>http://simplaio.github.io/rucksack/docs/responsive-type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/responsive-type/</guid>
+      <description>
+
+&lt;p&gt;Create automagical fluid typography with a new &lt;code&gt;responsive&lt;/code&gt; property on &lt;code&gt;font-size&lt;/code&gt;. All the typography on this site is responsive, resize your browser window to see it in action!&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-start:a6b7c01268140345226b1acb4b782f4d&#34;&gt;Quick start&lt;/h2&gt;
+
+&lt;p&gt;Rucksack&amp;rsquo;s responsive typography is fully adjustable, but all you need to get started is to specify &lt;code&gt;responsive&lt;/code&gt; as a font-size.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  font-size: responsive;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;specifying-parameters:a6b7c01268140345226b1acb4b782f4d&#34;&gt;Specifying parameters&lt;/h2&gt;
+
+&lt;p&gt;You&amp;rsquo;ll probably want to change those defaults and have some control over the bounds of a font size. The best way to do this is with a new shorthand syntax in &lt;code&gt;font-size&lt;/code&gt;, and a new property called &lt;code&gt;font-range&lt;/code&gt;. Font range specifies the viewport widths between which the font size is fluid, outside of this range the font sizes are set to min/max values.&lt;/p&gt;
+
+&lt;p&gt;The format of each property is very simple&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;font-size: responsive [min-font-size] [max-font-size]
+font-range: [lower-bound] [upper-bound]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For example&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;html {
+  font-size: responsive 12px 21px;
+  font-range: 420px 1280px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;expanded-syntax:a6b7c01268140345226b1acb4b782f4d&#34;&gt;Expanded syntax&lt;/h2&gt;
+
+&lt;p&gt;You can also specify all of these values independent properties&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;html {
+  font-size: responsive;
+  min-font-size: 12px;
+  max-font-size: 21px;
+  lower-font-range: 420px;
+  upper-font-range: 1280px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;output:a6b7c01268140345226b1acb4b782f4d&#34;&gt;Output&lt;/h2&gt;
+
+&lt;p&gt;Rucksack&amp;rsquo;s responsive typography outputs complex calc and vw based font-sizes, along with media queries to set the range between which a font size is fluid.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;html {
+  font-size: calc(12px + 9 * ((100vw - 420px) / 860));
+}
+
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 21px;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With the calc expression above being equivalent to&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;min-size + (max-size - min-size) * ((100vw - min-width) / (max-width - min-width))&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;defaults:a6b7c01268140345226b1acb4b782f4d&#34;&gt;Defaults&lt;/h2&gt;
+
+&lt;p&gt;To get started you only need to specify &lt;code&gt;font-size: responsive;&lt;/code&gt;, all other properties have sane defaults.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;min-font-size: 14px
+max-font-size: 21px
+lower-font-range: 420px
+upper-font-range: 1280px
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;supporting-legacy-browsers:a6b7c01268140345226b1acb4b782f4d&#34;&gt;Supporting legacy browsers&lt;/h2&gt;
+
+&lt;p&gt;Rucksack&amp;rsquo;s responsive typography works on all modern browsers (IE9+). Legacy browsers will ignore the output font-size, so it&amp;rsquo;s very easy to provide a static fallback.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;html {
+  font-size: 16px;
+  font-size: responsive;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Responsive Typography</title>
+      <link>http://simplaio.github.io/rucksack/home/responsive-type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/responsive-type/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  font-size: responsive;
+}
+
+
+/* Resize your browser! */
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Shorthand Positioning</title>
+      <link>http://simplaio.github.io/rucksack/docs/shorthand-positioning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/shorthand-positioning/</guid>
+      <description>
+
+&lt;p&gt;Rucksack provides the shorthand methods used by margin and padding to positioning properties. The same syntaxes apply&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;- [position]: [all];
+- [position]: [y] [x];
+- [position]: [top] [x] [bottom];
+- [position]: [top] [right] [bottom] [left];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;input:b6fc1cce8611b6d1f819c4ab98d2a9e9&#34;&gt;Input&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  absolute: 0;
+}
+
+.bar {
+  relative: 20% auto;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;output:b6fc1cce8611b6d1f819c4ab98d2a9e9&#34;&gt;Output&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bar {
+  position: relative;
+  top: 20%;
+  right: auto;
+  bottom: 20%;
+  left: auto;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Shorthand Positioning</title>
+      <link>http://simplaio.github.io/rucksack/home/shorthand-positioning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/shorthand-positioning/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  absolute: 0;
+}
+
+.bar {
+  relative: 20% auto;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Native Clearfix</title>
+      <link>http://simplaio.github.io/rucksack/docs/clearfix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/clearfix/</guid>
+      <description>
+
+&lt;p&gt;Rucksack bundles up common clearfix methods into native methods of the &lt;code&gt;clear&lt;/code&gt; property. A &amp;lsquo;clearfix&amp;rsquo; is a method of making a parent element self-clear it&amp;rsquo;s children, so floats and other properties are contained.&lt;/p&gt;
+
+&lt;p&gt;Two new methods are added, &lt;code&gt;fix&lt;/code&gt; and &lt;code&gt;fix-legacy&lt;/code&gt;. Both achieve the same outcome, with different levels of browser support. &lt;code&gt;fix&lt;/code&gt; outputs much cleaner code and is all that is needed for IE8+, &lt;code&gt;fix-legacy&lt;/code&gt; support IE6/7.&lt;/p&gt;
+
+&lt;h2 id=&#34;input:429b051e2a153a8670a70870dfc912ea&#34;&gt;Input&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  clear: fix;
+}
+
+.bar {
+  clear: fix-legacy;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;output:429b051e2a153a8670a70870dfc912ea&#34;&gt;Output&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo:after{
+  content: &#39;&#39;;
+  display: table;
+  clear: both;
+}
+
+
+.bar:before,
+.bar:after {
+  content: &#39;&#39;;
+  display: table;
+}
+.bar:after {
+  clear: both;
+}
+.bar {
+  zoom: 1;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Native Clearfix</title>
+      <link>http://simplaio.github.io/rucksack/home/clearfix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/clearfix/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  clear: fix;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Property Aliases</title>
+      <link>http://simplaio.github.io/rucksack/docs/alias/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/alias/</guid>
+      <description>
+
+&lt;p&gt;Rucksack allows you to set aliases for long property names and save some of those precious keystrokes. To set an alias simply add it to an &lt;code&gt;@alias&lt;/code&gt; rule in the format of &lt;code&gt;[alias]: [property];&lt;/code&gt;. Aliases can be used anywhere, including inside other properties. Aliases are global in a stylesheet, so it&amp;rsquo;s a good idea to have just a single &lt;code&gt;@alias&lt;/code&gt; rule in your project and specify all aliases in one place.&lt;/p&gt;
+
+&lt;h2 id=&#34;input:3b3d2541cd37edc022b27d62280cdf2f&#34;&gt;Input&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
+  fs: font-size;
+  bg: background;
+}
+
+.foo {
+  fs: 16px;
+  transition: bg 200ms ease;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;output:3b3d2541cd37edc022b27d62280cdf2f&#34;&gt;Output&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  font-size: 16px;
+  transition: background 200ms ease;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Property Aliases</title>
+      <link>http://simplaio.github.io/rucksack/home/alias/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/alias/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
+  fs: font-size;
+  br: border-radius;
+}
+
+.foo {
+  fs: 16px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quanitity Pseudo-Selectors</title>
+      <link>http://simplaio.github.io/rucksack/docs/quantity-pseudo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/quantity-pseudo/</guid>
+      <description>
+
+&lt;p&gt;Rucksack adds psuedo-selectors to select and style elements based on their quantity. Use them to build super powerful, responsive, content-driven designs.&lt;/p&gt;
+
+&lt;h2 id=&#34;at-least:0480254488cd73f5063255190d7f32dd&#34;&gt;:at-least&lt;/h2&gt;
+
+&lt;p&gt;Applies if there are a certain number of items or more&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-least(4) {
+  color: blue;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;at-most:0480254488cd73f5063255190d7f32dd&#34;&gt;:at-most&lt;/h2&gt;
+
+&lt;p&gt;Applies if there are a certain number of items or less&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
+  color: blue;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;between:0480254488cd73f5063255190d7f32dd&#34;&gt;:between&lt;/h2&gt;
+
+&lt;p&gt;Applies to all items between a certain range&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:between(4, 6) {
+  color: rebeccapurple;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;exactly:0480254488cd73f5063255190d7f32dd&#34;&gt;:exactly&lt;/h2&gt;
+
+&lt;p&gt;Applies when there are exactly a number of items&lt;/p&gt;
+
+&lt;p&gt;Target exactly count items:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:exactly(4) {
+  color: rebeccapurple;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;how-it-works:0480254488cd73f5063255190d7f32dd&#34;&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;The quanitity based pseudo-selectors style elements based on their sibling count, using constructions like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:nth-last-child(n+4),
+li:nth-last-child(n+4) ~ li
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For a more in-depth look at how this works and how to take advantage of it&amp;rsquo;s awesome power in your designs, read the recent article on A List Apart - &lt;a href=&#34;http://alistapart.com/article/quantity-queries-for-css&#34;&gt;Quantity Queries for CSS&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quanitity Queries</title>
+      <link>http://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
+  color: blue;
+}
+
+li:at-least(5) {
+  color: red;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hex RGBA Shortcuts</title>
+      <link>http://simplaio.github.io/rucksack/docs/hexrgba/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/hexrgba/</guid>
+      <description>
+
+&lt;p&gt;Rucksack provides an easy shortcut to add an alpha channel to any hex color. Just add the hex value you want to convert in place of the RGB value in &lt;code&gt;rgba()&lt;/code&gt;. The hex is converted to RGB and output as a proper &lt;code&gt;rgba()&lt;/code&gt; property.&lt;/p&gt;
+
+&lt;h2 id=&#34;input:2f57e4051bfff2585e887fe1e8adf84e&#34;&gt;Input&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  color: rgba(#fff, 0.8);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;output:2f57e4051bfff2585e887fe1e8adf84e&#34;&gt;Output&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  color: rgba(255,255,255, 0.8);
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hex RGBA Shortcuts</title>
+      <link>http://simplaio.github.io/rucksack/home/hexrgba/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/hexrgba/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  color: rgba(#fff, 0.8);
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Font Src Expansion</title>
+      <link>http://simplaio.github.io/rucksack/docs/font-src/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/font-src/</guid>
+      <description>
+
+&lt;p&gt;Rucksack provides a shortcut method to generate bulletproof &lt;code&gt;src&lt;/code&gt; sets in &lt;code&gt;@font-face&lt;/code&gt;, with a new &lt;code&gt;font-path&lt;/code&gt; property. Just set the path to your font files in &lt;code&gt;font-path&lt;/code&gt;, and it will output a src set based on the &lt;a href=&#34;http://blog.fontspring.com/2011/02/further-hardening-of-the-bulletproof-syntax/&#34;&gt;FontSpring syntax&lt;/a&gt;. Note that &lt;code&gt;font-path&lt;/code&gt; must be to the font &lt;em&gt;file&lt;/em&gt;, not just the directory containing the files.&lt;/p&gt;
+
+&lt;h2 id=&#34;input:f2abd75841bca483d201861228f32bc3&#34;&gt;Input&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
+  font-family: &#39;My Font&#39;;
+  font-path: &#39;/my/font/file&#39;;
+  font-weight: normal;
+  font-style: normal;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;output:f2abd75841bca483d201861228f32bc3&#34;&gt;Output&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
+  font-family: &#39;My Font&#39;;
+  src: url(&amp;quot;/my/font/file.eot&amp;quot;);
+  src: url(&amp;quot;/my/font/file.eot?#iefix&amp;quot;) format(&#39;embedded-opentype&#39;),
+       url(&amp;quot;/my/font/file.woff&amp;quot;) format(&#39;woff&#39;),
+       url(&amp;quot;/my/font/file.ttf&amp;quot;) format(&#39;truetype&#39;),
+       url(&amp;quot;/my/font/file.svg&amp;quot;) format(&#39;svg&#39;);
+  font-weight: normal;
+  font-style: normal;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Font Src Expansion</title>
+      <link>http://simplaio.github.io/rucksack/home/font-src/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/font-src/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
+  font-family: &#39;My Font&#39;;
+  font-path: &#39;/my/font/file&#39;;
+  font-weight: normal;
+  font-style: normal;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
