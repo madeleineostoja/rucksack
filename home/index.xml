@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Rucksack | CSS Superpowers</title>
+    <link>http://simplaio.github.io/rucksack/home/</link>
+    <description>Recent content in Homes on Rucksack | CSS Superpowers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <atom:link href="http://simplaio.github.io/rucksack/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Responsive Typography</title>
+      <link>http://simplaio.github.io/rucksack/home/responsive-type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/responsive-type/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  font-size: responsive;
+}
+
+
+/* Resize your browser! */
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Shorthand Positioning</title>
+      <link>http://simplaio.github.io/rucksack/home/shorthand-positioning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/shorthand-positioning/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  absolute: 0;
+}
+
+.bar {
+  relative: 20% auto;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Native Clearfix</title>
+      <link>http://simplaio.github.io/rucksack/home/clearfix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/clearfix/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  clear: fix;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Property Aliases</title>
+      <link>http://simplaio.github.io/rucksack/home/alias/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/alias/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
+  fs: font-size;
+  br: border-radius;
+}
+
+.foo {
+  fs: 16px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quanitity Queries</title>
+      <link>http://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
+  color: blue;
+}
+
+li:at-least(5) {
+  color: red;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hex RGBA Shortcuts</title>
+      <link>http://simplaio.github.io/rucksack/home/hexrgba/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/hexrgba/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  color: rgba(#fff, 0.8);
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Font Src Expansion</title>
+      <link>http://simplaio.github.io/rucksack/home/font-src/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/font-src/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
+  font-family: &#39;My Font&#39;;
+  font-path: &#39;/my/font/file&#39;;
+  font-weight: normal;
+  font-style: normal;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>All The Easings!</title>
+      <link>http://simplaio.github.io/rucksack/home/easings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/easings/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  transition: ease-in-cubic;
+}
+
+.bar {
+  transition: ease-out-back;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New Default Colors</title>
+      <link>http://simplaio.github.io/rucksack/home/colors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/colors/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo{
+  color: blue;
+}
+
+/* Becomes (from Material) */
+.foo {
+  color: #2196F3;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Legacy Fallbacks</title>
+      <link>http://simplaio.github.io/rucksack/home/fallbacks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/fallbacks/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  opacity: 0.8;
+}
+
+/* Becomes */
+.foo {
+  -ms-filter: &amp;quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=80)&amp;quot;;
+  opacity: 0.8;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automatic Prefixing</title>
+      <link>http://simplaio.github.io/rucksack/home/autoprefixing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/autoprefixing/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo{
+  transition: all;
+}
+
+/* Becomes (from CanIUse) */
+.foo {
+  -webkit-transition: all;
+          transition: all;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

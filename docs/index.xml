@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rucksack | CSS Superpowers</title>
-    <link>http://simplaio.github.io/rucksack/</link>
-    <description>Recent content on Rucksack | CSS Superpowers</description>
+    <title>Docs on Rucksack | CSS Superpowers</title>
+    <link>http://simplaio.github.io/rucksack/docs/</link>
+    <description>Recent content in Docs on Rucksack | CSS Superpowers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-au</language>
-    <atom:link href="http://simplaio.github.io/rucksack/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://simplaio.github.io/rucksack/docs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Installation &amp; Usage</title>
@@ -320,22 +320,6 @@ upper-font-range: 1280px
     </item>
     
     <item>
-      <title>Responsive Typography</title>
-      <link>http://simplaio.github.io/rucksack/home/responsive-type/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://simplaio.github.io/rucksack/home/responsive-type/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  font-size: responsive;
-}
-
-
-/* Resize your browser! */
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Shorthand Positioning</title>
       <link>http://simplaio.github.io/rucksack/docs/shorthand-positioning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -378,23 +362,6 @@ upper-font-range: 1280px
   right: auto;
   bottom: 20%;
   left: auto;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Shorthand Positioning</title>
-      <link>http://simplaio.github.io/rucksack/home/shorthand-positioning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://simplaio.github.io/rucksack/home/shorthand-positioning/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  absolute: 0;
-}
-
-.bar {
-  relative: 20% auto;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -448,19 +415,6 @@ upper-font-range: 1280px
     </item>
     
     <item>
-      <title>Native Clearfix</title>
-      <link>http://simplaio.github.io/rucksack/home/clearfix/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://simplaio.github.io/rucksack/home/clearfix/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  clear: fix;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Property Aliases</title>
       <link>http://simplaio.github.io/rucksack/docs/alias/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -488,24 +442,6 @@ upper-font-range: 1280px
 &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
   font-size: 16px;
   transition: background 200ms ease;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Property Aliases</title>
-      <link>http://simplaio.github.io/rucksack/home/alias/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://simplaio.github.io/rucksack/home/alias/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
-  fs: font-size;
-  br: border-radius;
-}
-
-.foo {
-  fs: 16px;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -572,23 +508,6 @@ li:nth-last-child(n+4) ~ li
     </item>
     
     <item>
-      <title>Quanitity Queries</title>
-      <link>http://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
-  color: blue;
-}
-
-li:at-least(5) {
-  color: red;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Hex RGBA Shortcuts</title>
       <link>http://simplaio.github.io/rucksack/docs/hexrgba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -609,19 +528,6 @@ li:at-least(5) {
 
 &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
   color: rgba(255,255,255, 0.8);
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hex RGBA Shortcuts</title>
-      <link>http://simplaio.github.io/rucksack/home/hexrgba/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://simplaio.github.io/rucksack/home/hexrgba/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  color: rgba(#fff, 0.8);
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -664,16 +570,354 @@ li:at-least(5) {
     </item>
     
     <item>
-      <title>Font Src Expansion</title>
-      <link>http://simplaio.github.io/rucksack/home/font-src/</link>
+      <title>All The Easings!</title>
+      <link>http://simplaio.github.io/rucksack/docs/easings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://simplaio.github.io/rucksack/home/font-src/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
-  font-family: &#39;My Font&#39;;
-  font-path: &#39;/my/font/file&#39;;
-  font-weight: normal;
-  font-style: normal;
+      <guid>http://simplaio.github.io/rucksack/docs/easings/</guid>
+      <description>
+
+&lt;p&gt;Rucksack comes with a whole library of modern easing functions for you to instantly use in CSS transitions and animations. The new easings are translated to &lt;code&gt;cubic-bezier()&lt;/code&gt; functions on output that CSS can natively understand.&lt;/p&gt;
+
+&lt;h2 id=&#34;input:6d1c8b29b26740a06ca5162cd12d9211&#34;&gt;Input&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  transition: all 250ms ease-in-cubic;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;output:6d1c8b29b26740a06ca5162cd12d9211&#34;&gt;Output&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  transition: all 250ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-sine&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-sine&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-out-sine&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-out-sine&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-out-sine&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-out-sine&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-quad&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-quad&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-out-quad&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-out-quad&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-out-quad&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-out-quad&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-cubic&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-cubic&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-out-cubic&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-out-cubic&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-out-cubic&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-out-cubic&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-quart&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-quart&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-out-quart&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-out-quart&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-out-quart&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-out-quart&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-quint&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-quint&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-out-quint&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-out-quint&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-out-quint&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-out-quint&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-expo&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-expo&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-out-expo&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-out-expo&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-out-expo&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-out-expo&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-circ&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-circ&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-out-circ&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-out-circ&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-out-circ&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-out-circ&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-back&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-back&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-out-back&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-out-back&lt;/code&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;easing&#34;&gt;
+  &lt;div class=&#34;easing__track&#34;&gt;
+    &lt;span class=&#34;easing__track__marker ease-in-out-back&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;code class=&#34;easing__name&#34;&gt;ease-in-out-back&lt;/code&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New Default Colors</title>
+      <link>http://simplaio.github.io/rucksack/docs/colors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/colors/</guid>
+      <description>&lt;p&gt;Rucksack automatically replaces default CSS color keywords (blue, red, yellow, etc.) with much nicer alternatives from Google&amp;rsquo;s &lt;a href=&#34;https://www.google.com/design/spec/style/color.html&#34;&gt;Material Design Colors&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is an optional add-on, and can be toggled on or off with the &lt;code&gt;colors&lt;/code&gt; option, passed to Rucksack on initialization (in Gulp, Grunt, etc.). By default color replacement is set to &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var rucksack = require(&#39;rucksack-css&#39;);
+
+// Set in build tool, etc.
+rucksack({
+  colors: true
+});
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Legacy Fallbacks</title>
+      <link>http://simplaio.github.io/rucksack/docs/fallbacks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/fallbacks/</guid>
+      <description>
+
+&lt;p&gt;Rucksack can automatically provide sane fallbacks for many properties for old browsers, making legacy browser support a breeze.&lt;/p&gt;
+
+&lt;p&gt;This is an optional add-on, and can be toggled on or off with the &lt;code&gt;fallbacks&lt;/code&gt; option, passed to Rucksack on initialization (in Gulp, Grunt, etc.). By default color replacement is set to &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var rucksack = require(&#39;rucksack-css&#39;);
+
+// Set in build tool, etc.
+rucksack({
+  fallbacks: true
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;opacity:55a54716ffff7e4c378dc72dd3df4c9b&#34;&gt;Opacity&lt;/h2&gt;
+
+&lt;p&gt;Generates the appropriate ms filter for achieving transparencies on IE8.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  opacity: 0.8;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  -ms-filter: &amp;quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=80)&amp;quot;;
+  opacity: 0.8;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;rgba:55a54716ffff7e4c378dc72dd3df4c9b&#34;&gt;RGBA&lt;/h2&gt;
+
+&lt;p&gt;Generates a hexidecimal fallback to &lt;code&gt;rgba()&lt;/code&gt; for &amp;lt;IE8&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+   background: rgba(153, 221, 153, 0.8);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  background: #99DD99;
+  background: rgba(153, 221, 153, 0.8);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;pseudo-elements:55a54716ffff7e4c378dc72dd3df4c9b&#34;&gt;Pseudo elements&lt;/h2&gt;
+
+&lt;p&gt;Converts &lt;code&gt;::pseudo&lt;/code&gt; elements to the CSS2-friendly single-colon style.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo::before {
+  content: &#39;&#39;;
+  color: blue;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo:before {
+  content: &#39;&#39;;
+  color: blue;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;vmin:55a54716ffff7e4c378dc72dd3df4c9b&#34;&gt;vmin&lt;/h2&gt;
+
+&lt;p&gt;Creates a &lt;code&gt;vm&lt;/code&gt; fallback to the &lt;code&gt;vmin&lt;/code&gt; unit for IE9&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  width: 50vmin;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  width: 50vm;
+  width: 50vmin;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automatic Prefixing</title>
+      <link>http://simplaio.github.io/rucksack/docs/autoprefixing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/autoprefixing/</guid>
+      <description>
+
+&lt;p&gt;Rucksack comes with the option to run your code through &lt;a href=&#34;https://github.com/postcss/autoprefixer&#34;&gt;Autoprefixer&lt;/a&gt;. Autoprefixer automatically applies relevant vendor prefixes based on data of current browser popularity and property support (from &lt;a href=&#34;http://caniuse.com/&#34;&gt;CanIUse&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;This is an optional add-on, and can be toggled on or off with the &lt;code&gt;autoprefixer&lt;/code&gt; option, passed to Rucksack on initialization (in Gulp, Grunt, etc.). By default color replacement is set to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var rucksack = require(&#39;rucksack-css&#39;);
+
+// Set in build tool, etc.
+rucksack({
+  autoprefixer: true
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;prefixing:e27a3ba1da1b19b58bd55213ecae100a&#34;&gt;Prefixing&lt;/h2&gt;
+
+&lt;p&gt;Head over to &lt;a href=&#34;http://caniuse.com&#34;&gt;CanIUse&lt;/a&gt; to see what kind of prefixes will be applied for various properties.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  display: flex
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;cleaning:e27a3ba1da1b19b58bd55213ecae100a&#34;&gt;Cleaning&lt;/h2&gt;
+
+&lt;p&gt;Autoprefixer also cleans your code of old, unnecessary vendor prefixes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  border-radius: 5px;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>

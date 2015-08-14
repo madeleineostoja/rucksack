@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<title>Rucksack | CSS Superpowers</title>
+<meta name="title" content="Rucksack | CSS Superpowers">
+<meta name="description" content="A little bag of CSS superpowers, built on PostCSS">
+<meta name="author" content="Simpla">
+<meta name="copyright" content="2015 Simpla">
+
+
+<meta property="og:title" content="Rucksack | CSS Superpowers"/>
+<meta property="og:url" content="http://simplaio.github.io/rucksack"/>
+<meta property="og:image" content="/img/full-logo.png"/>
+<meta property="og:description" content="A little bag of CSS superpowers, built on PostCSS"/>
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Rucksack | CSS Superpowers" />
+<meta name="twitter:description" content="A little bag of CSS superpowers, built on PostCSS" />
+<meta name="twitter:image" content="/img/full-logo.png" />
+<meta name="twitter:url" content="http://simplaio.github.io/rucksack" />
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<link rel="shortcut icon" href="/img/favicon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="Rucksack">
+<meta name="application-name" content="Rucksack">
+<meta name="msapplication-TileColor" content="#f2672e">
+<meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+    
+    <link rel="stylesheet" href="/style.css">
+
+    
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+
+    
+    <script src="/js/vendor.min.js"></script>
+    <script src="/js/user.min.js"></script>
+
+  </head>
+
+  <body lang="en-gb">
+
+
+<section class="docs">
+
+    <aside class="sidebar">
+
+      <a href="https://github.com/simplaio/rucksack" class="sidebar__github" data-icon="&#xe603;" title="Visit the GitHub Repo" target="_blank"></a>
+
+      <a href="/"><img src="img/logo.png" alt="Rucksack Logo" class="sidebar__logo"></a>
+
+      <nav>
+        <ul class="sidebar__nav">
+          
+            <li><a class="sidebar__nav__item" href="#usage">Installation &amp; Usage</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#responsive-type">Responsive Typography</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#shorthand-position">Shorthand Positioning</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#clearfix">Native Clearfix</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#alias">Property Aliases</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#quantity-pseudo">Quanitity Pseudo-Selectors</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#hexgrba">Hex RGBA Shortcuts</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#font-src">Font Src Expansion</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#easings">All The Easings!</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#colors">New Default Colors</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#fallbacks">Legacy Fallbacks</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#autoprefixing">Automatic Prefixing</a></li>
+          
+        </ul>
+      </nav>
+
+      <div class="sidebar__credit">Made with <span class="sidebar__credit__heart" data-icon="&#xe602;"></span> by the folks at <a clas="sidebar__credit__simpla" href="http://simpla.io" target="_blank">Simpla</div>
+
+
+
+    </aside>
+
+    <section class="content">
+
+      
+        <article class="content__section">
+          <a name="usage"></a>
+
+          <h1 class="content__section__title">Installation &amp; Usage <a href="#usage" class="content__section__anchor">#</a></h1>
+
+          <p>Integrating Rucksack into your workflow is easy. Just install it as an <a href="https://www.npmjs.com/package/rucksack-css">npm module</a>, then either integrate it into your build tool of choice or process your CSS directly on the command line.</p>
+
+<p>Since it&rsquo;s built on the <a href="https://github.com/postcss/postcss">PostCSS ecosystem</a> it plays nice with all other CSS pre and post processors, and can even integrate into Stylus directly.</p>
+
+<p>First install the npm module, then set up your workflow of choice:</p>
+
+<pre><code class="language-bash">$ npm install rucksack-css --save
+</code></pre>
+
+<div style="overflow: auto;">
+
+<div class="usage__trigger">
+  <a data-remodal-target='gulp'>
+    <img src='/img/usage/gulp.png' class="usage__trigger__logo" />
+    <span class="usage__trigger__title">With Gulp</span>
+  </a>
+</div>
+
+<div class="usage__modal remodal" data-remodal-id='gulp'>
+  <span class="remodal-close" data-remodal-action="close" data-icon="x"></span>
+  <img src='/img/usage/gulp.png' alt="" class="usage__modal__logo" />
+  <p>Rucksack has a Gulp plugin - <a href="https://github.com/simplaio/gulp-rucksack">gulp-rucksack</a></p>
+
+<p>Install with npm</p>
+
+<pre><code class="language-bash">$ npm install gulp-rucksack --save-dev
+</code></pre>
+
+<p>Then setup your gulp task</p>
+
+<pre><code class="language-javascript">var gulp = require('gulp'),
+    rucksack = require('gulp-rucksack');
+
+gulp.task('rucksack', function() {
+  return gulp.src('src/style.css')
+    .pipe(rucksack())
+    .pipe(gulp.dest('style.css'));
+});
+</code></pre>
+
+<p>Gulp Rucksack comes with full sourcemap support</p>
+
+<pre><code class="language-javascript">var gulp = require('gulp'),
+    rucksack = require('gulp-rucksack'),
+    sourcemaps = require('gulp-sourcemaps');
+
+gulp.task('rucksack', function() {
+  return gulp.src('src/style.css')
+    .pipe(sourcemaps.init())
+    .pipe(rucksack())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('style.css'));
+});
+</code></pre>
+
+</div>
+
+
+<div class="usage__trigger">
+  <a data-remodal-target='grunt'>
+    <img src='/img/usage/grunt.png' class="usage__trigger__logo" />
+    <span class="usage__trigger__title">With Grunt</span>
+  </a>
+</div>
+
+<div class="usage__modal remodal" data-remodal-id='grunt'>
+  <span class="remodal-close" data-remodal-action="close" data-icon="x"></span>
+  <img src='/img/usage/grunt.png' alt="" class="usage__modal__logo" />
+  <p>Rucksack has a Grunt plugin - <a href="https://github.com/simplaio/grunt-rucksack">grunt-rucksack</a></p>
+
+<p>Install it via npm</p>
+
+<pre><code class="language-bash">$ npm install grunt-rucksack --save-dev
+</code></pre>
+
+<p>Then load up your Grunt task</p>
+
+<pre><code class="language-javascript">require('load-grunt-tasks')(grunt);
+
+grunt.initConfig({
+    rucksack: {
+        compile: {
+            files: {
+                'style.css': 'src/style.css'
+            }
+        }
+    }
+});
+
+grunt.registerTask('default', ['rucksack']);
+</code></pre>
+
+</div>
+
+
+<div class="usage__trigger">
+  <a data-remodal-target='broccoli'>
+    <img src='/img/usage/broccoli.png' class="usage__trigger__logo" />
+    <span class="usage__trigger__title">With Broccoli</span>
+  </a>
+</div>
+
+<div class="usage__modal remodal" data-remodal-id='broccoli'>
+  <span class="remodal-close" data-remodal-action="close" data-icon="x"></span>
+  <img src='/img/usage/broccoli.png' alt="" class="usage__modal__logo" />
+  <p>Rucksack has a Broccoli plugin - <a href="https://github.com/simplaio/broccoli-rucksack">broccoli-rucksack</a></p>
+
+<p>Install via npm</p>
+
+<pre><code class="language-bash">$ npm install broccoli-rucksack --save-dev
+</code></pre>
+
+<p>Then setup your tree</p>
+
+<pre><code class="language-javascript">var rucksack = require('broccoli-rucksack');
+tree = rucksack(tree, [options]);
+</code></pre>
+
+</div>
+
+
+<div class="usage__trigger">
+  <a data-remodal-target='cli'>
+    <img src='/img/usage/cli.png' class="usage__trigger__logo" />
+    <span class="usage__trigger__title">Command Line</span>
+  </a>
+</div>
+
+<div class="usage__modal remodal" data-remodal-id='cli'>
+  <span class="remodal-close" data-remodal-action="close" data-icon="x"></span>
+  <img src='/img/usage/cli.png' alt="" class="usage__modal__logo" />
+  <p>Process CSS directly on the command line with the Rucksack CLI tool. It&rsquo;s comes bundled with Rucksack, so you can try it out straight away.</p>
+
+<pre><code class="language-bash">$ rucksack src/style.css style.css [options]
+</code></pre>
+
+<p>Options:</p>
+
+<pre><code class="language-bash">  --no-autoprefixer   Disable automatic vendor prefixing.
+
+  --no-fallbacks      Disable legacy fallbacks.
+
+  --no-colors         Disable default color replacements.
+
+  --version,    -v    Show the version number.
+
+  --help,       -h    Show help screen.
+</code></pre>
+
+</div>
+
+
+<div class="usage__trigger">
+  <a data-remodal-target='postcss'>
+    <img src='/img/usage/postcss.png' class="usage__trigger__logo" />
+    <span class="usage__trigger__title">With PostCSS</span>
+  </a>
+</div>
+
+<div class="usage__modal remodal" data-remodal-id='postcss'>
+  <span class="remodal-close" data-remodal-action="close" data-icon="x"></span>
+  <img src='/img/usage/postcss.png' alt="" class="usage__modal__logo" />
+  <p>Rucksack is built on PostCSS, and can be used as a PostCSS plugin.</p>
+
+<pre><code class="language-javascript">var postcss = require('postcss'),
+    rucksack = require('rucksack-css');
+
+postcss([ rucksack() ])
+  .process(css, { from: 'src/style.css', to: 'style.css' })
+  .then(function (result) {
+      fs.writeFileSync('style.css', result.css);
+      if ( result.map ) fs.writeFileSync('style.css.map', result.map);
+  });
+</code></pre>
+
+<p>See the <a href="https://github.com/postcss/postcss">PostCSS Docs</a> for examples for your environment.</p>
+
+</div>
+
+
+<div class="usage__trigger">
+  <a data-remodal-target='stylus'>
+    <img src='/img/usage/stylus.png' class="usage__trigger__logo" />
+    <span class="usage__trigger__title">With Stylus</span>
+  </a>
+</div>
+
+<div class="usage__modal remodal" data-remodal-id='stylus'>
+  <span class="remodal-close" data-remodal-action="close" data-icon="x"></span>
+  <img src='/img/usage/stylus.png' alt="" class="usage__modal__logo" />
+  <p>Rucksack can be used as a Stylus plugin with <a href="https://github.com/seaneking/poststylus">PostStylus</a></p>
+
+<pre><code class="language-javascript">var poststylus = require('poststylus');
+
+stylus(css).use(
+  poststylus('rucksack-css')
+);
+</code></pre>
+
+<p>See the <a href="https://github.com/seaneking/poststylus">PostStylus Docs</a> for examples for your environment.</p>
+
+</div>
+
+
+</div>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="responsive-type"></a>
+
+          <h1 class="content__section__title">Responsive Typography <a href="#responsive-type" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Create automagical fluid typography with a new <code>responsive</code> property on <code>font-size</code>. All the typography on this site is responsive, resize your browser window to see it in action!</p>
+
+<h2 id="quick-start:a6b7c01268140345226b1acb4b782f4d">Quick start</h2>
+
+<p>Rucksack&rsquo;s responsive typography is fully adjustable, but all you need to get started is to specify <code>responsive</code> as a font-size.</p>
+
+<pre><code class="language-css">.foo {
+  font-size: responsive;
+}
+</code></pre>
+
+<h2 id="specifying-parameters:a6b7c01268140345226b1acb4b782f4d">Specifying parameters</h2>
+
+<p>You&rsquo;ll probably want to change those defaults and have some control over the bounds of a font size. The best way to do this is with a new shorthand syntax in <code>font-size</code>, and a new property called <code>font-range</code>. Font range specifies the viewport widths between which the font size is fluid, outside of this range the font sizes are set to min/max values.</p>
+
+<p>The format of each property is very simple</p>
+
+<pre><code class="language-css">font-size: responsive [min-font-size] [max-font-size]
+font-range: [lower-bound] [upper-bound]
+</code></pre>
+
+<p>For example</p>
+
+<pre><code class="language-css">html {
+  font-size: responsive 12px 21px;
+  font-range: 420px 1280px;
+}
+</code></pre>
+
+<h2 id="expanded-syntax:a6b7c01268140345226b1acb4b782f4d">Expanded syntax</h2>
+
+<p>You can also specify all of these values independent properties</p>
+
+<pre><code class="language-css">html {
+  font-size: responsive;
+  min-font-size: 12px;
+  max-font-size: 21px;
+  lower-font-range: 420px;
+  upper-font-range: 1280px;
+}
+</code></pre>
+
+<h2 id="output:a6b7c01268140345226b1acb4b782f4d">Output</h2>
+
+<p>Rucksack&rsquo;s responsive typography outputs complex calc and vw based font-sizes, along with media queries to set the range between which a font size is fluid.</p>
+
+<pre><code class="language-css">html {
+  font-size: calc(12px + 9 * ((100vw - 420px) / 860));
+}
+
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 21px;
+  }
+}
+</code></pre>
+
+<p>With the calc expression above being equivalent to</p>
+
+<p><code>min-size + (max-size - min-size) * ((100vw - min-width) / (max-width - min-width))</code></p>
+
+<h2 id="defaults:a6b7c01268140345226b1acb4b782f4d">Defaults</h2>
+
+<p>To get started you only need to specify <code>font-size: responsive;</code>, all other properties have sane defaults.</p>
+
+<pre><code class="language-css">min-font-size: 14px
+max-font-size: 21px
+lower-font-range: 420px
+upper-font-range: 1280px
+</code></pre>
+
+<h2 id="supporting-legacy-browsers:a6b7c01268140345226b1acb4b782f4d">Supporting legacy browsers</h2>
+
+<p>Rucksack&rsquo;s responsive typography works on all modern browsers (IE9+). Legacy browsers will ignore the output font-size, so it&rsquo;s very easy to provide a static fallback.</p>
+
+<pre><code class="language-css">html {
+  font-size: 16px;
+  font-size: responsive;
+}
+</code></pre>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="shorthand-position"></a>
+
+          <h1 class="content__section__title">Shorthand Positioning <a href="#shorthand-position" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack provides the shorthand methods used by margin and padding to positioning properties. The same syntaxes apply</p>
+
+<pre><code class="language-css">- [position]: [all];
+- [position]: [y] [x];
+- [position]: [top] [x] [bottom];
+- [position]: [top] [right] [bottom] [left];
+</code></pre>
+
+<h2 id="input:b6fc1cce8611b6d1f819c4ab98d2a9e9">Input</h2>
+
+<pre><code class="language-css">.foo {
+  absolute: 0;
+}
+
+.bar {
+  relative: 20% auto;
+}
+</code></pre>
+
+<h2 id="output:b6fc1cce8611b6d1f819c4ab98d2a9e9">Output</h2>
+
+<pre><code class="language-css">.foo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bar {
+  position: relative;
+  top: 20%;
+  right: auto;
+  bottom: 20%;
+  left: auto;
+}
+</code></pre>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="clearfix"></a>
+
+          <h1 class="content__section__title">Native Clearfix <a href="#clearfix" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack bundles up common clearfix methods into native methods of the <code>clear</code> property. A &lsquo;clearfix&rsquo; is a method of making a parent element self-clear it&rsquo;s children, so floats and other properties are contained.</p>
+
+<p>Two new methods are added, <code>fix</code> and <code>fix-legacy</code>. Both achieve the same outcome, with different levels of browser support. <code>fix</code> outputs much cleaner code and is all that is needed for IE8+, <code>fix-legacy</code> support IE6/7.</p>
+
+<h2 id="input:429b051e2a153a8670a70870dfc912ea">Input</h2>
+
+<pre><code class="language-css">.foo {
+  clear: fix;
+}
+
+.bar {
+  clear: fix-legacy;
+}
+</code></pre>
+
+<h2 id="output:429b051e2a153a8670a70870dfc912ea">Output</h2>
+
+<pre><code class="language-css">.foo:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+.bar:before,
+.bar:after {
+  content: '';
+  display: table;
+}
+.bar:after {
+  clear: both;
+}
+.bar {
+  zoom: 1;
+}
+</code></pre>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="alias"></a>
+
+          <h1 class="content__section__title">Property Aliases <a href="#alias" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack allows you to set aliases for long property names and save some of those precious keystrokes. To set an alias simply add it to an <code>@alias</code> rule in the format of <code>[alias]: [property];</code>. Aliases can be used anywhere, including inside other properties. Aliases are global in a stylesheet, so it&rsquo;s a good idea to have just a single <code>@alias</code> rule in your project and specify all aliases in one place.</p>
+
+<h2 id="input:3b3d2541cd37edc022b27d62280cdf2f">Input</h2>
+
+<pre><code class="language-css">@alias {
+  fs: font-size;
+  bg: background;
+}
+
+.foo {
+  fs: 16px;
+  transition: bg 200ms ease;
+}
+</code></pre>
+
+<h2 id="output:3b3d2541cd37edc022b27d62280cdf2f">Output</h2>
+
+<pre><code class="language-css">.foo {
+  font-size: 16px;
+  transition: background 200ms ease;
+}
+</code></pre>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="quantity-pseudo"></a>
+
+          <h1 class="content__section__title">Quanitity Pseudo-Selectors <a href="#quantity-pseudo" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack adds psuedo-selectors to select and style elements based on their quantity. Use them to build super powerful, responsive, content-driven designs.</p>
+
+<h2 id="at-least:0480254488cd73f5063255190d7f32dd">:at-least</h2>
+
+<p>Applies if there are a certain number of items or more</p>
+
+<pre><code class="language-css">li:at-least(4) {
+  color: blue;
+}
+</code></pre>
+
+<h2 id="at-most:0480254488cd73f5063255190d7f32dd">:at-most</h2>
+
+<p>Applies if there are a certain number of items or less</p>
+
+<pre><code class="language-css">li:at-most(4) {
+  color: blue;
+}
+</code></pre>
+
+<h2 id="between:0480254488cd73f5063255190d7f32dd">:between</h2>
+
+<p>Applies to all items between a certain range</p>
+
+<pre><code class="language-css">li:between(4, 6) {
+  color: rebeccapurple;
+}
+</code></pre>
+
+<h2 id="exactly:0480254488cd73f5063255190d7f32dd">:exactly</h2>
+
+<p>Applies when there are exactly a number of items</p>
+
+<p>Target exactly count items:</p>
+
+<pre><code class="language-css">li:exactly(4) {
+  color: rebeccapurple;
+}
+</code></pre>
+
+<h2 id="how-it-works:0480254488cd73f5063255190d7f32dd">How it works</h2>
+
+<p>The quanitity based pseudo-selectors style elements based on their sibling count, using constructions like:</p>
+
+<pre><code class="language-css">li:nth-last-child(n+4),
+li:nth-last-child(n+4) ~ li
+</code></pre>
+
+<p>For a more in-depth look at how this works and how to take advantage of it&rsquo;s awesome power in your designs, read the recent article on A List Apart - <a href="http://alistapart.com/article/quantity-queries-for-css">Quantity Queries for CSS</a>.</p>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="hexgrba"></a>
+
+          <h1 class="content__section__title">Hex RGBA Shortcuts <a href="#hexgrba" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack provides an easy shortcut to add an alpha channel to any hex color. Just add the hex value you want to convert in place of the RGB value in <code>rgba()</code>. The hex is converted to RGB and output as a proper <code>rgba()</code> property.</p>
+
+<h2 id="input:2f57e4051bfff2585e887fe1e8adf84e">Input</h2>
+
+<pre><code class="language-css">.foo {
+  color: rgba(#fff, 0.8);
+}
+</code></pre>
+
+<h2 id="output:2f57e4051bfff2585e887fe1e8adf84e">Output</h2>
+
+<pre><code class="language-css">.foo {
+  color: rgba(255,255,255, 0.8);
+}
+</code></pre>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="font-src"></a>
+
+          <h1 class="content__section__title">Font Src Expansion <a href="#font-src" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack provides a shortcut method to generate bulletproof <code>src</code> sets in <code>@font-face</code>, with a new <code>font-path</code> property. Just set the path to your font files in <code>font-path</code>, and it will output a src set based on the <a href="http://blog.fontspring.com/2011/02/further-hardening-of-the-bulletproof-syntax/">FontSpring syntax</a>. Note that <code>font-path</code> must be to the font <em>file</em>, not just the directory containing the files.</p>
+
+<h2 id="input:f2abd75841bca483d201861228f32bc3">Input</h2>
+
+<pre><code class="language-css">@font-face {
+  font-family: 'My Font';
+  font-path: '/my/font/file';
+  font-weight: normal;
+  font-style: normal;
+}
+</code></pre>
+
+<h2 id="output:f2abd75841bca483d201861228f32bc3">Output</h2>
+
+<pre><code class="language-css">@font-face {
+  font-family: 'My Font';
+  src: url(&quot;/my/font/file.eot&quot;);
+  src: url(&quot;/my/font/file.eot?#iefix&quot;) format('embedded-opentype'),
+       url(&quot;/my/font/file.woff&quot;) format('woff'),
+       url(&quot;/my/font/file.ttf&quot;) format('truetype'),
+       url(&quot;/my/font/file.svg&quot;) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+</code></pre>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="easings"></a>
+
+          <h1 class="content__section__title">All The Easings! <a href="#easings" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack comes with a whole library of modern easing functions for you to instantly use in CSS transitions and animations. The new easings are translated to <code>cubic-bezier()</code> functions on output that CSS can natively understand.</p>
+
+<h2 id="input:6d1c8b29b26740a06ca5162cd12d9211">Input</h2>
+
+<pre><code class="language-css">.foo {
+  transition: all 250ms ease-in-cubic;
+}
+</code></pre>
+
+<h2 id="output:6d1c8b29b26740a06ca5162cd12d9211">Output</h2>
+
+<pre><code class="language-css">.foo {
+  transition: all 250ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+</code></pre>
+
+<div>
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-sine"></span>
+  </div>
+<code class="easing__name">ease-in-sine</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-out-sine"></span>
+  </div>
+<code class="easing__name">ease-out-sine</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-out-sine"></span>
+  </div>
+<code class="easing__name">ease-in-out-sine</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-quad"></span>
+  </div>
+<code class="easing__name">ease-in-quad</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-out-quad"></span>
+  </div>
+<code class="easing__name">ease-out-quad</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-out-quad"></span>
+  </div>
+<code class="easing__name">ease-in-out-quad</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-cubic"></span>
+  </div>
+<code class="easing__name">ease-in-cubic</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-out-cubic"></span>
+  </div>
+<code class="easing__name">ease-out-cubic</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-out-cubic"></span>
+  </div>
+<code class="easing__name">ease-in-out-cubic</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-quart"></span>
+  </div>
+<code class="easing__name">ease-in-quart</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-out-quart"></span>
+  </div>
+<code class="easing__name">ease-out-quart</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-out-quart"></span>
+  </div>
+<code class="easing__name">ease-in-out-quart</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-quint"></span>
+  </div>
+<code class="easing__name">ease-in-quint</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-out-quint"></span>
+  </div>
+<code class="easing__name">ease-out-quint</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-out-quint"></span>
+  </div>
+<code class="easing__name">ease-in-out-quint</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-expo"></span>
+  </div>
+<code class="easing__name">ease-in-expo</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-out-expo"></span>
+  </div>
+<code class="easing__name">ease-out-expo</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-out-expo"></span>
+  </div>
+<code class="easing__name">ease-in-out-expo</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-circ"></span>
+  </div>
+<code class="easing__name">ease-in-circ</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-out-circ"></span>
+  </div>
+<code class="easing__name">ease-out-circ</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-out-circ"></span>
+  </div>
+<code class="easing__name">ease-in-out-circ</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-back"></span>
+  </div>
+<code class="easing__name">ease-in-back</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-out-back"></span>
+  </div>
+<code class="easing__name">ease-out-back</code>
+</div>
+
+  <div class="easing">
+  <div class="easing__track">
+    <span class="easing__track__marker ease-in-out-back"></span>
+  </div>
+<code class="easing__name">ease-in-out-back</code>
+</div>
+
+</div>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="colors"></a>
+
+          <h1 class="content__section__title">New Default Colors <a href="#colors" class="content__section__anchor">#</a></h1>
+
+          <p>Rucksack automatically replaces default CSS color keywords (blue, red, yellow, etc.) with much nicer alternatives from Google&rsquo;s <a href="https://www.google.com/design/spec/style/color.html">Material Design Colors</a>.</p>
+
+<p>This is an optional add-on, and can be toggled on or off with the <code>colors</code> option, passed to Rucksack on initialization (in Gulp, Grunt, etc.). By default color replacement is set to <code>true</code>.</p>
+
+<pre><code class="language-javascript">var rucksack = require('rucksack-css');
+
+// Set in build tool, etc.
+rucksack({
+  colors: true
+});
+</code></pre>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="fallbacks"></a>
+
+          <h1 class="content__section__title">Legacy Fallbacks <a href="#fallbacks" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack can automatically provide sane fallbacks for many properties for old browsers, making legacy browser support a breeze.</p>
+
+<p>This is an optional add-on, and can be toggled on or off with the <code>fallbacks</code> option, passed to Rucksack on initialization (in Gulp, Grunt, etc.). By default color replacement is set to <code>true</code>.</p>
+
+<pre><code class="language-javascript">var rucksack = require('rucksack-css');
+
+// Set in build tool, etc.
+rucksack({
+  fallbacks: true
+});
+</code></pre>
+
+<h2 id="opacity:55a54716ffff7e4c378dc72dd3df4c9b">Opacity</h2>
+
+<p>Generates the appropriate ms filter for achieving transparencies on IE8.</p>
+
+<pre><code class="language-css">.foo {
+  opacity: 0.8;
+}
+</code></pre>
+
+<pre><code class="language-css">.foo {
+  -ms-filter: &quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=80)&quot;;
+  opacity: 0.8;
+}
+</code></pre>
+
+<h2 id="rgba:55a54716ffff7e4c378dc72dd3df4c9b">RGBA</h2>
+
+<p>Generates a hexidecimal fallback to <code>rgba()</code> for &lt;IE8</p>
+
+<pre><code class="language-css">.foo {
+   background: rgba(153, 221, 153, 0.8);
+}
+</code></pre>
+
+<pre><code class="language-css">.foo {
+  background: #99DD99;
+  background: rgba(153, 221, 153, 0.8);
+}
+</code></pre>
+
+<h2 id="pseudo-elements:55a54716ffff7e4c378dc72dd3df4c9b">Pseudo elements</h2>
+
+<p>Converts <code>::pseudo</code> elements to the CSS2-friendly single-colon style.</p>
+
+<pre><code class="language-css">.foo::before {
+  content: '';
+  color: blue;
+}
+</code></pre>
+
+<pre><code class="language-css">.foo:before {
+  content: '';
+  color: blue;
+}
+</code></pre>
+
+<h2 id="vmin:55a54716ffff7e4c378dc72dd3df4c9b">vmin</h2>
+
+<p>Creates a <code>vm</code> fallback to the <code>vmin</code> unit for IE9</p>
+
+<pre><code class="language-css">.foo {
+  width: 50vmin;
+}
+</code></pre>
+
+<pre><code class="language-css">.foo {
+  width: 50vm;
+  width: 50vmin;
+}
+</code></pre>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="autoprefixing"></a>
+
+          <h1 class="content__section__title">Automatic Prefixing <a href="#autoprefixing" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack comes with the option to run your code through <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>. Autoprefixer automatically applies relevant vendor prefixes based on data of current browser popularity and property support (from <a href="http://caniuse.com/">CanIUse</a>).</p>
+
+<p>This is an optional add-on, and can be toggled on or off with the <code>autoprefixer</code> option, passed to Rucksack on initialization (in Gulp, Grunt, etc.). By default color replacement is set to <code>false</code>.</p>
+
+<pre><code class="language-javascript">var rucksack = require('rucksack-css');
+
+// Set in build tool, etc.
+rucksack({
+  autoprefixer: true
+});
+</code></pre>
+
+<h2 id="prefixing:e27a3ba1da1b19b58bd55213ecae100a">Prefixing</h2>
+
+<p>Head over to <a href="http://caniuse.com">CanIUse</a> to see what kind of prefixes will be applied for various properties.</p>
+
+<pre><code class="language-css">.foo {
+  display: flex
+}
+</code></pre>
+
+<pre><code class="language-css">.foo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex
+}
+</code></pre>
+
+<h2 id="cleaning:e27a3ba1da1b19b58bd55213ecae100a">Cleaning</h2>
+
+<p>Autoprefixer also cleans your code of old, unnecessary vendor prefixes.</p>
+
+<pre><code class="language-css">.foo {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+</code></pre>
+
+<pre><code class="language-css">.foo {
+  border-radius: 5px;
+}
+</code></pre>
+
+
+        </article>
+      
+
+        <footer class="footer">
+    <span class="footer-copyright">MIT © <a href="http://simpla.io" target="blank">Simpla</a> 2015</span>
+  </footer>
+
+  </body>
+</html>
+
+    </section>
+
+</section>
