@@ -12,16 +12,15 @@
 
     {{ partial "meta.html" . }}
 
-
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL}}/style.css">
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
 
     <!-- Javascript -->
-    <script src="/js/vendor.min.js"></script>
-    <script src="/js/user.min.js"></script>
+    <script src="{{ .Site.BaseURL}}/js/vendor.min.js"></script>
+    <script src="{{ .Site.BaseURL}}/js/user.min.js"></script>
 
   </head>
 
