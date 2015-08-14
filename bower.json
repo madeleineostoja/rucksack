@@ -1,0 +1,9 @@
+{
+  "name": "rucksack-web",
+  "dependencies": {
+    "jquery": "*",
+    "html5shiv": "*",
+    "respond": "*",
+    "html5-placeholder-polyfill": "*"
+  }
+}

@@ -1,0 +1,33 @@
+// aliases
+@alias
+  fs font-size
+  fw font-weight
+  br border-radius
+  bg background
+  trans transition
+
+// Modluar scale
+:root
+  --ms-bases 1.125, 1 // 18px, 16px
+  --ms-ratios 1.618034 // golden
+
+small = 14px
+scale0 = ms(1)rem
+scale1 = ms(2)rem
+scale2 = ms(3)rem
+scale3 = ms(4)rem
+scale4 = ms(5)rem
+scale5 = ms(6)rem
+scale6 = ms(7)rem
+scale7 = ms(8)rem
+
+// Placeholder styling
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+  &:-moz-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}

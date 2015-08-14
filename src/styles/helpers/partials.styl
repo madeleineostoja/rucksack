@@ -1,0 +1,17 @@
+@font-face
+  font-family 'icon'
+  font-path '/fonts/icon/icomoon'
+  font-weight normal
+  font-style normal
+
+icon()
+  font-family 'icon'
+  font-size inherit
+  line-height inherit
+  color inherit
+  vertical-align middle
+
+[data-icon]::before
+  icon()
+  content attr(data-icon)
+

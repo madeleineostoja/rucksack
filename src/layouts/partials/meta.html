@@ -1,0 +1,20 @@
+<!-- Site meta -->
+<title>{{ .Title }}</title>
+<meta name="title" content="{{ .Title }}">
+<meta name="description" content="{{ .Site.Params.description }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+<meta name="copyright" content="2015 {{ .Site.Params.author}}">
+
+<!-- Facebook meta -->
+<meta property="og:title" content="{{ .Title }}"/>
+<meta property="og:url" content="{{ .Site.BaseURL}}"/>
+<meta property="og:image" content=""/>
+<meta property="og:description" content="{{ .Site.Params.description }}"/>
+
+<!-- Twitter meta -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ .Site.Params.description }}" />
+<meta name="twitter:image" content="" />
+<meta name="twitter:url" content="{{ .Site.BaseURL }}" />

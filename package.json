@@ -1,0 +1,28 @@
+{
+  "name": "rucksack-web",
+  "version": "0.0.0",
+  "description": "Rucksack ia a little bag of CSS superpowers, built on PostCSS",
+  "license": "MIT",
+  "author": "Simpla",
+  "maintainers": [
+    {
+      "name": "Sean King",
+      "email": "sean@simpla.io",
+      "web": "http://simpla.io"
+    }
+  ],
+  "dependencies": {
+    "poststylus": "*",
+    "rupture": "*",
+    "rucksack-css": "*",
+    "lost": "*"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-stylus": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "wiredep": "*",
+    "gulp-livereload": "*"
+  }
+}
