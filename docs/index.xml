@@ -147,6 +147,13 @@ tree = rucksack(tree, [options]);
   &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/cli.png&#39; alt=&#34;&#34; class=&#34;usage__modal__logo&#34; /&gt;
   &lt;p&gt;Process CSS directly on the command line with the Rucksack CLI tool. It&amp;rsquo;s comes bundled with Rucksack, so you can try it out straight away.&lt;/p&gt;
 
+&lt;p&gt;First install the Rucksack npm module globally&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install -g rucksack-css
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then you can run the tool from anywhere&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ rucksack src/style.css style.css [options]
 &lt;/code&gt;&lt;/pre&gt;
 
