@@ -1,8 +1,3 @@
-input::placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
 input[type="range"]::thumb {
   background: #4286be;
   width: 16px;
