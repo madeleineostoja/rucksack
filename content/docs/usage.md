@@ -106,6 +106,12 @@ tree = rucksack(tree, [options]);
 
 Process CSS directly on the command line with the Rucksack CLI tool. It's comes bundled with Rucksack, so you can try it out straight away.
 
+First install the Rucksack npm module globally
+```bash
+$ npm install -g rucksack-css
+```
+
+Then you can run the tool from anywhere
 ```bash
 $ rucksack src/style.css style.css [options]
 ```
