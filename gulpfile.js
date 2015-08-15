@@ -47,7 +47,7 @@ gulp.task('stylus', function () {
   gulp.src(paths.fetchStyles)
     .pipe(stylus({
       use: [
-        postStylus(['rucksack-css', 'postcss-normalize', 'lost']),
+        postStylus(['lost', 'rucksack-css', 'postcss-normalize']),
         rupture()
       ],
       compress: true
