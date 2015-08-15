@@ -28,6 +28,9 @@ var fallbacks = [
 var autoprefixer = require('autoprefixer'),
     colors = require('postcss-color-palette');
 
+// Error reporting
+var reporter = require('postcss-reporter');
+
 // Define a custom color palette
 colors = colors({ palette: 'material' });
 
@@ -67,6 +70,8 @@ var rucksack = $postcss.plugin('rucksack', function(options) {
   if (options.colors) {
     plugins.push(colors);
   }
+
+  plugins.push(reporter);
 
   // Build PostCSS bundle
   plugins.forEach(function(plugin){

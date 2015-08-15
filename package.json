@@ -50,6 +50,7 @@
     "postcss-position": "^0.2.0",
     "postcss-pseudoelements": "^2.2.0",
     "postcss-quantity-queries": "^0.3.1",
+    "postcss-reporter": "^0.4.0",
     "postcss-responsive-type": "^0.1.0",
     "postcss-vmin": "^1.0.0",
     "read-file-stdin": "^0.2.0",
