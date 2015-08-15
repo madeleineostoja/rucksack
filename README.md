@@ -129,6 +129,18 @@ _Native clearfix_
 }
 ```
 
+_Input pseudo-elements_
+```css
+input::placeholder {
+  color: black;
+  opacity: 0.8;
+}
+
+input[type="range"]::thumb {
+  background: blue;
+}
+```
+
 _Hex shortcuts for RGBA_
 ```css
 .foo {
