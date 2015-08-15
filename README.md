@@ -117,8 +117,7 @@ _Automagical responsive typography_
 _Shorthand syntax for positioning properties_
 ```css
 .foo {
-  absolute: 0 20px;
-  relative: 20% 0 30px;
+  position: absolute 0 20px;
 }
 ```
 

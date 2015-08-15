@@ -47,7 +47,7 @@
     "postcss-hexrgba": "^0.1.0",
     "postcss-input-style": "^0.2.0",
     "postcss-opacity": "^2.0.0",
-    "postcss-position": "^0.2.0",
+    "postcss-position": "^0.3.0",
     "postcss-pseudoelements": "^2.2.0",
     "postcss-quantity-queries": "^0.3.1",
     "postcss-reporter": "^0.4.0",
