@@ -73,6 +73,23 @@
     </item>
     
     <item>
+      <title>Input Pseduo-Elements</title>
+      <link>http://simplaio.github.io/rucksack/home/input/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/input/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::placeholder {
+  color: black;
+}
+
+input[type=&amp;quot;range&amp;quot;]::thumb {
+  background: blue;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Quanitity Queries</title>
       <link>http://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -90,19 +107,6 @@ li:at-least(5) {
     </item>
     
     <item>
-      <title>Hex RGBA Shortcuts</title>
-      <link>http://simplaio.github.io/rucksack/home/hexrgba/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://simplaio.github.io/rucksack/home/hexrgba/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  color: rgba(#fff, 0.8);
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Font Src Expansion</title>
       <link>http://simplaio.github.io/rucksack/home/font-src/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -113,6 +117,19 @@ li:at-least(5) {
   font-path: &#39;/my/font/file&#39;;
   font-weight: normal;
   font-style: normal;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hex RGBA Shortcuts</title>
+      <link>http://simplaio.github.io/rucksack/home/hexrgba/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/home/hexrgba/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  color: rgba(#fff, 0.8);
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>

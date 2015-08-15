@@ -43,6 +43,14 @@
   </url>
   
   <url>
+    <loc>http://simplaio.github.io/rucksack/docs/input/</loc>
+  </url>
+  
+  <url>
+    <loc>http://simplaio.github.io/rucksack/home/input/</loc>
+  </url>
+  
+  <url>
     <loc>http://simplaio.github.io/rucksack/docs/quantity-pseudo/</loc>
   </url>
   
@@ -51,19 +59,19 @@
   </url>
   
   <url>
-    <loc>http://simplaio.github.io/rucksack/docs/hexrgba/</loc>
-  </url>
-  
-  <url>
-    <loc>http://simplaio.github.io/rucksack/home/hexrgba/</loc>
-  </url>
-  
-  <url>
     <loc>http://simplaio.github.io/rucksack/docs/font-src/</loc>
   </url>
   
   <url>
     <loc>http://simplaio.github.io/rucksack/home/font-src/</loc>
+  </url>
+  
+  <url>
+    <loc>http://simplaio.github.io/rucksack/docs/hexrgba/</loc>
+  </url>
+  
+  <url>
+    <loc>http://simplaio.github.io/rucksack/home/hexrgba/</loc>
   </url>
   
   <url>
@@ -91,11 +99,11 @@
   </url>
   
   <url>
-    <loc>http://simplaio.github.io/rucksack/home/autoprefixing/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/autoprefixing/</loc>
   </url>
   
   <url>
-    <loc>http://simplaio.github.io/rucksack/docs/autoprefixing/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/autoprefixing/</loc>
   </url>
   
 </urlset>
