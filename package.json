@@ -14,8 +14,8 @@
   "dependencies": {
     "lost": "^6.5.0",
     "postcss-normalize": "^0.1.0",
-    "poststylus": "^0.2.0",
-    "rucksack-css": "^0.5.3"
+    "poststylus": "*",
+    "rucksack-css": "*"
   },
   "devDependencies": {
     "gulp": "*",
