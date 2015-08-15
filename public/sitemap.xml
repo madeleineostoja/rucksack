@@ -2,108 +2,108 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://0.0.0.0:8080/</loc>
+    <loc>http://simplaio.github.io/rucksack/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/usage/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/usage/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/responsive-type/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/responsive-type/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/responsive-type/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/responsive-type/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/shorthand-positioning/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/shorthand-positioning/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/shorthand-positioning/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/shorthand-positioning/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/clearfix/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/clearfix/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/clearfix/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/clearfix/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/alias/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/alias/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/alias/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/alias/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/input/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/input/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/input/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/input/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/quantity-pseudo/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/quantity-pseudo/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/quantity-pseudo/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/quantity-pseudo/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/font-src/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/font-src/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/font-src/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/font-src/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/hexrgba/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/hexrgba/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/hexrgba/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/hexrgba/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/easings/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/easings/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/easings/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/easings/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/colors/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/colors/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/colors/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/colors/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/fallbacks/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/fallbacks/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/fallbacks/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/fallbacks/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/home/autoprefixing/</loc>
+    <loc>http://simplaio.github.io/rucksack/docs/autoprefixing/</loc>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:8080/docs/autoprefixing/</loc>
+    <loc>http://simplaio.github.io/rucksack/home/autoprefixing/</loc>
   </url>
   
 </urlset>
