@@ -3,23 +3,27 @@ title: "Shorthand Positioning"
 anchor: "shorthand-position"
 weight: 2
 ---
-Rucksack provides the shorthand methods used by margin and padding to positioning properties. The same syntaxes apply
+Rucksack brings the shorthand methods used by margin and padding to position offsets. The same syntaxes apply
 
 ```css
-- [position]: [all];
-- [position]: [y] [x];
-- [position]: [top] [x] [bottom];
-- [position]: [top] [right] [bottom] [left];
+- position: [position] [all];
+- position: [position] [y] [x];
+- position: [position] [top] [x] [bottom];
+- position: [position] [top] [right] [bottom] [left];
 ```
 
 ## Input
 ```css
 .foo {
-  absolute: 0;
+  position: absolute 0;
 }
 
 .bar {
-  relative: 20% auto;
+  position: relative 20% auto;
+}
+
+.baz {
+  position: fixed 0 20px 10px;
 }
 ```
 
@@ -39,5 +43,13 @@ Rucksack provides the shorthand methods used by margin and padding to positionin
   right: auto;
   bottom: 20%;
   left: auto;
+}
+
+.baz {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  bottom: 10px;
+  left: 20px;
 }
 ```

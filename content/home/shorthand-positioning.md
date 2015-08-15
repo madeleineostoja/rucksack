@@ -5,10 +5,10 @@ weight: 2
 ---
 ```css
 .foo {
-  absolute: 0;
+  position: absolute 0;
 }
 
 .bar {
-  relative: 20% auto;
+  position: relative 20% auto;
 }
 ```
