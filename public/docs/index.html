@@ -90,11 +90,13 @@
           
             <li><a class="sidebar__nav__item" href="#alias">Property Aliases</a></li>
           
+            <li><a class="sidebar__nav__item" href="#input">Input Pseduo-Elements</a></li>
+          
             <li><a class="sidebar__nav__item" href="#quantity-pseudo">Quanitity Pseudo-Selectors</a></li>
           
-            <li><a class="sidebar__nav__item" href="#hexgrba">Hex RGBA Shortcuts</a></li>
-          
             <li><a class="sidebar__nav__item" href="#font-src">Font Src Expansion</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#hexgrba">Hex RGBA Shortcuts</a></li>
           
             <li><a class="sidebar__nav__item" href="#easings">All The Easings!</a></li>
           
@@ -556,6 +558,117 @@ upper-font-range: 1280px
         </article>
       
         <article class="content__section">
+          <a name="input"></a>
+
+          <h1 class="content__section__title">Input Pseduo-Elements <a href="#input" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers.</p>
+
+<p>Note that the rules in the output generated (see below) are duplicated/ungrouped because if a browser finds a single selector it doesn&rsquo;t understand in a group, the whole group is ignored (see <a href="http://www.w3.org/TR/selectors/#Conformance">Selectors Level 3</a>).</p>
+
+<h2 id="placeholders:0fa58901273a043169cc0dfabb934c88">Placeholders</h2>
+
+<p>Style placeholders with the <code>::placeholder</code> pseudo-element. It can be applied to any input element, or at the root of your stylesheet for global styling.</p>
+
+<p>Input</p>
+
+<pre><code class="language-css">input::placeholder {
+  color: black;
+  opacity: 0.8;
+}
+</code></pre>
+
+<p>Output</p>
+
+<pre><code class="language-css">input::-webkit-input-placeholder {
+  color: black;
+  opacity: 0.8;
+}
+
+input:-moz-placeholder {
+  color: black !important;
+  opacity: 0.8;
+}
+
+input::-moz-placeholder {
+  color: black !important;
+  opacity: 0.8;
+}
+
+input:-ms-input-placeholder {
+  color: black !important;
+  opacity: 0.8;
+}
+</code></pre>
+
+<p>The <code>!important</code> flag is automatically applied to <code>color</code> declerations on Firefox and IE, since it is needed to overcome defaults in those browsers.</p>
+
+<h2 id="range-elements:0fa58901273a043169cc0dfabb934c88">Range Elements</h2>
+
+<p>Style the notoriously tricky range input with <code>::track</code> and <code>::thumb</code>. Track targets the &lsquo;line&rsquo;, while thumb targets the &lsquo;button&rsquo;. They can be applied to any range element, or at the root of your stylesheet for global styling.</p>
+
+<p>Input</p>
+
+<pre><code class="language-css">input[type=&quot;range&quot;]::track {
+  background: #9d9d9d;
+  height: 3px;
+}
+
+input[type=&quot;range&quot;]::thumb {
+  background: #4286be;
+  width: 16px;
+  height: 8px;
+}
+</code></pre>
+
+<p>Output</p>
+
+<pre><code class="language-css">input[type=&quot;range&quot;]::-webkit-runnable-track {
+  -webkit-appearance: none !important;
+  background: #9d9d9d;
+  height: 3px;
+}
+
+input[type=&quot;range&quot;]::-moz-range-track  {
+  -moz-appearance: none !important;
+  background: #9d9d9d;
+  height: 3px;
+}
+
+input[type=&quot;range&quot;]::-ms-track  {
+  background: #9d9d9d;
+  height: 3px;
+}
+
+input[type=&quot;range&quot;]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: #4286be;
+  width: 16px;
+  height: 8px;
+}
+
+input[type=&quot;range&quot;]::-moz-range-thumb {
+  -moz-appearance: none !important;
+  background: #4286be;
+  width: 16px;
+  height: 8px;
+}
+
+input[type=&quot;range&quot;]::-ms-thumb {
+  background: #4286be;
+  width: 16px;
+  height: 8px;
+}
+</code></pre>
+
+<p>The <code>-webkit-appearance: none;</code> and <code>-moz-appearance: none;</code> declarations are added to the elements so that your custom styles are properly applied.</p>
+
+
+        </article>
+      
+        <article class="content__section">
           <a name="quantity-pseudo"></a>
 
           <h1 class="content__section__title">Quanitity Pseudo-Selectors <a href="#quantity-pseudo" class="content__section__anchor">#</a></h1>
@@ -616,32 +729,6 @@ li:nth-last-child(n+4) ~ li
         </article>
       
         <article class="content__section">
-          <a name="hexgrba"></a>
-
-          <h1 class="content__section__title">Hex RGBA Shortcuts <a href="#hexgrba" class="content__section__anchor">#</a></h1>
-
-          
-
-<p>Rucksack provides an easy shortcut to add an alpha channel to any hex color. Just add the hex value you want to convert in place of the RGB value in <code>rgba()</code>. The hex is converted to RGB and output as a proper <code>rgba()</code> property.</p>
-
-<h2 id="input:2f57e4051bfff2585e887fe1e8adf84e">Input</h2>
-
-<pre><code class="language-css">.foo {
-  color: rgba(#fff, 0.8);
-}
-</code></pre>
-
-<h2 id="output:2f57e4051bfff2585e887fe1e8adf84e">Output</h2>
-
-<pre><code class="language-css">.foo {
-  color: rgba(255,255,255, 0.8);
-}
-</code></pre>
-
-
-        </article>
-      
-        <article class="content__section">
           <a name="font-src"></a>
 
           <h1 class="content__section__title">Font Src Expansion <a href="#font-src" class="content__section__anchor">#</a></h1>
@@ -671,6 +758,32 @@ li:nth-last-child(n+4) ~ li
        url(&quot;/my/font/file.svg&quot;) format('svg');
   font-weight: normal;
   font-style: normal;
+}
+</code></pre>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="hexgrba"></a>
+
+          <h1 class="content__section__title">Hex RGBA Shortcuts <a href="#hexgrba" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack provides an easy shortcut to add an alpha channel to any hex color. Just add the hex value you want to convert in place of the RGB value in <code>rgba()</code>. The hex is converted to RGB and output as a proper <code>rgba()</code> property.</p>
+
+<h2 id="input:2f57e4051bfff2585e887fe1e8adf84e">Input</h2>
+
+<pre><code class="language-css">.foo {
+  color: rgba(#fff, 0.8);
+}
+</code></pre>
+
+<h2 id="output:2f57e4051bfff2585e887fe1e8adf84e">Output</h2>
+
+<pre><code class="language-css">.foo {
+  color: rgba(255,255,255, 0.8);
 }
 </code></pre>
 

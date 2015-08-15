@@ -1,7 +1,7 @@
 ---
 title: "Automatic Prefixing"
 anchor: "autoprefixing"
-weight: 11
+weight: 12
 addon: true
 ---
 ```css

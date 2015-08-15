@@ -1,7 +1,7 @@
 ---
 title: "New Default Colors"
 anchor: "colors"
-weight: 9
+weight: 10
 addon: true
 ---
 Rucksack automatically replaces default CSS color keywords (blue, red, yellow, etc.) with much nicer alternatives from Google's [Material Design Colors](https://www.google.com/design/spec/style/color.html).

@@ -448,6 +448,117 @@ upper-font-range: 1280px
     </item>
     
     <item>
+      <title>Input Pseduo-Elements</title>
+      <link>http://simplaio.github.io/rucksack/docs/input/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/input/</guid>
+      <description>
+
+&lt;p&gt;Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers.&lt;/p&gt;
+
+&lt;p&gt;Note that the rules in the output generated (see below) are duplicated/ungrouped because if a browser finds a single selector it doesn&amp;rsquo;t understand in a group, the whole group is ignored (see &lt;a href=&#34;http://www.w3.org/TR/selectors/#Conformance&#34;&gt;Selectors Level 3&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h2 id=&#34;placeholders:0fa58901273a043169cc0dfabb934c88&#34;&gt;Placeholders&lt;/h2&gt;
+
+&lt;p&gt;Style placeholders with the &lt;code&gt;::placeholder&lt;/code&gt; pseudo-element. It can be applied to any input element, or at the root of your stylesheet for global styling.&lt;/p&gt;
+
+&lt;p&gt;Input&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::placeholder {
+  color: black;
+  opacity: 0.8;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::-webkit-input-placeholder {
+  color: black;
+  opacity: 0.8;
+}
+
+input:-moz-placeholder {
+  color: black !important;
+  opacity: 0.8;
+}
+
+input::-moz-placeholder {
+  color: black !important;
+  opacity: 0.8;
+}
+
+input:-ms-input-placeholder {
+  color: black !important;
+  opacity: 0.8;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;!important&lt;/code&gt; flag is automatically applied to &lt;code&gt;color&lt;/code&gt; declerations on Firefox and IE, since it is needed to overcome defaults in those browsers.&lt;/p&gt;
+
+&lt;h2 id=&#34;range-elements:0fa58901273a043169cc0dfabb934c88&#34;&gt;Range Elements&lt;/h2&gt;
+
+&lt;p&gt;Style the notoriously tricky range input with &lt;code&gt;::track&lt;/code&gt; and &lt;code&gt;::thumb&lt;/code&gt;. Track targets the &amp;lsquo;line&amp;rsquo;, while thumb targets the &amp;lsquo;button&amp;rsquo;. They can be applied to any range element, or at the root of your stylesheet for global styling.&lt;/p&gt;
+
+&lt;p&gt;Input&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input[type=&amp;quot;range&amp;quot;]::track {
+  background: #9d9d9d;
+  height: 3px;
+}
+
+input[type=&amp;quot;range&amp;quot;]::thumb {
+  background: #4286be;
+  width: 16px;
+  height: 8px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input[type=&amp;quot;range&amp;quot;]::-webkit-runnable-track {
+  -webkit-appearance: none !important;
+  background: #9d9d9d;
+  height: 3px;
+}
+
+input[type=&amp;quot;range&amp;quot;]::-moz-range-track  {
+  -moz-appearance: none !important;
+  background: #9d9d9d;
+  height: 3px;
+}
+
+input[type=&amp;quot;range&amp;quot;]::-ms-track  {
+  background: #9d9d9d;
+  height: 3px;
+}
+
+input[type=&amp;quot;range&amp;quot;]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: #4286be;
+  width: 16px;
+  height: 8px;
+}
+
+input[type=&amp;quot;range&amp;quot;]::-moz-range-thumb {
+  -moz-appearance: none !important;
+  background: #4286be;
+  width: 16px;
+  height: 8px;
+}
+
+input[type=&amp;quot;range&amp;quot;]::-ms-thumb {
+  background: #4286be;
+  width: 16px;
+  height: 8px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;-webkit-appearance: none;&lt;/code&gt; and &lt;code&gt;-moz-appearance: none;&lt;/code&gt; declarations are added to the elements so that your custom styles are properly applied.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Quanitity Pseudo-Selectors</title>
       <link>http://simplaio.github.io/rucksack/docs/quantity-pseudo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -508,32 +619,6 @@ li:nth-last-child(n+4) ~ li
     </item>
     
     <item>
-      <title>Hex RGBA Shortcuts</title>
-      <link>http://simplaio.github.io/rucksack/docs/hexrgba/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://simplaio.github.io/rucksack/docs/hexrgba/</guid>
-      <description>
-
-&lt;p&gt;Rucksack provides an easy shortcut to add an alpha channel to any hex color. Just add the hex value you want to convert in place of the RGB value in &lt;code&gt;rgba()&lt;/code&gt;. The hex is converted to RGB and output as a proper &lt;code&gt;rgba()&lt;/code&gt; property.&lt;/p&gt;
-
-&lt;h2 id=&#34;input:2f57e4051bfff2585e887fe1e8adf84e&#34;&gt;Input&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  color: rgba(#fff, 0.8);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;output:2f57e4051bfff2585e887fe1e8adf84e&#34;&gt;Output&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  color: rgba(255,255,255, 0.8);
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Font Src Expansion</title>
       <link>http://simplaio.github.io/rucksack/docs/font-src/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -564,6 +649,32 @@ li:nth-last-child(n+4) ~ li
        url(&amp;quot;/my/font/file.svg&amp;quot;) format(&#39;svg&#39;);
   font-weight: normal;
   font-style: normal;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hex RGBA Shortcuts</title>
+      <link>http://simplaio.github.io/rucksack/docs/hexrgba/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://simplaio.github.io/rucksack/docs/hexrgba/</guid>
+      <description>
+
+&lt;p&gt;Rucksack provides an easy shortcut to add an alpha channel to any hex color. Just add the hex value you want to convert in place of the RGB value in &lt;code&gt;rgba()&lt;/code&gt;. The hex is converted to RGB and output as a proper &lt;code&gt;rgba()&lt;/code&gt; property.&lt;/p&gt;
+
+&lt;h2 id=&#34;input:2f57e4051bfff2585e887fe1e8adf84e&#34;&gt;Input&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  color: rgba(#fff, 0.8);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;output:2f57e4051bfff2585e887fe1e8adf84e&#34;&gt;Output&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  color: rgba(255,255,255, 0.8);
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>

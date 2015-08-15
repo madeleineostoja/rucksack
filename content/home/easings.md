@@ -1,7 +1,7 @@
 ---
 title: "All The Easings!"
 anchor: "easings"
-weight: 8
+weight: 9
 ---
 ```css
 .foo {

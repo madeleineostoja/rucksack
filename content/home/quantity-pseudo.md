@@ -1,7 +1,7 @@
 ---
 title: "Quanitity Queries"
 anchor: "quantity-pseudo"
-weight: 5
+weight: 6
 ---
 ```css
 li:at-most(4) {

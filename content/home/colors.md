@@ -1,7 +1,7 @@
 ---
 title: "New Default Colors"
 anchor: "colors"
-weight: 9
+weight: 10
 addon: true
 ---
 ```css

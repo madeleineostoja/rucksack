@@ -1,7 +1,7 @@
 ---
 title: "All The Easings!"
 anchor: "easings"
-weight: 8
+weight: 9
 ---
 Rucksack comes with a whole library of modern easing functions for you to instantly use in CSS transitions and animations. The new easings are translated to `cubic-bezier()` functions on output that CSS can natively understand.
 

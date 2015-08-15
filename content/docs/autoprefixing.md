@@ -1,7 +1,7 @@
 ---
 title: "Automatic Prefixing"
 anchor: "autoprefixing"
-weight: 11
+weight: 12
 addon: true
 ---
 Rucksack comes with the option to run your code through [Autoprefixer](https://github.com/postcss/autoprefixer). Autoprefixer automatically applies relevant vendor prefixes based on data of current browser popularity and property support (from [CanIUse](http://caniuse.com/)).

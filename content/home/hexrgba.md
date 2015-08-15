@@ -1,7 +1,7 @@
 ---
 title: "Hex RGBA Shortcuts"
 anchor: "hexgrba"
-weight: 6
+weight: 8
 ---
 ```css
 .foo {
