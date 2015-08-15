@@ -105,6 +105,10 @@ describe('Rucksack', function () {
    test('responsive-type', {}, done);
   });
 
+  it('adds new input pseudo-elements', function(done) {
+    test('input', {}, done);
+  });
+
   // Fallback plugins
   it('polyfills rgba', function(done) {
    test('rgba', { fallbacks: true }, done);

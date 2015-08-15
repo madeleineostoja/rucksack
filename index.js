@@ -11,7 +11,8 @@ var core = [
   require('postcss-hexrgba'),
   require('postcss-position'),
   require('postcss-quantity-queries'),
-  require('postcss-responsive-type')
+  require('postcss-responsive-type'),
+  require('postcss-input-style')
 ];
 
 // CSS fallbacks set (optional)
