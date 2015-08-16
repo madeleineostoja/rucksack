@@ -86,19 +86,19 @@
           
             <li><a class="sidebar__nav__item" href="#shorthand-position">Shorthand Positioning</a></li>
           
-            <li><a class="sidebar__nav__item" href="#clearfix">Native Clearfix</a></li>
+            <li><a class="sidebar__nav__item" href="#quantity-pseudo">Quanitity Pseudo-Selectors</a></li>
           
             <li><a class="sidebar__nav__item" href="#alias">Property Aliases</a></li>
           
             <li><a class="sidebar__nav__item" href="#input">Input Pseduo-Elements</a></li>
           
-            <li><a class="sidebar__nav__item" href="#quantity-pseudo">Quanitity Pseudo-Selectors</a></li>
+            <li><a class="sidebar__nav__item" href="#clearfix">Native Clearfix</a></li>
           
             <li><a class="sidebar__nav__item" href="#font-src">Font Src Expansion</a></li>
           
             <li><a class="sidebar__nav__item" href="#hexgrba">Hex RGBA Shortcuts</a></li>
           
-            <li><a class="sidebar__nav__item" href="#easings">All The Easings!</a></li>
+            <li><a class="sidebar__nav__item" href="#easings">All The Easings</a></li>
           
             <li><a class="sidebar__nav__item" href="#colors">New Default Colors</a></li>
           
@@ -127,7 +127,7 @@
 
 <p>Since it&rsquo;s built on the <a href="https://github.com/postcss/postcss">PostCSS ecosystem</a> it plays nice with all other CSS pre and post processors, and can even integrate into Stylus directly.</p>
 
-<p>First install the npm module, then set up your workflow of choice:</p>
+<p>First install the npm module, then set up your workflow</p>
 
 <pre><code class="language-bash">$ npm install rucksack-css --save
 </code></pre>
@@ -377,7 +377,7 @@ font-range: [lower-bound] [upper-bound]
 
 <h2 id="expanded-syntax:a6b7c01268140345226b1acb4b782f4d">Expanded syntax</h2>
 
-<p>You can also specify all of these values independent properties</p>
+<p>You can also specify all of these values with independent properties</p>
 
 <pre><code class="language-css">html {
   font-size: responsive;
@@ -443,22 +443,26 @@ upper-font-range: 1280px
 
           
 
-<p>Rucksack provides the shorthand methods used by margin and padding to positioning properties. The same syntaxes apply</p>
+<p>Rucksack brings the shorthand methods used by properties like <code>margin</code> and <code>padding</code> to position offsets. The same syntaxes apply</p>
 
-<pre><code class="language-css">- [position]: [all];
-- [position]: [y] [x];
-- [position]: [top] [x] [bottom];
-- [position]: [top] [right] [bottom] [left];
+<pre><code class="language-css">- position: [type] [all];
+- position: [type] [y] [x];
+- position: [type] [top] [x] [bottom];
+- position: [type] [top] [right] [bottom] [left];
 </code></pre>
 
 <h2 id="input:b6fc1cce8611b6d1f819c4ab98d2a9e9">Input</h2>
 
 <pre><code class="language-css">.foo {
-  absolute: 0;
+  position: absolute 0;
 }
 
 .bar {
-  relative: 20% auto;
+  position: relative 20% auto;
+}
+
+.baz {
+  position: fixed 0 20px 10px;
 }
 </code></pre>
 
@@ -479,54 +483,73 @@ upper-font-range: 1280px
   bottom: 20%;
   left: auto;
 }
+
+.baz {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  bottom: 10px;
+  left: 20px;
+}
 </code></pre>
 
 
         </article>
       
         <article class="content__section">
-          <a name="clearfix"></a>
+          <a name="quantity-pseudo"></a>
 
-          <h1 class="content__section__title">Native Clearfix <a href="#clearfix" class="content__section__anchor">#</a></h1>
+          <h1 class="content__section__title">Quanitity Pseudo-Selectors <a href="#quantity-pseudo" class="content__section__anchor">#</a></h1>
 
           
 
-<p>Rucksack bundles up common clearfix methods into native methods of the <code>clear</code> property. A &lsquo;clearfix&rsquo; is a method of making a parent element self-clear it&rsquo;s children, so floats and other properties are contained.</p>
+<p>Rucksack adds psuedo-selectors to select and style elements based on their quantity. Use them to build powerful, responsive, content-driven designs.</p>
 
-<p>Two new methods are added, <code>fix</code> and <code>fix-legacy</code>. Both achieve the same outcome, with different levels of browser support. <code>fix</code> outputs much cleaner code and is all that is needed for IE8+, <code>fix-legacy</code> support IE6/7.</p>
+<h2 id="at-least:0480254488cd73f5063255190d7f32dd">:at-least</h2>
 
-<h2 id="input:429b051e2a153a8670a70870dfc912ea">Input</h2>
+<p>Applies if there are a certain number of items or more</p>
 
-<pre><code class="language-css">.foo {
-  clear: fix;
-}
-
-.bar {
-  clear: fix-legacy;
+<pre><code class="language-css">li:at-least(4) {
+  color: blue;
 }
 </code></pre>
 
-<h2 id="output:429b051e2a153a8670a70870dfc912ea">Output</h2>
+<h2 id="at-most:0480254488cd73f5063255190d7f32dd">:at-most</h2>
 
-<pre><code class="language-css">.foo:after{
-  content: '';
-  display: table;
-  clear: both;
-}
+<p>Applies if there are a certain number of items or less</p>
 
-
-.bar:before,
-.bar:after {
-  content: '';
-  display: table;
-}
-.bar:after {
-  clear: both;
-}
-.bar {
-  zoom: 1;
+<pre><code class="language-css">li:at-most(4) {
+  color: blue;
 }
 </code></pre>
+
+<h2 id="between:0480254488cd73f5063255190d7f32dd">:between</h2>
+
+<p>Applies to all items between a certain range</p>
+
+<pre><code class="language-css">li:between(4, 6) {
+  color: blue;
+}
+</code></pre>
+
+<h2 id="exactly:0480254488cd73f5063255190d7f32dd">:exactly</h2>
+
+<p>Applies when there are exactly a number of items</p>
+
+<pre><code class="language-css">li:exactly(4) {
+  color: blue;
+}
+</code></pre>
+
+<h2 id="how-it-works:0480254488cd73f5063255190d7f32dd">How it works</h2>
+
+<p>The quanitity based pseudo-selectors style elements based on their sibling count, using constructions like</p>
+
+<pre><code class="language-css">li:nth-last-child(n+4),
+li:nth-last-child(n+4) ~ li
+</code></pre>
+
+<p>For a more in-depth look at how this works and how to take advantage of it in your designs, read the recent article on A List Apart - <a href="http://alistapart.com/article/quantity-queries-for-css">Quantity Queries for CSS</a>.</p>
 
 
         </article>
@@ -538,7 +561,7 @@ upper-font-range: 1280px
 
           
 
-<p>Rucksack allows you to set aliases for long property names and save some of those precious keystrokes. To set an alias simply add it to an <code>@alias</code> rule in the format of <code>[alias]: [property];</code>. Aliases can be used anywhere, including inside other properties. Aliases are global in a stylesheet, so it&rsquo;s a good idea to have just a single <code>@alias</code> rule in your project and specify all aliases in one place.</p>
+<p>Rucksack allows you to set aliases for long property names and save some of those precious keystrokes. To set an alias simply add it to the <code>@alias</code> rule in the format of <code>[alias]: [property];</code>. Aliases can be used anywhere, including inside other properties. Aliases are global in a stylesheet, so it&rsquo;s a good idea to have just a single <code>@alias</code> rule in your project and specify all aliases in one place.</p>
 
 <h2 id="input:3b3d2541cd37edc022b27d62280cdf2f">Input</h2>
 
@@ -571,13 +594,13 @@ upper-font-range: 1280px
 
           
 
-<p>Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers. Currently the only element supported is Range (and &lsquo;<code>::placeholder</code> if you enable automatic vendor prefixing), more will be added as browser vendors open up their APIs.</p>
+<p>Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers. Currently the only element supported is the range input (and <code>::placeholder</code> if you enable automatic vendor prefixing), more will be added as browser vendors open up their APIs.</p>
 
-<p>Note that the rules in the output generated (see below) are duplicated/ungrouped because if a browser finds a single selector it doesn&rsquo;t understand in a group, the whole group is ignored (see <a href="http://www.w3.org/TR/selectors/#Conformance">Selectors Level 3</a>).</p>
+<p>Note that the rules in the output generated (see below) are duplicated, since if a browser finds a single selector it doesn&rsquo;t understand in a group the whole group is ignored (see <a href="http://www.w3.org/TR/selectors/#Conformance">Selectors Level 3</a>).</p>
 
 <h2 id="placeholders:0fa58901273a043169cc0dfabb934c88">Placeholders</h2>
 
-<p>Via <a href="#autoprefixer">automatic prefixing</a>.</p>
+<p>Via <a href="#autoprefixing">automatic prefixing</a>.</p>
 
 <p>Style placeholders with the <code>::placeholder</code> pseudo-element. It can be applied to any input element, or at the root of your stylesheet for global styling.</p>
 
@@ -675,67 +698,55 @@ input[type=&quot;range&quot;]::-ms-thumb {
 }
 </code></pre>
 
-<p>The <code>-webkit-appearance: none;</code> and <code>-moz-appearance: none;</code> declarations are added to the elements so that your custom styles are properly applied.</p>
+<p>The <code>-webkit-appearance: none;</code> and <code>-moz-appearance: none;</code> declarations are added to relevant elements so that your custom styles are properly applied.</p>
 
 
         </article>
       
         <article class="content__section">
-          <a name="quantity-pseudo"></a>
+          <a name="clearfix"></a>
 
-          <h1 class="content__section__title">Quanitity Pseudo-Selectors <a href="#quantity-pseudo" class="content__section__anchor">#</a></h1>
+          <h1 class="content__section__title">Native Clearfix <a href="#clearfix" class="content__section__anchor">#</a></h1>
 
           
 
-<p>Rucksack adds psuedo-selectors to select and style elements based on their quantity. Use them to build super powerful, responsive, content-driven designs.</p>
+<p>Rucksack bundles up common clearfix methods into native methods of the <code>clear</code> property. A &lsquo;clearfix&rsquo; is a method of making a parent element self-clear it&rsquo;s children, so floats are contained.</p>
 
-<h2 id="at-least:0480254488cd73f5063255190d7f32dd">:at-least</h2>
+<p>Two new methods are added, <code>fix</code> and <code>fix-legacy</code>. Both achieve the same outcome, with different levels of browser support. <code>fix</code> outputs cleaner code and is all that is needed for IE8+, <code>fix-legacy</code> support IE6/7.</p>
 
-<p>Applies if there are a certain number of items or more</p>
+<h2 id="input:429b051e2a153a8670a70870dfc912ea">Input</h2>
 
-<pre><code class="language-css">li:at-least(4) {
-  color: blue;
+<pre><code class="language-css">.foo {
+  clear: fix;
+}
+
+.bar {
+  clear: fix-legacy;
 }
 </code></pre>
 
-<h2 id="at-most:0480254488cd73f5063255190d7f32dd">:at-most</h2>
+<h2 id="output:429b051e2a153a8670a70870dfc912ea">Output</h2>
 
-<p>Applies if there are a certain number of items or less</p>
+<pre><code class="language-css">/* fix */
+.foo:after{
+  content: '';
+  display: table;
+  clear: both;
+}
 
-<pre><code class="language-css">li:at-most(4) {
-  color: blue;
+/* fix-legacy */
+.bar:before,
+.bar:after {
+  content: '';
+  display: table;
+}
+.bar:after {
+  clear: both;
+}
+.bar {
+  zoom: 1;
 }
 </code></pre>
-
-<h2 id="between:0480254488cd73f5063255190d7f32dd">:between</h2>
-
-<p>Applies to all items between a certain range</p>
-
-<pre><code class="language-css">li:between(4, 6) {
-  color: rebeccapurple;
-}
-</code></pre>
-
-<h2 id="exactly:0480254488cd73f5063255190d7f32dd">:exactly</h2>
-
-<p>Applies when there are exactly a number of items</p>
-
-<p>Target exactly count items:</p>
-
-<pre><code class="language-css">li:exactly(4) {
-  color: rebeccapurple;
-}
-</code></pre>
-
-<h2 id="how-it-works:0480254488cd73f5063255190d7f32dd">How it works</h2>
-
-<p>The quanitity based pseudo-selectors style elements based on their sibling count, using constructions like:</p>
-
-<pre><code class="language-css">li:nth-last-child(n+4),
-li:nth-last-child(n+4) ~ li
-</code></pre>
-
-<p>For a more in-depth look at how this works and how to take advantage of it&rsquo;s awesome power in your designs, read the recent article on A List Apart - <a href="http://alistapart.com/article/quantity-queries-for-css">Quantity Queries for CSS</a>.</p>
 
 
         </article>
@@ -805,7 +816,7 @@ li:nth-last-child(n+4) ~ li
         <article class="content__section">
           <a name="easings"></a>
 
-          <h1 class="content__section__title">All The Easings! <a href="#easings" class="content__section__anchor">#</a></h1>
+          <h1 class="content__section__title">All The Easings <a href="#easings" class="content__section__anchor">#</a></h1>
 
           
 
@@ -1006,11 +1017,11 @@ li:nth-last-child(n+4) ~ li
 
           <p>Rucksack automatically replaces default CSS color keywords (blue, red, yellow, etc.) with much nicer alternatives from Google&rsquo;s <a href="https://www.google.com/design/spec/style/color.html">Material Design Colors</a>.</p>
 
-<p>This is an optional add-on, and can be toggled on or off with the <code>colors</code> option, passed to Rucksack on initialization (in Gulp, Grunt, etc.). By default color replacement is set to <code>true</code>.</p>
+<p>This is an optional add-on, and can be toggled on or off with the <code>colors</code> option, passed to Rucksack on initialization. By default color replacement is set to <code>true</code>.</p>
 
 <pre><code class="language-javascript">var rucksack = require('rucksack-css');
 
-// Set in build tool, etc.
+// Set in build tool
 rucksack({
   colors: true
 });
@@ -1026,9 +1037,9 @@ rucksack({
 
           
 
-<p>Rucksack can automatically provide sane fallbacks for many properties for old browsers, making legacy browser support a breeze.</p>
+<p>Rucksack can automatically provide fallbacks for many properties on old browsers, making legacy support a breeze.</p>
 
-<p>This is an optional add-on, and can be toggled on or off with the <code>fallbacks</code> option, passed to Rucksack on initialization (in Gulp, Grunt, etc.). By default color replacement is set to <code>true</code>.</p>
+<p>This is an optional add-on, and can be toggled on or off with the <code>fallbacks</code> option, passed to Rucksack on initialization. By default fallbacks is set to <code>true</code>.</p>
 
 <pre><code class="language-javascript">var rucksack = require('rucksack-css');
 
@@ -1109,9 +1120,9 @@ rucksack({
 
           
 
-<p>Rucksack comes with the option to run your code through <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>. Autoprefixer automatically applies relevant vendor prefixes based on data of current browser popularity and property support (from <a href="http://caniuse.com/">CanIUse</a>).</p>
+<p>Rucksack comes with the option to run your code through <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>. Autoprefixer automatically applies relevant vendor prefixes based on current browser popularity and property support (from <a href="http://caniuse.com/">CanIUse</a>).</p>
 
-<p>This is an optional add-on, and can be toggled on or off with the <code>autoprefixer</code> option, passed to Rucksack on initialization (in Gulp, Grunt, etc.). By default color replacement is set to <code>false</code>.</p>
+<p>This is an optional add-on, and can be toggled on or off with the <code>autoprefixer</code> option, passed to Rucksack on initialization. By default autoprefixer is set to <code>false</code>.</p>
 
 <pre><code class="language-javascript">var rucksack = require('rucksack-css');
 

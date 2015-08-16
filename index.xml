@@ -18,7 +18,7 @@
 
 &lt;p&gt;Since it&amp;rsquo;s built on the &lt;a href=&#34;https://github.com/postcss/postcss&#34;&gt;PostCSS ecosystem&lt;/a&gt; it plays nice with all other CSS pre and post processors, and can even integrate into Stylus directly.&lt;/p&gt;
 
-&lt;p&gt;First install the npm module, then set up your workflow of choice:&lt;/p&gt;
+&lt;p&gt;First install the npm module, then set up your workflow&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install rucksack-css --save
 &lt;/code&gt;&lt;/pre&gt;
@@ -268,7 +268,7 @@ font-range: [lower-bound] [upper-bound]
 
 &lt;h2 id=&#34;expanded-syntax:a6b7c01268140345226b1acb4b782f4d&#34;&gt;Expanded syntax&lt;/h2&gt;
 
-&lt;p&gt;You can also specify all of these values independent properties&lt;/p&gt;
+&lt;p&gt;You can also specify all of these values with independent properties&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;html {
   font-size: responsive;
@@ -350,22 +350,26 @@ upper-font-range: 1280px
       <guid>http://simplaio.github.io/rucksack/docs/shorthand-positioning/</guid>
       <description>
 
-&lt;p&gt;Rucksack provides the shorthand methods used by margin and padding to positioning properties. The same syntaxes apply&lt;/p&gt;
+&lt;p&gt;Rucksack brings the shorthand methods used by properties like &lt;code&gt;margin&lt;/code&gt; and &lt;code&gt;padding&lt;/code&gt; to position offsets. The same syntaxes apply&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;- [position]: [all];
-- [position]: [y] [x];
-- [position]: [top] [x] [bottom];
-- [position]: [top] [right] [bottom] [left];
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;- position: [type] [all];
+- position: [type] [y] [x];
+- position: [type] [top] [x] [bottom];
+- position: [type] [top] [right] [bottom] [left];
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;input:b6fc1cce8611b6d1f819c4ab98d2a9e9&#34;&gt;Input&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  absolute: 0;
+  position: absolute 0;
 }
 
 .bar {
-  relative: 20% auto;
+  position: relative 20% auto;
+}
+
+.baz {
+  position: fixed 0 20px 10px;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -386,6 +390,14 @@ upper-font-range: 1280px
   bottom: 20%;
   left: auto;
 }
+
+.baz {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  bottom: 10px;
+  left: 20px;
+}
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -397,71 +409,86 @@ upper-font-range: 1280px
       
       <guid>http://simplaio.github.io/rucksack/home/shorthand-positioning/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  absolute: 0;
+  position: absolute 0;
 }
 
 .bar {
-  relative: 20% auto;
+  position: relative 20% auto;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
     <item>
-      <title>Native Clearfix</title>
-      <link>http://simplaio.github.io/rucksack/docs/clearfix/</link>
+      <title>Quanitity Pseudo-Selectors</title>
+      <link>http://simplaio.github.io/rucksack/docs/quantity-pseudo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://simplaio.github.io/rucksack/docs/clearfix/</guid>
+      <guid>http://simplaio.github.io/rucksack/docs/quantity-pseudo/</guid>
       <description>
 
-&lt;p&gt;Rucksack bundles up common clearfix methods into native methods of the &lt;code&gt;clear&lt;/code&gt; property. A &amp;lsquo;clearfix&amp;rsquo; is a method of making a parent element self-clear it&amp;rsquo;s children, so floats and other properties are contained.&lt;/p&gt;
+&lt;p&gt;Rucksack adds psuedo-selectors to select and style elements based on their quantity. Use them to build powerful, responsive, content-driven designs.&lt;/p&gt;
 
-&lt;p&gt;Two new methods are added, &lt;code&gt;fix&lt;/code&gt; and &lt;code&gt;fix-legacy&lt;/code&gt;. Both achieve the same outcome, with different levels of browser support. &lt;code&gt;fix&lt;/code&gt; outputs much cleaner code and is all that is needed for IE8+, &lt;code&gt;fix-legacy&lt;/code&gt; support IE6/7.&lt;/p&gt;
+&lt;h2 id=&#34;at-least:0480254488cd73f5063255190d7f32dd&#34;&gt;:at-least&lt;/h2&gt;
 
-&lt;h2 id=&#34;input:429b051e2a153a8670a70870dfc912ea&#34;&gt;Input&lt;/h2&gt;
+&lt;p&gt;Applies if there are a certain number of items or more&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  clear: fix;
-}
-
-.bar {
-  clear: fix-legacy;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-least(4) {
+  color: blue;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;output:429b051e2a153a8670a70870dfc912ea&#34;&gt;Output&lt;/h2&gt;
+&lt;h2 id=&#34;at-most:0480254488cd73f5063255190d7f32dd&#34;&gt;:at-most&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo:after{
-  content: &#39;&#39;;
-  display: table;
-  clear: both;
-}
+&lt;p&gt;Applies if there are a certain number of items or less&lt;/p&gt;
 
-
-.bar:before,
-.bar:after {
-  content: &#39;&#39;;
-  display: table;
-}
-.bar:after {
-  clear: both;
-}
-.bar {
-  zoom: 1;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
+  color: blue;
 }
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;between:0480254488cd73f5063255190d7f32dd&#34;&gt;:between&lt;/h2&gt;
+
+&lt;p&gt;Applies to all items between a certain range&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:between(4, 6) {
+  color: blue;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;exactly:0480254488cd73f5063255190d7f32dd&#34;&gt;:exactly&lt;/h2&gt;
+
+&lt;p&gt;Applies when there are exactly a number of items&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:exactly(4) {
+  color: blue;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;how-it-works:0480254488cd73f5063255190d7f32dd&#34;&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;The quanitity based pseudo-selectors style elements based on their sibling count, using constructions like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:nth-last-child(n+4),
+li:nth-last-child(n+4) ~ li
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For a more in-depth look at how this works and how to take advantage of it in your designs, read the recent article on A List Apart - &lt;a href=&#34;http://alistapart.com/article/quantity-queries-for-css&#34;&gt;Quantity Queries for CSS&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Native Clearfix</title>
-      <link>http://simplaio.github.io/rucksack/home/clearfix/</link>
+      <title>Quanitity Queries</title>
+      <link>http://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://simplaio.github.io/rucksack/home/clearfix/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  clear: fix;
+      <guid>http://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
+  color: blue;
+}
+
+li:at-least(5) {
+  color: red;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -475,7 +502,7 @@ upper-font-range: 1280px
       <guid>http://simplaio.github.io/rucksack/docs/alias/</guid>
       <description>
 
-&lt;p&gt;Rucksack allows you to set aliases for long property names and save some of those precious keystrokes. To set an alias simply add it to an &lt;code&gt;@alias&lt;/code&gt; rule in the format of &lt;code&gt;[alias]: [property];&lt;/code&gt;. Aliases can be used anywhere, including inside other properties. Aliases are global in a stylesheet, so it&amp;rsquo;s a good idea to have just a single &lt;code&gt;@alias&lt;/code&gt; rule in your project and specify all aliases in one place.&lt;/p&gt;
+&lt;p&gt;Rucksack allows you to set aliases for long property names and save some of those precious keystrokes. To set an alias simply add it to the &lt;code&gt;@alias&lt;/code&gt; rule in the format of &lt;code&gt;[alias]: [property];&lt;/code&gt;. Aliases can be used anywhere, including inside other properties. Aliases are global in a stylesheet, so it&amp;rsquo;s a good idea to have just a single &lt;code&gt;@alias&lt;/code&gt; rule in your project and specify all aliases in one place.&lt;/p&gt;
 
 &lt;h2 id=&#34;input:3b3d2541cd37edc022b27d62280cdf2f&#34;&gt;Input&lt;/h2&gt;
 
@@ -526,13 +553,13 @@ upper-font-range: 1280px
       <guid>http://simplaio.github.io/rucksack/docs/input/</guid>
       <description>
 
-&lt;p&gt;Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers. Currently the only element supported is Range (and &amp;lsquo;&lt;code&gt;::placeholder&lt;/code&gt; if you enable automatic vendor prefixing), more will be added as browser vendors open up their APIs.&lt;/p&gt;
+&lt;p&gt;Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers. Currently the only element supported is the range input (and &lt;code&gt;::placeholder&lt;/code&gt; if you enable automatic vendor prefixing), more will be added as browser vendors open up their APIs.&lt;/p&gt;
 
-&lt;p&gt;Note that the rules in the output generated (see below) are duplicated/ungrouped because if a browser finds a single selector it doesn&amp;rsquo;t understand in a group, the whole group is ignored (see &lt;a href=&#34;http://www.w3.org/TR/selectors/#Conformance&#34;&gt;Selectors Level 3&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Note that the rules in the output generated (see below) are duplicated, since if a browser finds a single selector it doesn&amp;rsquo;t understand in a group the whole group is ignored (see &lt;a href=&#34;http://www.w3.org/TR/selectors/#Conformance&#34;&gt;Selectors Level 3&lt;/a&gt;).&lt;/p&gt;
 
 &lt;h2 id=&#34;placeholders:0fa58901273a043169cc0dfabb934c88&#34;&gt;Placeholders&lt;/h2&gt;
 
-&lt;p&gt;Via &lt;a href=&#34;#autoprefixer&#34;&gt;automatic prefixing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Via &lt;a href=&#34;#autoprefixing&#34;&gt;automatic prefixing&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Style placeholders with the &lt;code&gt;::placeholder&lt;/code&gt; pseudo-element. It can be applied to any input element, or at the root of your stylesheet for global styling.&lt;/p&gt;
 
@@ -630,12 +657,12 @@ input[type=&amp;quot;range&amp;quot;]::-ms-thumb {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The &lt;code&gt;-webkit-appearance: none;&lt;/code&gt; and &lt;code&gt;-moz-appearance: none;&lt;/code&gt; declarations are added to the elements so that your custom styles are properly applied.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;-webkit-appearance: none;&lt;/code&gt; and &lt;code&gt;-moz-appearance: none;&lt;/code&gt; declarations are added to relevant elements so that your custom styles are properly applied.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Input Pseduo-Elements</title>
+      <title>Input Styling</title>
       <link>http://simplaio.github.io/rucksack/home/input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -652,77 +679,61 @@ input[type=&amp;quot;range&amp;quot;]::thumb {
     </item>
     
     <item>
-      <title>Quanitity Pseudo-Selectors</title>
-      <link>http://simplaio.github.io/rucksack/docs/quantity-pseudo/</link>
+      <title>Native Clearfix</title>
+      <link>http://simplaio.github.io/rucksack/docs/clearfix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://simplaio.github.io/rucksack/docs/quantity-pseudo/</guid>
+      <guid>http://simplaio.github.io/rucksack/docs/clearfix/</guid>
       <description>
 
-&lt;p&gt;Rucksack adds psuedo-selectors to select and style elements based on their quantity. Use them to build super powerful, responsive, content-driven designs.&lt;/p&gt;
+&lt;p&gt;Rucksack bundles up common clearfix methods into native methods of the &lt;code&gt;clear&lt;/code&gt; property. A &amp;lsquo;clearfix&amp;rsquo; is a method of making a parent element self-clear it&amp;rsquo;s children, so floats are contained.&lt;/p&gt;
 
-&lt;h2 id=&#34;at-least:0480254488cd73f5063255190d7f32dd&#34;&gt;:at-least&lt;/h2&gt;
+&lt;p&gt;Two new methods are added, &lt;code&gt;fix&lt;/code&gt; and &lt;code&gt;fix-legacy&lt;/code&gt;. Both achieve the same outcome, with different levels of browser support. &lt;code&gt;fix&lt;/code&gt; outputs cleaner code and is all that is needed for IE8+, &lt;code&gt;fix-legacy&lt;/code&gt; support IE6/7.&lt;/p&gt;
 
-&lt;p&gt;Applies if there are a certain number of items or more&lt;/p&gt;
+&lt;h2 id=&#34;input:429b051e2a153a8670a70870dfc912ea&#34;&gt;Input&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-least(4) {
-  color: blue;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  clear: fix;
+}
+
+.bar {
+  clear: fix-legacy;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;at-most:0480254488cd73f5063255190d7f32dd&#34;&gt;:at-most&lt;/h2&gt;
+&lt;h2 id=&#34;output:429b051e2a153a8670a70870dfc912ea&#34;&gt;Output&lt;/h2&gt;
 
-&lt;p&gt;Applies if there are a certain number of items or less&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/* fix */
+.foo:after{
+  content: &#39;&#39;;
+  display: table;
+  clear: both;
+}
 
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
-  color: blue;
+/* fix-legacy */
+.bar:before,
+.bar:after {
+  content: &#39;&#39;;
+  display: table;
+}
+.bar:after {
+  clear: both;
+}
+.bar {
+  zoom: 1;
 }
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;between:0480254488cd73f5063255190d7f32dd&#34;&gt;:between&lt;/h2&gt;
-
-&lt;p&gt;Applies to all items between a certain range&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:between(4, 6) {
-  color: rebeccapurple;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;exactly:0480254488cd73f5063255190d7f32dd&#34;&gt;:exactly&lt;/h2&gt;
-
-&lt;p&gt;Applies when there are exactly a number of items&lt;/p&gt;
-
-&lt;p&gt;Target exactly count items:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:exactly(4) {
-  color: rebeccapurple;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;how-it-works:0480254488cd73f5063255190d7f32dd&#34;&gt;How it works&lt;/h2&gt;
-
-&lt;p&gt;The quanitity based pseudo-selectors style elements based on their sibling count, using constructions like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:nth-last-child(n+4),
-li:nth-last-child(n+4) ~ li
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For a more in-depth look at how this works and how to take advantage of it&amp;rsquo;s awesome power in your designs, read the recent article on A List Apart - &lt;a href=&#34;http://alistapart.com/article/quantity-queries-for-css&#34;&gt;Quantity Queries for CSS&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Quanitity Queries</title>
-      <link>http://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
+      <title>Native Clearfix</title>
+      <link>http://simplaio.github.io/rucksack/home/clearfix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
-  color: blue;
-}
-
-li:at-least(5) {
-  color: red;
+      <guid>http://simplaio.github.io/rucksack/home/clearfix/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  clear: fix;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -765,7 +776,7 @@ li:at-least(5) {
     </item>
     
     <item>
-      <title>Font Src Expansion</title>
+      <title>Font Src Generation</title>
       <link>http://simplaio.github.io/rucksack/home/font-src/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
