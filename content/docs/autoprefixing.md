@@ -4,9 +4,9 @@ anchor: "autoprefixing"
 weight: 12
 addon: true
 ---
-Rucksack comes with the option to run your code through [Autoprefixer](https://github.com/postcss/autoprefixer). Autoprefixer automatically applies relevant vendor prefixes based on data of current browser popularity and property support (from [CanIUse](http://caniuse.com/)).
+Rucksack comes with the option to run your code through [Autoprefixer](https://github.com/postcss/autoprefixer). Autoprefixer automatically applies relevant vendor prefixes based on current browser popularity and property support (from [CanIUse](http://caniuse.com/)).
 
-This is an optional add-on, and can be toggled on or off with the `autoprefixer` option, passed to Rucksack on initialization (in Gulp, Grunt, etc.). By default color replacement is set to `false`.
+This is an optional add-on, and can be toggled on or off with the `autoprefixer` option, passed to Rucksack on initialization. By default autoprefixer is set to `false`.
 
 ```javascript
 var rucksack = require('rucksack-css');

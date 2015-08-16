@@ -8,7 +8,7 @@ Integrating Rucksack into your workflow is easy. Just install it as an [npm modu
 
 Since it's built on the [PostCSS ecosystem](https://github.com/postcss/postcss) it plays nice with all other CSS pre and post processors, and can even integrate into Stylus directly.
 
-First install the npm module, then set up your workflow of choice:
+First install the npm module, then set up your workflow
 ```bash
 $ npm install rucksack-css --save
 ```

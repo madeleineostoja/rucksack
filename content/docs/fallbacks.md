@@ -4,9 +4,9 @@ anchor: "fallbacks"
 weight: 11
 addon: true
 ---
-Rucksack can automatically provide sane fallbacks for many properties for old browsers, making legacy browser support a breeze.
+Rucksack can automatically provide fallbacks for many properties on old browsers, making legacy support a breeze.
 
-This is an optional add-on, and can be toggled on or off with the `fallbacks` option, passed to Rucksack on initialization (in Gulp, Grunt, etc.). By default color replacement is set to `true`.
+This is an optional add-on, and can be toggled on or off with the `fallbacks` option, passed to Rucksack on initialization. By default fallbacks is set to `true`.
 
 ```javascript
 var rucksack = require('rucksack-css');

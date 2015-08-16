@@ -33,7 +33,7 @@ html {
 ```
 
 ## Expanded syntax
-You can also specify all of these values independent properties
+You can also specify all of these values with independent properties
 ```css
 html {
   font-size: responsive;

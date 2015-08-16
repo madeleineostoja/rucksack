@@ -31,24 +31,28 @@
       
       <guid>http://simplaio.github.io/rucksack/home/shorthand-positioning/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  absolute: 0;
+  position: absolute 0;
 }
 
 .bar {
-  relative: 20% auto;
+  position: relative 20% auto;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
     <item>
-      <title>Native Clearfix</title>
-      <link>http://simplaio.github.io/rucksack/home/clearfix/</link>
+      <title>Quanitity Queries</title>
+      <link>http://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://simplaio.github.io/rucksack/home/clearfix/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  clear: fix;
+      <guid>http://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
+  color: blue;
+}
+
+li:at-least(5) {
+  color: red;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -73,7 +77,7 @@
     </item>
     
     <item>
-      <title>Input Pseduo-Elements</title>
+      <title>Input Styling</title>
       <link>http://simplaio.github.io/rucksack/home/input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -90,24 +94,20 @@ input[type=&amp;quot;range&amp;quot;]::thumb {
     </item>
     
     <item>
-      <title>Quanitity Queries</title>
-      <link>http://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
+      <title>Native Clearfix</title>
+      <link>http://simplaio.github.io/rucksack/home/clearfix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
-  color: blue;
-}
-
-li:at-least(5) {
-  color: red;
+      <guid>http://simplaio.github.io/rucksack/home/clearfix/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  clear: fix;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
     <item>
-      <title>Font Src Expansion</title>
+      <title>Font Src Generation</title>
       <link>http://simplaio.github.io/rucksack/home/font-src/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -136,7 +136,7 @@ li:at-least(5) {
     </item>
     
     <item>
-      <title>All The Easings!</title>
+      <title>All The Easings</title>
       <link>http://simplaio.github.io/rucksack/home/easings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

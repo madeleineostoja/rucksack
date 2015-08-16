@@ -3,12 +3,12 @@ title: "Input Pseduo-Elements"
 anchor: "input"
 weight: 5
 ---
-Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers. Currently the only element supported is Range (and '`::placeholder` if you enable automatic vendor prefixing), more will be added as browser vendors open up their APIs.
+Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers. Currently the only element supported is the range input (and `::placeholder` if you enable automatic vendor prefixing), more will be added as browser vendors open up their APIs.
 
-Note that the rules in the output generated (see below) are duplicated/ungrouped because if a browser finds a single selector it doesn't understand in a group, the whole group is ignored (see [Selectors Level 3](http://www.w3.org/TR/selectors/#Conformance)).
+Note that the rules in the output generated (see below) are duplicated, since if a browser finds a single selector it doesn't understand in a group the whole group is ignored (see [Selectors Level 3](http://www.w3.org/TR/selectors/#Conformance)).
 
 ## Placeholders
-Via [automatic prefixing](#autoprefixer).
+Via [automatic prefixing](#autoprefixing).
 
 Style placeholders with the `::placeholder` pseudo-element. It can be applied to any input element, or at the root of your stylesheet for global styling.
 
@@ -103,4 +103,4 @@ input[type="range"]::-ms-thumb {
 }
 ```
 
-The `-webkit-appearance: none;` and `-moz-appearance: none;` declarations are added to the elements so that your custom styles are properly applied.
+The `-webkit-appearance: none;` and `-moz-appearance: none;` declarations are added to relevant elements so that your custom styles are properly applied.

@@ -1,5 +1,5 @@
 ---
-title: "All The Easings!"
+title: "All The Easings"
 anchor: "easings"
 weight: 9
 ---

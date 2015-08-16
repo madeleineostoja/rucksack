@@ -1,7 +1,7 @@
 ---
 title: "Native Clearfix"
 anchor: "clearfix"
-weight: 3
+weight: 6
 ---
 ```css
 .foo {
