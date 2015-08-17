@@ -4,14 +4,9 @@ anchor: "usage"
 weight: 0
 ---
 
-Integrating Rucksack into your workflow is easy. Just install it as an [npm module](https://www.npmjs.com/package/rucksack-css), then either integrate it into your build tool of choice or process your CSS directly on the command line.
+Integrating Rucksack into your workflow is easy. There are plugins for most build tools, and an [npm module](https://www.npmjs.com/package/rucksack-css) to integrate it manually or process your CSS directly on the command line.
 
 Since it's built on the [PostCSS ecosystem](https://github.com/postcss/postcss) it plays nice with all other CSS pre and post processors, and can even integrate into Stylus directly.
-
-First install the npm module, then set up your workflow
-```bash
-$ npm install rucksack-css --save
-```
 
 <div style="overflow: auto;">
 
@@ -135,6 +130,12 @@ Options:
 
 Rucksack is built on PostCSS, and can be used as a PostCSS plugin.
 
+First install the npm module
+```bash
+$ npm install rucksack-css --save-dev
+```
+
+Then use it as a plugin for PostCSS
 ```javascript
 var postcss = require('postcss'),
     rucksack = require('rucksack-css');
@@ -153,8 +154,14 @@ See the [PostCSS Docs](https://github.com/postcss/postcss) for examples for your
 
 {{% usage title="With Stylus" id="stylus" img="http://simplaio.github.io/rucksack/img/usage/stylus.png" %}}
 
-Rucksack can be used as a Stylus plugin with [PostStylus](https://github.com/seaneking/poststylus)
+Rucksack can be used as a Stylus plugin with [PostStylus](https://github.com/seaneking/poststylus).
 
+First install the npm module
+```bash
+$ npm install rucksack-css --save-dev
+```
+
+Then pass it directly to PostStylus
 ```javascript
 var poststylus = require('poststylus');
 

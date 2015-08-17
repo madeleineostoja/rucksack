@@ -123,14 +123,9 @@
 
           <h1 class="content__section__title">Installation &amp; Usage <a href="#usage" class="content__section__anchor">#</a></h1>
 
-          <p>Integrating Rucksack into your workflow is easy. Just install it as an <a href="https://www.npmjs.com/package/rucksack-css">npm module</a>, then either integrate it into your build tool of choice or process your CSS directly on the command line.</p>
+          <p>Integrating Rucksack into your workflow is easy. There are plugins for most build tools, and an <a href="https://www.npmjs.com/package/rucksack-css">npm module</a> to integrate it manually or process your CSS directly on the command line.</p>
 
 <p>Since it&rsquo;s built on the <a href="https://github.com/postcss/postcss">PostCSS ecosystem</a> it plays nice with all other CSS pre and post processors, and can even integrate into Stylus directly.</p>
-
-<p>First install the npm module, then set up your workflow</p>
-
-<pre><code class="language-bash">$ npm install rucksack-css --save
-</code></pre>
 
 <div style="overflow: auto;">
 
@@ -294,6 +289,13 @@ tree = rucksack(tree, [options]);
   <img src='http://simplaio.github.io/rucksack/img/usage/postcss.png' alt="" class="usage__modal__logo" />
   <p>Rucksack is built on PostCSS, and can be used as a PostCSS plugin.</p>
 
+<p>First install the npm module</p>
+
+<pre><code class="language-bash">$ npm install rucksack-css --save-dev
+</code></pre>
+
+<p>Then use it as a plugin for PostCSS</p>
+
 <pre><code class="language-javascript">var postcss = require('postcss'),
     rucksack = require('rucksack-css');
 
@@ -320,7 +322,14 @@ postcss([ rucksack() ])
 <div class="usage__modal remodal" data-remodal-id='stylus'>
   <span class="remodal-close" data-remodal-action="close" data-icon="x"></span>
   <img src='http://simplaio.github.io/rucksack/img/usage/stylus.png' alt="" class="usage__modal__logo" />
-  <p>Rucksack can be used as a Stylus plugin with <a href="https://github.com/seaneking/poststylus">PostStylus</a></p>
+  <p>Rucksack can be used as a Stylus plugin with <a href="https://github.com/seaneking/poststylus">PostStylus</a>.</p>
+
+<p>First install the npm module</p>
+
+<pre><code class="language-bash">$ npm install rucksack-css --save-dev
+</code></pre>
+
+<p>Then pass it directly to PostStylus</p>
 
 <pre><code class="language-javascript">var poststylus = require('poststylus');
 
