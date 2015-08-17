@@ -65,14 +65,14 @@ input[type="range"]::thumb {
 ```
 Output
 ```css
-input[type="range"]::-webkit-runnable-track {
-  -webkit-appearance: none !important;
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
   background: #9d9d9d;
   height: 3px;
 }
 
 input[type="range"]::-moz-range-track  {
-  -moz-appearance: none !important;
+  -moz-appearance: none;
   background: #9d9d9d;
   height: 3px;
 }
@@ -83,14 +83,14 @@ input[type="range"]::-ms-track  {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
   background: #4286be;
   width: 16px;
   height: 8px;
 }
 
 input[type="range"]::-moz-range-thumb {
-  -moz-appearance: none !important;
+  -moz-appearance: none;
   background: #4286be;
   width: 16px;
   height: 8px;
@@ -101,6 +101,9 @@ input[type="range"]::-ms-thumb {
   width: 16px;
   height: 8px;
 }
+input[type="range"] {
+  -webkit-appearance: none;
+}
 ```
 
-The `-webkit-appearance: none;` and `-moz-appearance: none;` declarations are added to relevant elements so that your custom styles are properly applied.
+The `-webkit-appearance: none;` and `-moz-appearance: none;` declarations are added to relevant elements so that your custom styles are properly applied. Note that this means that for webkit (Chrome, etc) you must style _both_ `::track` and `::thumb`, since the appearance must be set on the root element.
