@@ -14,14 +14,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://simplaio.github.io/rucksack/docs/usage/</guid>
-      <description>&lt;p&gt;Integrating Rucksack into your workflow is easy. Just install it as an &lt;a href=&#34;https://www.npmjs.com/package/rucksack-css&#34;&gt;npm module&lt;/a&gt;, then either integrate it into your build tool of choice or process your CSS directly on the command line.&lt;/p&gt;
+      <description>&lt;p&gt;Integrating Rucksack into your workflow is easy. There are plugins for most build tools, and an &lt;a href=&#34;https://www.npmjs.com/package/rucksack-css&#34;&gt;npm module&lt;/a&gt; to integrate it manually or process your CSS directly on the command line.&lt;/p&gt;
 
 &lt;p&gt;Since it&amp;rsquo;s built on the &lt;a href=&#34;https://github.com/postcss/postcss&#34;&gt;PostCSS ecosystem&lt;/a&gt; it plays nice with all other CSS pre and post processors, and can even integrate into Stylus directly.&lt;/p&gt;
-
-&lt;p&gt;First install the npm module, then set up your workflow&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install rucksack-css --save
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;div style=&#34;overflow: auto;&#34;&gt;
 
@@ -185,6 +180,13 @@ tree = rucksack(tree, [options]);
   &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/postcss.png&#39; alt=&#34;&#34; class=&#34;usage__modal__logo&#34; /&gt;
   &lt;p&gt;Rucksack is built on PostCSS, and can be used as a PostCSS plugin.&lt;/p&gt;
 
+&lt;p&gt;First install the npm module&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install rucksack-css --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then use it as a plugin for PostCSS&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var postcss = require(&#39;postcss&#39;),
     rucksack = require(&#39;rucksack-css&#39;);
 
@@ -211,7 +213,14 @@ postcss([ rucksack() ])
 &lt;div class=&#34;usage__modal remodal&#34; data-remodal-id=&#39;stylus&#39;&gt;
   &lt;span class=&#34;remodal-close&#34; data-remodal-action=&#34;close&#34; data-icon=&#34;x&#34;&gt;&lt;/span&gt;
   &lt;img src=&#39;http://simplaio.github.io/rucksack/img/usage/stylus.png&#39; alt=&#34;&#34; class=&#34;usage__modal__logo&#34; /&gt;
-  &lt;p&gt;Rucksack can be used as a Stylus plugin with &lt;a href=&#34;https://github.com/seaneking/poststylus&#34;&gt;PostStylus&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Rucksack can be used as a Stylus plugin with &lt;a href=&#34;https://github.com/seaneking/poststylus&#34;&gt;PostStylus&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;First install the npm module&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install rucksack-css --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then pass it directly to PostStylus&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var poststylus = require(&#39;poststylus&#39;);
 
