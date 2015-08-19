@@ -1,5 +1,5 @@
 ---
-title: "Quanitity Queries"
+title: "Quantity Queries"
 anchor: "quantity-pseudo"
 weight: 3
 ---
