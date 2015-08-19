@@ -4,7 +4,9 @@ anchor: "responsive-type"
 weight: 1
 ---
 
-Create automagical fluid typography with a new `responsive` property on `font-size`. All the typography on this site is responsive, resize your browser window to see it in action!
+Create automagical fluid typography with a new `responsive` property on `font-size`. All the type on this site is responsive, resize your browser to see it in action!
+
+![Responsive Type Demo][demo]
 
 ## Quick start
 Rucksack's responsive typography is fully adjustable, but all you need to get started is to specify `responsive` as a font-size.
@@ -91,3 +93,4 @@ html {
 [calc-polyfill]: https://github.com/closingtag/calc-polyfill
 [respond]: https://github.com/scottjehl/Respond
 [vminpoly]: https://github.com/saabi/vminpoly
+[demo]: http://simplaio.github.io/rucksack/img/type-demo.gif
