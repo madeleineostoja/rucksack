@@ -16,6 +16,8 @@ Rucksack makes CSS development less painful, with the features and shortcuts it 
 
 Made with &#9829; by the folks at [Simpla][simpla].
 
+**Read the full docs at http://simplaio.github.io/rucksack**
+
 --
 
 ### Install
