@@ -246,7 +246,9 @@ stylus(css).use(
       <guid>http://simplaio.github.io/rucksack/docs/responsive-type/</guid>
       <description>
 
-&lt;p&gt;Create automagical fluid typography with a new &lt;code&gt;responsive&lt;/code&gt; property on &lt;code&gt;font-size&lt;/code&gt;. All the typography on this site is responsive, resize your browser window to see it in action!&lt;/p&gt;
+&lt;p&gt;Create automagical fluid typography with a new &lt;code&gt;responsive&lt;/code&gt; property on &lt;code&gt;font-size&lt;/code&gt;. All the type on this site is responsive, resize your browser to see it in action!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://simplaio.github.io/rucksack/img/type-demo.gif&#34; alt=&#34;Responsive Type Demo&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;quick-start:a6b7c01268140345226b1acb4b782f4d&#34;&gt;Quick start&lt;/h2&gt;
 
@@ -628,14 +630,14 @@ input[type=&amp;quot;range&amp;quot;]::thumb {
 
 &lt;p&gt;Output&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input[type=&amp;quot;range&amp;quot;]::-webkit-runnable-track {
-  -webkit-appearance: none !important;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input[type=&amp;quot;range&amp;quot;]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
   background: #9d9d9d;
   height: 3px;
 }
 
 input[type=&amp;quot;range&amp;quot;]::-moz-range-track  {
-  -moz-appearance: none !important;
+  -moz-appearance: none;
   background: #9d9d9d;
   height: 3px;
 }
@@ -646,14 +648,14 @@ input[type=&amp;quot;range&amp;quot;]::-ms-track  {
 }
 
 input[type=&amp;quot;range&amp;quot;]::-webkit-slider-thumb {
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
   background: #4286be;
   width: 16px;
   height: 8px;
 }
 
 input[type=&amp;quot;range&amp;quot;]::-moz-range-thumb {
-  -moz-appearance: none !important;
+  -moz-appearance: none;
   background: #4286be;
   width: 16px;
   height: 8px;
@@ -664,9 +666,17 @@ input[type=&amp;quot;range&amp;quot;]::-ms-thumb {
   width: 16px;
   height: 8px;
 }
+input[type=&amp;quot;range&amp;quot;] {
+  -webkit-appearance: none;
+}
+input[type=range]::-moz-focus-outer {
+  border: 0;
+}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The &lt;code&gt;-webkit-appearance: none;&lt;/code&gt; and &lt;code&gt;-moz-appearance: none;&lt;/code&gt; declarations are added to relevant elements so that your custom styles are properly applied.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;-webkit-appearance: none;&lt;/code&gt; and &lt;code&gt;-moz-appearance: none;&lt;/code&gt; declarations are added to relevant elements so that your custom styles are properly applied. Note that this means that for webkit (Chrome, etc) you must style &lt;em&gt;both&lt;/em&gt; &lt;code&gt;::track&lt;/code&gt; and &lt;code&gt;::thumb&lt;/code&gt;, since the appearance must be set on the root element.&lt;/p&gt;
+
+&lt;p&gt;The additional &lt;code&gt;::-moz-focus-outer&lt;/code&gt; rule simply removes the dotted outline around the element on some versions of firefox.&lt;/p&gt;
 </description>
     </item>
     

@@ -355,7 +355,9 @@ stylus(css).use(
 
           
 
-<p>Create automagical fluid typography with a new <code>responsive</code> property on <code>font-size</code>. All the typography on this site is responsive, resize your browser window to see it in action!</p>
+<p>Create automagical fluid typography with a new <code>responsive</code> property on <code>font-size</code>. All the type on this site is responsive, resize your browser to see it in action!</p>
+
+<p><img src="http://simplaio.github.io/rucksack/img/type-demo.gif" alt="Responsive Type Demo" /></p>
 
 <h2 id="quick-start:a6b7c01268140345226b1acb4b782f4d">Quick start</h2>
 
@@ -669,14 +671,14 @@ input[type=&quot;range&quot;]::thumb {
 
 <p>Output</p>
 
-<pre><code class="language-css">input[type=&quot;range&quot;]::-webkit-runnable-track {
-  -webkit-appearance: none !important;
+<pre><code class="language-css">input[type=&quot;range&quot;]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
   background: #9d9d9d;
   height: 3px;
 }
 
 input[type=&quot;range&quot;]::-moz-range-track  {
-  -moz-appearance: none !important;
+  -moz-appearance: none;
   background: #9d9d9d;
   height: 3px;
 }
@@ -687,14 +689,14 @@ input[type=&quot;range&quot;]::-ms-track  {
 }
 
 input[type=&quot;range&quot;]::-webkit-slider-thumb {
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
   background: #4286be;
   width: 16px;
   height: 8px;
 }
 
 input[type=&quot;range&quot;]::-moz-range-thumb {
-  -moz-appearance: none !important;
+  -moz-appearance: none;
   background: #4286be;
   width: 16px;
   height: 8px;
@@ -705,9 +707,17 @@ input[type=&quot;range&quot;]::-ms-thumb {
   width: 16px;
   height: 8px;
 }
+input[type=&quot;range&quot;] {
+  -webkit-appearance: none;
+}
+input[type=range]::-moz-focus-outer {
+  border: 0;
+}
 </code></pre>
 
-<p>The <code>-webkit-appearance: none;</code> and <code>-moz-appearance: none;</code> declarations are added to relevant elements so that your custom styles are properly applied.</p>
+<p>The <code>-webkit-appearance: none;</code> and <code>-moz-appearance: none;</code> declarations are added to relevant elements so that your custom styles are properly applied. Note that this means that for webkit (Chrome, etc) you must style <em>both</em> <code>::track</code> and <code>::thumb</code>, since the appearance must be set on the root element.</p>
+
+<p>The additional <code>::-moz-focus-outer</code> rule simply removes the dotted outline around the element on some versions of firefox.</p>
 
 
         </article>
