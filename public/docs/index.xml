@@ -1032,7 +1032,7 @@ rucksack({
 
 &lt;p&gt;Rucksack comes with the option to run your code through &lt;a href=&#34;https://github.com/postcss/autoprefixer&#34;&gt;Autoprefixer&lt;/a&gt;. Autoprefixer automatically applies relevant vendor prefixes based on current browser popularity and property support (from &lt;a href=&#34;http://caniuse.com/&#34;&gt;CanIUse&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;This is an optional add-on, and can be toggled on or off with the &lt;code&gt;autoprefixer&lt;/code&gt; option, passed to Rucksack on initialization. By default autoprefixer is set to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This is an optional add-on, and can be toggled on or off with the &lt;code&gt;autoprefixer&lt;/code&gt; option, passed to Rucksack on initialization. By default autoprefixer is set to &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var rucksack = require(&#39;rucksack-css&#39;);
 
