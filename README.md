@@ -1,5 +1,5 @@
 <p align="center">
- <img src="http://simplaio.github.io/rucksack/logo.png" alt="rucksack logo" height="325" />
+ <img src="https://simplaio.github.io/rucksack/logo.png" alt="rucksack logo" height="325" />
 </p>
 
 <p align="center">

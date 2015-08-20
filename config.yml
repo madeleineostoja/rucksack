@@ -1,5 +1,5 @@
 ---
-baseurl: "http://simplaio.github.io/rucksack"
+baseurl: "https://simplaio.github.io/rucksack"
 languageCode: "en-au"
 title: "Rucksack | CSS Superpowers"
 dataDir: "src/data"
