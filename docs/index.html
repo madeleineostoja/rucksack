@@ -386,6 +386,8 @@ font-range: [lower-bound] [upper-bound]
 }
 </code></pre>
 
+<p>All values can be in <code>px</code>, <code>rem</code>, or <code>em</code>.</p>
+
 <h2 id="expanded-syntax:a6b7c01268140345226b1acb4b782f4d">Expanded syntax</h2>
 
 <p>You can also specify all of these values with independent properties</p>
@@ -404,7 +406,7 @@ font-range: [lower-bound] [upper-bound]
 <p>Rucksack&rsquo;s responsive typography outputs complex calc and vw based font-sizes, along with media queries to set the range between which a font size is fluid.</p>
 
 <pre><code class="language-css">html {
-  font-size: calc(12px + 9 * ((100vw - 420px) / 860));
+  font-size: calc((12px - 420px * 0.01) + 1.05vw);
 }
 
 @media screen and (max-width: 420px) {
@@ -422,7 +424,8 @@ font-range: [lower-bound] [upper-bound]
 
 <p>With the calc expression above being equivalent to</p>
 
-<p><code>min-size + (max-size - min-size) * ((100vw - min-width) / (max-width - min-width))</code></p>
+<pre><code>(min-size - min-width * (max-size - min-size) / (max-width - min-width)) + ((max-size - min-size) / (max-width - min-width) * 100)vw
+</code></pre>
 
 <h2 id="defaults:a6b7c01268140345226b1acb4b782f4d">Defaults</h2>
 
