@@ -1,5 +1,5 @@
 .foo {
-  font-size: calc(10px + 20 * ((100vw - 300px) / 600));
+  font-size: calc((10px - 300px * 0.03333333333333333) + 3.3333333333333335vw);
 }
 @media screen and (max-width: 300px) {
   .foo {
