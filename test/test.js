@@ -135,9 +135,9 @@ describe('Rucksack', function () {
    test('autoprefixer', { autoprefixer: true }, done);
   });
 
-  it('swaps default colors', function(done) {
-   test('colors', {}, done);
-  });
+  // it('swaps default colors', function(done) {
+  //  test('colors', {}, done);
+  // });
 
   // CLI tool
   it('processes css on the command line', function(done) {
