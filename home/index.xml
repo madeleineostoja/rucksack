@@ -153,24 +153,6 @@ input[type=&amp;quot;range&amp;quot;]::thumb {
     </item>
     
     <item>
-      <title>New Default Colors</title>
-      <link>https://simplaio.github.io/rucksack/home/colors/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplaio.github.io/rucksack/home/colors/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo{
-  color: blue;
-}
-
-/* Becomes (from Material) */
-.foo {
-  color: #2196F3;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Legacy Fallbacks</title>
       <link>https://simplaio.github.io/rucksack/home/fallbacks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

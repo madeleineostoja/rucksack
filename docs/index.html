@@ -100,8 +100,6 @@
           
             <li><a class="sidebar__nav__item" href="#easings">All The Easings</a></li>
           
-            <li><a class="sidebar__nav__item" href="#colors">New Default Colors</a></li>
-          
             <li><a class="sidebar__nav__item" href="#fallbacks">Legacy Fallbacks</a></li>
           
             <li><a class="sidebar__nav__item" href="#autoprefixing">Automatic Prefixing</a></li>
@@ -266,8 +264,6 @@ tree = rucksack(tree, [options]);
 <pre><code class="language-bash">  --no-autoprefixer   Disable automatic vendor prefixing.
 
   --no-fallbacks      Disable legacy fallbacks.
-
-  --no-colors         Disable default color replacements.
 
   --version,    -v    Show the version number.
 
@@ -1028,26 +1024,6 @@ input[type=range]::-moz-focus-outer {
 </div>
 
 </div>
-
-
-        </article>
-      
-        <article class="content__section">
-          <a name="colors"></a>
-
-          <h1 class="content__section__title">New Default Colors <a href="#colors" class="content__section__anchor">#</a></h1>
-
-          <p>Rucksack automatically replaces default CSS color keywords (blue, red, yellow, etc.) with much nicer alternatives from Google&rsquo;s <a href="https://www.google.com/design/spec/style/color.html">Material Design Colors</a>.</p>
-
-<p>This is an optional add-on, and can be toggled on or off with the <code>colors</code> option, passed to Rucksack on initialization. By default color replacement is set to <code>true</code>.</p>
-
-<pre><code class="language-javascript">var rucksack = require('rucksack-css');
-
-// Set in build tool
-rucksack({
-  colors: true
-});
-</code></pre>
 
 
         </article>
