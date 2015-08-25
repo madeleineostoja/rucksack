@@ -117,8 +117,6 @@ Options:
 
   --no-fallbacks      Disable legacy fallbacks.
 
-  --no-colors         Disable default color replacements.
-
   --version,    -v    Show the version number.
 
   --help,       -h    Show help screen.

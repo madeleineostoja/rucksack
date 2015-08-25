@@ -158,8 +158,6 @@ tree = rucksack(tree, [options]);
 
   --no-fallbacks      Disable legacy fallbacks.
 
-  --no-colors         Disable default color replacements.
-
   --version,    -v    Show the version number.
 
   --help,       -h    Show help screen.
@@ -919,26 +917,6 @@ input[type=range]::-moz-focus-outer {
 &lt;/div&gt;
 
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>New Default Colors</title>
-      <link>https://simplaio.github.io/rucksack/docs/colors/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplaio.github.io/rucksack/docs/colors/</guid>
-      <description>&lt;p&gt;Rucksack automatically replaces default CSS color keywords (blue, red, yellow, etc.) with much nicer alternatives from Google&amp;rsquo;s &lt;a href=&#34;https://www.google.com/design/spec/style/color.html&#34;&gt;Material Design Colors&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is an optional add-on, and can be toggled on or off with the &lt;code&gt;colors&lt;/code&gt; option, passed to Rucksack on initialization. By default color replacement is set to &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var rucksack = require(&#39;rucksack-css&#39;);
-
-// Set in build tool
-rucksack({
-  colors: true
-});
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
