@@ -25,20 +25,20 @@ var fallbacks = [
 ];
 
 // Individual add-ons (optional)
-var autoprefixer = require('autoprefixer'),
-    colors = require('postcss-color-palette');
+var autoprefixer = require('autoprefixer');
+    // colors = require('postcss-color-palette');
 
 // Error reporting
 var reporter = require('postcss-reporter');
 
 // Define a custom color palette
-colors = colors({ palette: 'material' });
+// colors = colors({ palette: 'material' });
 
 // Default options
 var defaults = {
   fallbacks: true,
-  autoprefixer: true,
-  colors: true
+  autoprefixer: true
+  // colors: true
 };
 
 // Build PostCSS plugin
@@ -67,9 +67,9 @@ var rucksack = $postcss.plugin('rucksack', function(options) {
     plugins.push(autoprefixer);
   }
 
-  if (options.colors) {
-    plugins.push(colors);
-  }
+  // if (options.colors) {
+  //   plugins.push(colors);
+  // }
 
   plugins.push(reporter);
 

@@ -218,9 +218,6 @@ Automatically insert legacy fallbacks for modern properties.
 }
 ```
 
-###### New Default Colors
-Swap out those ugly default colors with replacements from [Material Design Colors][material-colors].
-
 --
 
 ### Options
@@ -235,8 +232,6 @@ You can toggle Rucksack's addons on or off by passing booleans to the relevant p
 `autoprefixer`: Endable/disable autoprefixing (default: `true`).
 
 `fallbacks`: Enable/disable legacy fallbacks (default: `true`).
-
-`colors`: Enable/disable color replacements (default: `true`).
 
 --
 
