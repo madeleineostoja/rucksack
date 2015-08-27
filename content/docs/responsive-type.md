@@ -52,7 +52,7 @@ html {
 Rucksack's responsive typography outputs complex calc and vw based font-sizes, along with media queries to set the range between which a font size is fluid.
 ```css
 html {
-  font-size: calc((12px - 420px * 0.01) + 1.05vw);
+  font-size: calc(12px + 9 * ( (100vw - 420px) / 860));
 }
 
 @media screen and (max-width: 420px) {
@@ -71,7 +71,7 @@ html {
 With the calc expression above being equivalent to
 
 ```
-(min-size - min-width * (max-size - min-size) / (max-width - min-width)) + ((max-size - min-size) / (max-width - min-width) * 100)vw
+min-size + (min-size - max-size) * ( (100vw - min-width) / ( max-width - min-width) )
 ```
 
 ## Defaults
