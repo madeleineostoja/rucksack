@@ -1,5 +1,5 @@
 ---
-title: "Quanitity Pseudo-Selectors"
+title: "Quantity Pseudo-Selectors"
 anchor: "quantity-pseudo"
 weight: 3
 ---
