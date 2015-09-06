@@ -3,15 +3,15 @@
 var $postcss = require('postcss');
 
 var processors = {
+  responsiveType: require('postcss-responsive-type'),
+  shorthandPosition: require('postcss-position'),
+  quantityQueries: require('postcss-quantity-queries'),
   alias: require('postcss-alias'),
+  inputPseudo: require('postcss-input-style'),
   clearFix: require('postcss-clearfix'),
-  easings: require('postcss-easings'),
   fontPath: require('postcss-fontpath'),
   hexRGBA: require('postcss-hexrgba'),
-  position: require('postcss-position'),
-  quantityQueries: require('postcss-quantity-queries'),
-  responsiveType: require('postcss-responsive-type'),
-  inputStyles: require('postcss-input-style'),
+  easings: require('postcss-easings'),
   fallbacks: [
     require('postcss-color-rgba-fallback'),
     require('postcss-epub'),
