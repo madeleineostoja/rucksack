@@ -13,8 +13,7 @@ var fs = require('fs'),
 opts = opts(process.argv.slice(2), {
   boolean: [
     'autoprefixer',
-    'fallbacks',
-    'colors'
+    'fallbacks'
   ],
   alias: {
     h: 'help',
