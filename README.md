@@ -221,11 +221,25 @@ Automatically insert legacy fallbacks for modern properties.
 --
 
 ### Options
-You can toggle Rucksack's addons on or off by passing booleans to the relevant property.
+All features in Rucksack can be toggled on or off by passing options on initialization.
+
+Full list of feature options (all true by default):
+- `alias`
+- `clearFix`
+- `easings`
+- `fontPath`
+- `hexRGBA`
+- `position`
+- `quantityQueries`
+- `responsiveType`
+- `inputStyles`
+- `fallbacks`
+- `autoprefixer`
 
 ```js
+// Set in build tool, etc.
 .rucksack({
-  /* options */
+  // options
 })
 ```
 
