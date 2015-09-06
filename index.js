@@ -2,44 +2,28 @@
 
 var $postcss = require('postcss');
 
-// Core Rucksack plugins (always used)
-var core = [
-  require('postcss-alias'),
-  require('postcss-clearfix'),
-  require('postcss-easings'),
-  require('postcss-fontpath'),
-  require('postcss-hexrgba'),
-  require('postcss-position'),
-  require('postcss-quantity-queries'),
-  require('postcss-responsive-type'),
-  require('postcss-input-style')
-];
-
-// CSS fallbacks set (optional)
-var fallbacks = [
-  require('postcss-color-rgba-fallback'),
-  require('postcss-epub'),
-  require('postcss-opacity'),
-  require('postcss-pseudoelements'),
-  require('postcss-vmin')
-];
-
-// Individual add-ons (optional)
-var autoprefixer = require('autoprefixer');
-    // colors = require('postcss-color-palette');
+var processors = {
+  alias: require('postcss-alias'),
+  clearFix: require('postcss-clearfix'),
+  easings: require('postcss-easings'),
+  fontPath: require('postcss-fontpath'),
+  hexRGBA: require('postcss-hexrgba'),
+  position: require('postcss-position'),
+  quantityQueries: require('postcss-quantity-queries'),
+  responsiveType: require('postcss-responsive-type'),
+  inputStyles: require('postcss-input-style'),
+  fallbacks: [
+    require('postcss-color-rgba-fallback'),
+    require('postcss-epub'),
+    require('postcss-opacity'),
+    require('postcss-pseudoelements'),
+    require('postcss-vmin')
+  ],
+  autoprefixer: require('autoprefixer')
+};
 
 // Error reporting
 var reporter = require('postcss-reporter');
-
-// Define a custom color palette
-// colors = colors({ palette: 'material' });
-
-// Default options
-var defaults = {
-  fallbacks: true,
-  autoprefixer: true
-  // colors: true
-};
 
 // Build PostCSS plugin
 var rucksack = $postcss.plugin('rucksack', function(options) {
@@ -47,29 +31,21 @@ var rucksack = $postcss.plugin('rucksack', function(options) {
   var postcss = $postcss(),
       plugins = [];
 
-  // Build options with defaults
   options = options || {};
 
-  for (var option in defaults) {
-    if (defaults.hasOwnProperty(option) && !options.hasOwnProperty(option)) {
-      options[option] = defaults[option];
+  Object.keys(processors).forEach(function(feature){
+    var processor = processors[feature];
+
+    if (options[feature] !== false) {
+
+      if (processor instanceof Array) {
+        plugins = plugins.concat(processor);
+      } else {
+        plugins.push(processor);
+      }
+
     }
-  }
-
-  // Build plugin array based on options
-  plugins = plugins.concat(core);
-
-  if (options.fallbacks) {
-    plugins = plugins.concat(fallbacks);
-  }
-
-  if (options.autoprefixer) {
-    plugins.push(autoprefixer);
-  }
-
-  // if (options.colors) {
-  //   plugins.push(colors);
-  // }
+  });
 
   plugins.push(reporter);
 

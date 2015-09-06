@@ -6,7 +6,7 @@ var postcss = require('postcss'),
     fs = require('fs'),
     path = require('path'),
     spawn = require('child_process').spawn,
-    rucksack = require('../index.js');
+    rucksack = require('../');
 
 var test = function(fixture, opts, done) {
   var input = fixture + '.css',
@@ -134,10 +134,6 @@ describe('Rucksack', function () {
   it('autoprefixes', function(done) {
    test('autoprefixer', { autoprefixer: true }, done);
   });
-
-  // it('swaps default colors', function(done) {
-  //  test('colors', {}, done);
-  // });
 
   // CLI tool
   it('processes css on the command line', function(done) {
