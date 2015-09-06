@@ -82,6 +82,8 @@
           
             <li><a class="sidebar__nav__item" href="#usage">Installation &amp; Usage</a></li>
           
+            <li><a class="sidebar__nav__item" href="#options">Options</a></li>
+          
             <li><a class="sidebar__nav__item" href="#responsive-type">Responsive Typography</a></li>
           
             <li><a class="sidebar__nav__item" href="#shorthand-position">Shorthand Positioning</a></li>
@@ -96,7 +98,7 @@
           
             <li><a class="sidebar__nav__item" href="#font-src">Font Src Expansion</a></li>
           
-            <li><a class="sidebar__nav__item" href="#hexgrba">Hex RGBA Shortcuts</a></li>
+            <li><a class="sidebar__nav__item" href="#hexrgba">Hex RGBA Shortcuts</a></li>
           
             <li><a class="sidebar__nav__item" href="#easings">All The Easings</a></li>
           
@@ -340,6 +342,53 @@ stylus(css).use(
 
 
 </div>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="options"></a>
+
+          <h1 class="content__section__title">Options <a href="#options" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack is fully modular, you can turn any of its features on or off to customize it to your needs. Just pass the feature name and a boolean during initialization in your build tool. By default all features are set to <code>true</code>.</p>
+
+<p>For example:</p>
+
+<pre><code class="language-javascript">// Set in build tool
+.rucksack({
+  clearFix: false,
+  fallbacks: false
+});
+</code></pre>
+
+<h2 id="available-feature-toggles:e4e1609209f0cd02c1d50b647b7ad7b2">Available feature toggles:</h2>
+
+<ul>
+<li><p><a href="#responsive-type"><code>responsiveType</code></a></p></li>
+
+<li><p><a href="#shorthand-position"><code>shorthandPosition</code></a></p></li>
+
+<li><p><a href="#quantity-pseudo"><code>quantityQueries</code></a></p></li>
+
+<li><p><a href="#alias"><code>alias</code></a></p></li>
+
+<li><p><a href="#input"><code>inputPseudo</code></a></p></li>
+
+<li><p><a href="#clearfix"><code>clearFix</code></a></p></li>
+
+<li><p><a href="#font-src"><code>fontPath</code></a></p></li>
+
+<li><p><a href="#hexrgba"><code>hexRGBA</code></a></p></li>
+
+<li><p><a href="#easings"><code>easings</code></a></p></li>
+
+<li><p><a href="#fallbacks"><code>fallbacks</code></a></p></li>
+
+<li><p><a href="#autoprefixing"><code>autoprefixer</code></a></p></li>
+</ul>
 
 
         </article>
@@ -806,9 +855,9 @@ input[type=range]::-moz-focus-outer {
         </article>
       
         <article class="content__section">
-          <a name="hexgrba"></a>
+          <a name="hexrgba"></a>
 
-          <h1 class="content__section__title">Hex RGBA Shortcuts <a href="#hexgrba" class="content__section__anchor">#</a></h1>
+          <h1 class="content__section__title">Hex RGBA Shortcuts <a href="#hexrgba" class="content__section__anchor">#</a></h1>
 
           
 

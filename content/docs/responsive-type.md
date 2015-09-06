@@ -1,7 +1,7 @@
 ---
 title: "Responsive Typography"
 anchor: "responsive-type"
-weight: 1
+weight: 2
 ---
 
 Create automagical fluid typography with a new `responsive` property on `font-size`. All the type on this site is responsive, resize your browser to see it in action!

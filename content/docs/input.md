@@ -1,7 +1,7 @@
 ---
 title: "Input Pseduo-Elements"
 anchor: "input"
-weight: 5
+weight: 6
 ---
 Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers. Currently the only element supported is the range input (and `::placeholder` if you enable automatic vendor prefixing), more will be added as browser vendors open up their APIs.
 

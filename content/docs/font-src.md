@@ -1,7 +1,7 @@
 ---
 title: "Font Src Expansion"
 anchor: "font-src"
-weight: 7
+weight: 8
 ---
 Rucksack provides a shortcut method to generate bulletproof `src` sets in `@font-face`, with a new `font-path` property. Just set the path to your font files in `font-path`, and it will output a src set based on the [FontSpring syntax](http://blog.fontspring.com/2011/02/further-hardening-of-the-bulletproof-syntax/). Note that `font-path` must be to the font _file_, not just the directory containing the files.
 

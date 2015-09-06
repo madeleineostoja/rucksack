@@ -1,7 +1,7 @@
 ---
 title: "Legacy Fallbacks"
 anchor: "fallbacks"
-weight: 11
+weight: 12
 addon: true
 ---
 Rucksack can automatically provide fallbacks for many properties on old browsers, making legacy support a breeze.

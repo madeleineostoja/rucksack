@@ -1,7 +1,7 @@
 ---
 title: "Shorthand Positioning"
 anchor: "shorthand-position"
-weight: 2
+weight: 3
 ---
 Rucksack brings the shorthand methods used by properties like `margin` and `padding` to position offsets. The same syntaxes apply
 

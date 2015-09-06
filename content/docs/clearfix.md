@@ -1,7 +1,7 @@
 ---
 title: "Native Clearfix"
 anchor: "clearfix"
-weight: 6
+weight: 7
 ---
 Rucksack bundles up common clearfix methods into native methods of the `clear` property. A 'clearfix' is a method of making a parent element self-clear it's children, so floats are contained.
 
