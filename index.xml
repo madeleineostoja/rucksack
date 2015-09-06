@@ -237,6 +237,69 @@ stylus(css).use(
     </item>
     
     <item>
+      <title>Options</title>
+      <link>https://simplaio.github.io/rucksack/docs/options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simplaio.github.io/rucksack/docs/options/</guid>
+      <description>
+
+&lt;p&gt;Rucksack is fully modular, you can turn any of its features on or off to customize it to your needs. Just pass the feature name and a boolean during initialization in your build tool. By default all features are set to &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// Set in build tool
+.rucksack({
+  clearFix: false,
+  fallbacks: false
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;available-feature-toggles:e4e1609209f0cd02c1d50b647b7ad7b2&#34;&gt;Available feature toggles:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#responsive-type&#34;&gt;&lt;code&gt;responsiveType&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#shorthand-position&#34;&gt;&lt;code&gt;shorthandPosition&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#quantity-pseudo&#34;&gt;&lt;code&gt;quantityQueries&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#alias&#34;&gt;&lt;code&gt;alias&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#input&#34;&gt;&lt;code&gt;inputPseudo&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#clearfix&#34;&gt;&lt;code&gt;clearFix&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#font-src&#34;&gt;&lt;code&gt;fontPath&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#hexrgba&#34;&gt;&lt;code&gt;hexRGBA&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#easings&#34;&gt;&lt;code&gt;easings&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#fallbacks&#34;&gt;&lt;code&gt;fallbacks&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#autoprefixing&#34;&gt;&lt;code&gt;autoprefixer&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Responsive Typography</title>
+      <link>https://simplaio.github.io/rucksack/home/responsive-type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simplaio.github.io/rucksack/home/responsive-type/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  font-size: responsive;
+}
+
+
+/* Resize your browser! */
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Responsive Typography</title>
       <link>https://simplaio.github.io/rucksack/docs/responsive-type/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -339,17 +402,18 @@ upper-font-range: 1280px
     </item>
     
     <item>
-      <title>Responsive Typography</title>
-      <link>https://simplaio.github.io/rucksack/home/responsive-type/</link>
+      <title>Shorthand Positioning</title>
+      <link>https://simplaio.github.io/rucksack/home/shorthand-positioning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://simplaio.github.io/rucksack/home/responsive-type/</guid>
+      <guid>https://simplaio.github.io/rucksack/home/shorthand-positioning/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  font-size: responsive;
+  position: absolute 0;
 }
 
-
-/* Resize your browser! */
+.bar {
+  position: relative 20% auto;
+}
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -415,17 +479,17 @@ upper-font-range: 1280px
     </item>
     
     <item>
-      <title>Shorthand Positioning</title>
-      <link>https://simplaio.github.io/rucksack/home/shorthand-positioning/</link>
+      <title>Quantity Queries</title>
+      <link>https://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://simplaio.github.io/rucksack/home/shorthand-positioning/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  position: absolute 0;
+      <guid>https://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
+  color: blue;
 }
 
-.bar {
-  position: relative 20% auto;
+li:at-least(5) {
+  color: red;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -490,17 +554,18 @@ li:nth-last-child(n+4) ~ li
     </item>
     
     <item>
-      <title>Quantity Queries</title>
-      <link>https://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
+      <title>Property Aliases</title>
+      <link>https://simplaio.github.io/rucksack/home/alias/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
-  color: blue;
+      <guid>https://simplaio.github.io/rucksack/home/alias/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
+  fs: font-size;
+  br: border-radius;
 }
 
-li:at-least(5) {
-  color: red;
+.foo {
+  fs: 16px;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -540,18 +605,17 @@ li:at-least(5) {
     </item>
     
     <item>
-      <title>Property Aliases</title>
-      <link>https://simplaio.github.io/rucksack/home/alias/</link>
+      <title>Input Styling</title>
+      <link>https://simplaio.github.io/rucksack/home/input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://simplaio.github.io/rucksack/home/alias/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
-  fs: font-size;
-  br: border-radius;
+      <guid>https://simplaio.github.io/rucksack/home/input/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::placeholder {
+  color: black;
 }
 
-.foo {
-  fs: 16px;
+input[type=&amp;quot;range&amp;quot;]::thumb {
+  background: blue;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -682,17 +746,13 @@ input[type=range]::-moz-focus-outer {
     </item>
     
     <item>
-      <title>Input Styling</title>
-      <link>https://simplaio.github.io/rucksack/home/input/</link>
+      <title>Native Clearfix</title>
+      <link>https://simplaio.github.io/rucksack/home/clearfix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://simplaio.github.io/rucksack/home/input/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::placeholder {
-  color: black;
-}
-
-input[type=&amp;quot;range&amp;quot;]::thumb {
-  background: blue;
+      <guid>https://simplaio.github.io/rucksack/home/clearfix/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  clear: fix;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -741,55 +801,6 @@ input[type=&amp;quot;range&amp;quot;]::thumb {
 }
 .bar {
   zoom: 1;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Native Clearfix</title>
-      <link>https://simplaio.github.io/rucksack/home/clearfix/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplaio.github.io/rucksack/home/clearfix/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  clear: fix;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Font Src Expansion</title>
-      <link>https://simplaio.github.io/rucksack/docs/font-src/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplaio.github.io/rucksack/docs/font-src/</guid>
-      <description>
-
-&lt;p&gt;Rucksack provides a shortcut method to generate bulletproof &lt;code&gt;src&lt;/code&gt; sets in &lt;code&gt;@font-face&lt;/code&gt;, with a new &lt;code&gt;font-path&lt;/code&gt; property. Just set the path to your font files in &lt;code&gt;font-path&lt;/code&gt;, and it will output a src set based on the &lt;a href=&#34;http://blog.fontspring.com/2011/02/further-hardening-of-the-bulletproof-syntax/&#34;&gt;FontSpring syntax&lt;/a&gt;. Note that &lt;code&gt;font-path&lt;/code&gt; must be to the font &lt;em&gt;file&lt;/em&gt;, not just the directory containing the files.&lt;/p&gt;
-
-&lt;h2 id=&#34;input:f2abd75841bca483d201861228f32bc3&#34;&gt;Input&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
-  font-family: &#39;My Font&#39;;
-  font-path: &#39;/my/font/file&#39;;
-  font-weight: normal;
-  font-style: normal;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;output:f2abd75841bca483d201861228f32bc3&#34;&gt;Output&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
-  font-family: &#39;My Font&#39;;
-  src: url(&amp;quot;/my/font/file.eot&amp;quot;);
-  src: url(&amp;quot;/my/font/file.eot?#iefix&amp;quot;) format(&#39;embedded-opentype&#39;),
-       url(&amp;quot;/my/font/file.woff&amp;quot;) format(&#39;woff&#39;),
-       url(&amp;quot;/my/font/file.ttf&amp;quot;) format(&#39;truetype&#39;),
-       url(&amp;quot;/my/font/file.svg&amp;quot;) format(&#39;svg&#39;);
-  font-weight: normal;
-  font-style: normal;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>

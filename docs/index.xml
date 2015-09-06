@@ -237,6 +237,53 @@ stylus(css).use(
     </item>
     
     <item>
+      <title>Options</title>
+      <link>https://simplaio.github.io/rucksack/docs/options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simplaio.github.io/rucksack/docs/options/</guid>
+      <description>
+
+&lt;p&gt;Rucksack is fully modular, you can turn any of its features on or off to customize it to your needs. Just pass the feature name and a boolean during initialization in your build tool. By default all features are set to &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// Set in build tool
+.rucksack({
+  clearFix: false,
+  fallbacks: false
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;available-feature-toggles:e4e1609209f0cd02c1d50b647b7ad7b2&#34;&gt;Available feature toggles:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#responsive-type&#34;&gt;&lt;code&gt;responsiveType&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#shorthand-position&#34;&gt;&lt;code&gt;shorthandPosition&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#quantity-pseudo&#34;&gt;&lt;code&gt;quantityQueries&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#alias&#34;&gt;&lt;code&gt;alias&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#input&#34;&gt;&lt;code&gt;inputPseudo&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#clearfix&#34;&gt;&lt;code&gt;clearFix&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#font-src&#34;&gt;&lt;code&gt;fontPath&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#hexrgba&#34;&gt;&lt;code&gt;hexRGBA&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#easings&#34;&gt;&lt;code&gt;easings&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#fallbacks&#34;&gt;&lt;code&gt;fallbacks&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#autoprefixing&#34;&gt;&lt;code&gt;autoprefixer&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Responsive Typography</title>
       <link>https://simplaio.github.io/rucksack/docs/responsive-type/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
