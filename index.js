@@ -24,6 +24,12 @@ var processors = {
 // Error reporting
 var reporter = require('postcss-reporter');
 
+// Default options
+var defaults = {
+  autoprefixer: false,
+  fallbacks: false
+};
+
 // Build PostCSS plugin
 var rucksack = $postcss.plugin('rucksack', function(options) {
 
@@ -31,6 +37,12 @@ var rucksack = $postcss.plugin('rucksack', function(options) {
       plugins = [];
 
   options = options || {};
+
+  Object.keys(defaults).forEach(function(opt){
+    if (!options.hasOwnProperty(opt)){
+      options[opt] = defaults[opt];
+    }
+  });
 
   Object.keys(processors).forEach(function(feature){
     var processor = processors[feature];

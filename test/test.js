@@ -12,9 +12,6 @@ var test = function(fixture, opts, done) {
   var input = fixture + '.css',
       expected = fixture + '.expected.css';
 
-  opts.hasOwnProperty('autoprefixer') ? opts : opts.autoprefixer = false;
-  opts.hasOwnProperty('fallbacks') ? opts : opts.fallbacks = false;
-
   input = fs.readFileSync(path.join(__dirname, 'fixtures', input), 'utf8');
   expected = fs.readFileSync(path.join(__dirname, 'fixtures', expected), 'utf8');
 
