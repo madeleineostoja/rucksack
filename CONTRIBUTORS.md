@@ -18,9 +18,7 @@ Rucksack (c) 2015 Simpla <admin@simpla.io>
 
 ### Optional Addons
 * [autoprefixer][autoprefixer] - (c) 2013 Andrey Sitnik <andrey@sitnik.ru>
-* [postcss-color-palette][postcss-color-palette] - (c) 2015 Zaim Bakar
 * [postcss-color-rgba-fallback][postcss-color-rgba-fallback] - (c) 2015  Guillaume Démésy
-* [postcss-epub][postcss-epub] - (c) 2014 Maxime Thirouin
 * [postcss-opacity][postcss-opacity] - (c) 2015 Vincent De Oliveira <vincent@iamvdo.me>
 * [postcss-vmin][postcss-vmin] - (c) 2015 Vincent De Oliveira <vincent@iamvdo.me>
 * [postcss-pseudoelements][postcss-pseudoelements] - no license specified
