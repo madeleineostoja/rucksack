@@ -221,9 +221,10 @@ Automatically insert legacy fallbacks for modern properties.
 --
 
 ### Options
-All features in Rucksack can be toggled on or off by passing options on initialization. By default all features are set to `true`.
+All features in Rucksack can be toggled on or off by passing options on initialization. By default all core features are set to `true`, and optional
+addons are set to `false`.
 
-Full list of feature options:
+Core features (default to `true`):
 - `responsiveType`
 - `shorthandPosition`
 - `quantityQueries`
@@ -233,6 +234,8 @@ Full list of feature options:
 - `fontPath`
 - `hexRGBA`
 - `easings`
+
+Addons (default to `false`):
 - `fallbacks`
 - `autoprefixer`
 
