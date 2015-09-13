@@ -114,10 +114,6 @@ describe('Rucksack', function () {
    test('rgba', { fallbacks: true }, done);
   });
 
-  it('polyfills -epub', function(done) {
-   test('epub', { fallbacks: true }, done);
-  });
-
   it('polyfills opacity', function(done) {
    test('opacity', { fallbacks: true }, done);
   });

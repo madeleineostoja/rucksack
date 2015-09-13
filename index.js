@@ -14,7 +14,6 @@ var processors = {
   easings: require('postcss-easings'),
   fallbacks: [
     require('postcss-color-rgba-fallback'),
-    require('postcss-epub'),
     require('postcss-opacity'),
     require('postcss-pseudoelements'),
     require('postcss-vmin')

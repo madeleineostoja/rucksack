@@ -41,7 +41,6 @@
     "postcss-clearfix": "0.2.0",
     "postcss-color-rgba-fallback": "^2.0.0",
     "postcss-easings": "^0.3.0",
-    "postcss-epub": "^3.0.0",
     "postcss-fontpath": "^0.2.0",
     "postcss-hexrgba": "^0.2.0",
     "postcss-input-style": "^0.3.0",
