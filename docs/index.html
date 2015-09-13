@@ -353,18 +353,20 @@ stylus(css).use(
 
           
 
-<p>Rucksack is fully modular, you can turn any of its features on or off to customize it to your needs. Just pass the feature name and a boolean during initialization in your build tool. By default all features are set to <code>true</code>.</p>
+<p>Rucksack is fully modular, you can turn any of its features on or off to customize it to your needs. Just pass the feature name and a boolean during initialization in your build tool. By default core features are set to <code>true</code>, and optional addons are set to <code>false</code>.</p>
 
 <p>For example:</p>
 
 <pre><code class="language-javascript">// Set in build tool
 .rucksack({
   clearFix: false,
-  fallbacks: false
+  fallbacks: true
 });
 </code></pre>
 
-<h2 id="available-feature-toggles:e4e1609209f0cd02c1d50b647b7ad7b2">Available feature toggles:</h2>
+<h2 id="core-feature-toggles:e4e1609209f0cd02c1d50b647b7ad7b2">Core feature toggles</h2>
+
+<p>All default to <code>true</code>.</p>
 
 <ul>
 <li><p><a href="#responsive-type"><code>responsiveType</code></a></p></li>
@@ -384,7 +386,13 @@ stylus(css).use(
 <li><p><a href="#hexrgba"><code>hexRGBA</code></a></p></li>
 
 <li><p><a href="#easings"><code>easings</code></a></p></li>
+</ul>
 
+<h2 id="options-addon-toggles:e4e1609209f0cd02c1d50b647b7ad7b2">Options addon toggles</h2>
+
+<p>All default to <code>false</code>.</p>
+
+<ul>
 <li><p><a href="#fallbacks"><code>fallbacks</code></a></p></li>
 
 <li><p><a href="#autoprefixing"><code>autoprefixer</code></a></p></li>
@@ -1086,7 +1094,7 @@ input[type=range]::-moz-focus-outer {
 
 <p>Rucksack can automatically provide fallbacks for many properties on old browsers, making legacy support a breeze.</p>
 
-<p>This is an optional add-on, and can be toggled on or off with the <code>fallbacks</code> option, passed to Rucksack on initialization. By default fallbacks is set to <code>true</code>.</p>
+<p>This is an optional add-on, and can be toggled on or off with the <code>fallbacks</code> option, passed to Rucksack on initialization. By default fallbacks is set to <code>false</code>.</p>
 
 <pre><code class="language-javascript">var rucksack = require('rucksack-css');
 
@@ -1169,7 +1177,7 @@ rucksack({
 
 <p>Rucksack comes with the option to run your code through <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>. Autoprefixer automatically applies relevant vendor prefixes based on current browser popularity and property support (from <a href="http://caniuse.com/">CanIUse</a>).</p>
 
-<p>This is an optional add-on, and can be toggled on or off with the <code>autoprefixer</code> option, passed to Rucksack on initialization. By default autoprefixer is set to <code>true</code>.</p>
+<p>This is an optional add-on, and can be toggled on or off with the <code>autoprefixer</code> option, passed to Rucksack on initialization. By default autoprefixer is set to <code>false</code>.</p>
 
 <pre><code class="language-javascript">var rucksack = require('rucksack-css');
 
