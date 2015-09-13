@@ -37,7 +37,7 @@ All default to `true`.
 
 - [`easings`](#easings)
 
-## Options addon toggles
+## Addon toggles
 All default to `false`.
 
 - [`fallbacks`](#fallbacks)
