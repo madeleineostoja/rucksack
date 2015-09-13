@@ -279,7 +279,7 @@ stylus(css).use(
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;#easings&#34;&gt;&lt;code&gt;easings&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;options-addon-toggles:e4e1609209f0cd02c1d50b647b7ad7b2&#34;&gt;Options addon toggles&lt;/h2&gt;
+&lt;h2 id=&#34;addon-toggles:e4e1609209f0cd02c1d50b647b7ad7b2&#34;&gt;Addon toggles&lt;/h2&gt;
 
 &lt;p&gt;All default to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
 
