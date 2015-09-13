@@ -220,6 +220,10 @@ Automatically insert legacy fallbacks for modern properties.
 
 --
 
+**Read the full docs at http://simplaio.github.io/rucksack**
+
+--
+
 ### Options
 All features in Rucksack can be toggled on or off by passing options on initialization. By default all core features are set to `true`, and optional
 addons are set to `false`.
