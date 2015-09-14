@@ -2,9 +2,9 @@ Usage: rucksack [input] [output] {OPTIONS}
 
 Options:
 
-    --no-autoprefixer   Disable automatic vendor prefixing.
+    --autoprefixer      Enable automatic vendor prefixing.
 
-    --no-fallbacks      Disable legacy fallbacks.
+    --fallbacks         Enable legacy fallbacks.
 
     --version,    -v    Show the version number.
 

@@ -134,7 +134,7 @@ describe('Rucksack', function () {
   });
 
   it('handles options on the command line', function(done) {
-    cliTest('cliopts', '--no-autoprefixer', done);
+    cliTest('cliopts', '--autoprefixer', done);
   });
 
 
