@@ -30,7 +30,7 @@
     "rucksack": "./bin/cmd.js"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.12.0"
   },
   "homepage": "https://github.com/simplaio/rucksack",
   "dependencies": {
@@ -44,13 +44,13 @@
     "postcss-fontpath": "^0.2.0",
     "postcss-hexrgba": "^0.2.0",
     "postcss-input-style": "^0.3.0",
-    "postcss-opacity": "git://github.com/seaneking/postcss-opacity.git",
+    "postcss-opacity": "3.0.0",
     "postcss-position": "^0.4.0",
     "postcss-pseudoelements": "^3.0.0",
     "postcss-quantity-queries": "^0.4.0",
     "postcss-reporter": "^1.0.0",
     "postcss-responsive-type": "^0.3.0",
-    "postcss-vmin": "git://github.com/seaneking/postcss-vmin.git",
+    "postcss-vmin": "2.0.0",
     "read-file-stdin": "^0.2.0",
     "write-file-stdout": "0.0.2"
   },
