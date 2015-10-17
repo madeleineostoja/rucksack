@@ -49,7 +49,7 @@
     "postcss-pseudoelements": "^3.0.0",
     "postcss-quantity-queries": "^0.4.0",
     "postcss-reporter": "^1.0.0",
-    "postcss-responsive-type": "^0.3.0",
+    "postcss-responsive-type": "^0.3.1",
     "postcss-vmin": "2.0.0",
     "read-file-stdin": "^0.2.0",
     "write-file-stdout": "0.0.2"
