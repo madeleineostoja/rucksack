@@ -1092,7 +1092,7 @@ input[type=range]::-moz-focus-outer {
 
           
 
-<p>Rucksack can automatically provide fallbacks for many properties on old browsers, making legacy support a breeze.</p>
+<p>Rucksack can pass your styles through <a href="https://github.com/seaneking/laggard">Laggard</a>, which provides legacy fallbacks for many properties, making old browser support a breeze.</p>
 
 <p>This is an optional add-on, and can be toggled on or off with the <code>fallbacks</code> option, passed to Rucksack on initialization. By default fallbacks is set to <code>false</code>.</p>
 
@@ -1134,6 +1134,21 @@ rucksack({
 }
 </code></pre>
 
+<h2 id="rem-units:55a54716ffff7e4c378dc72dd3df4c9b">Rem units</h2>
+
+<p>Creates a <code>px</code> fallback to <code>rem</code> unit sizing, calculated from the document root (defined in <code>html</code>, <code>:root</code>, or falling back to <code>16px</code>).</p>
+
+<pre><code class="language-css">.foo {
+  font-size: 2rem;
+}
+</code></pre>
+
+<pre><code class="language-css">.foo {
+  font-size: 32px;
+  font-size: 2rem;
+}
+</code></pre>
+
 <h2 id="pseudo-elements:55a54716ffff7e4c378dc72dd3df4c9b">Pseudo elements</h2>
 
 <p>Converts <code>::pseudo</code> elements to the CSS2-friendly single-colon style.</p>
@@ -1162,6 +1177,21 @@ rucksack({
 <pre><code class="language-css">.foo {
   width: 50vm;
   width: 50vmin;
+}
+</code></pre>
+
+<h2 id="will-change:55a54716ffff7e4c378dc72dd3df4c9b">will-change</h2>
+
+<p>Inserts a 3D acceleration hack to emulate the <code>will-change</code> property, using <code>backface-visibility</code>.</p>
+
+<pre><code class="language-css">.foo {
+  will-change: transform;
+}
+</code></pre>
+
+<pre><code class="language-css">.foo {
+  backface-visibility: hidden;
+  will-change: transform;
 }
 </code></pre>
 
