@@ -18,12 +18,7 @@ processors = {
   fontPath: require('postcss-fontpath'),
   hexRGBA: require('postcss-hexrgba'),
   easings: require('postcss-easings'),
-  fallbacks: [
-    require('postcss-color-rgba-fallback'),
-    require('postcss-opacity'),
-    require('postcss-pseudoelements'),
-    require('postcss-vmin')
-  ],
+  fallbacks: require('laggard'),
   autoprefixer: require('autoprefixer')
 };
 
@@ -54,13 +49,7 @@ rucksack = $postcss.plugin('rucksack', function(options) {
     var processor = processors[feature];
 
     if (options[feature] !== false) {
-
-      if (processor instanceof Array) {
-        plugins = plugins.concat(processor);
-      } else {
-        plugins.push(processor);
-      }
-
+      plugins.push(processor);
     }
   });
 

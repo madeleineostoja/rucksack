@@ -1,0 +1,24 @@
+.opacity {
+  opacity: .5;
+}
+
+.pseudo::after {
+  display: block;
+}
+
+.rgba {
+  background: rgba(153, 221, 153, 0.8);
+  color: rgba(0, 0, 0, .4);
+}
+
+.vmin {
+  width: 50vmin;
+}
+
+.pixrem {
+  font-size: 2rem;
+}
+
+.willchange {
+  will-change: transform;
+}

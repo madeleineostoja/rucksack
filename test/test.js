@@ -106,24 +106,11 @@ describe('Rucksack', function () {
     test('input', {}, done);
   });
 
-  // Fallback plugins
-  it('polyfills rgba', function(done) {
-   test('rgba', { fallbacks: true }, done);
-  });
-
-  it('polyfills opacity', function(done) {
-   test('opacity', { fallbacks: true }, done);
-  });
-
-  it('polyfills pseudo-elements', function(done) {
-   test('pseudo', { fallbacks: true }, done);
-  });
-
-  it('polyfills vmin', function(done) {
-   test('vmin', { fallbacks: true }, done);
-  });
-
   // Addons
+  it('applies fallbacks', function(done) {
+   test('laggard', { fallbacks: true }, done);
+  });
+
   it('autoprefixes', function(done) {
    test('autoprefixer', { autoprefixer: true }, done);
   });

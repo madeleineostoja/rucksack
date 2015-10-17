@@ -35,6 +35,7 @@
   "homepage": "https://github.com/simplaio/rucksack",
   "dependencies": {
     "autoprefixer": "^6.0.0",
+    "laggard": "^0.1.0",
     "minimist": "^1.1.2",
     "postcss": "^5.0.0",
     "postcss-alias": "^0.2.2",

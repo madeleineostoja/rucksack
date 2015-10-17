@@ -1,8 +1,0 @@
-.foo {
-  opacity: .5;
-}
-
-.bar {
-  opacity: .5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-}

@@ -1,7 +1,0 @@
-.foo:before {
-  display: block;
-}
-
-.bar:after {
-  display: none;
-}
