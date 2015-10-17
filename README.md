@@ -188,11 +188,11 @@ _CSS property aliases_
 ### Optional Extras
 
 ###### Autoprefixing
-Automatically apply vendor prefixes to relevant properties based on data from [CanIUse][caniuse].
+Automatically apply vendor prefixes to relevant properties based on data from [CanIUse][caniuse] - via [autoprefixer][autoprefixer].
 
 
 ###### Legacy Fallbacks
-Automatically insert legacy fallbacks for modern properties.
+Automatically insert legacy fallbacks for modern properties - via [laggard][laggard].
 ```css
 /* before */
 .foo {
@@ -264,4 +264,5 @@ MIT © [Simpla][simpla]
 [type-demo]: http://simplaio.github.io/rucksack/img/type-demo.gif
 [fontspring]: http://blog.fontspring.com/2011/02/further-hardening-of-the-bulletproof-syntax/
 [caniuse]: http://caniuse.com
-[material-colors]: https://www.google.com/design/spec/style/color.html
+[autoprefixer]: https://github.com/postcss/autoprefixer
+[laggard]: https://github.com/seaneking/laggard
