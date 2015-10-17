@@ -1,12 +1,18 @@
 'use strict';
 
-var $postcss = require('postcss');
+var $postcss,
+    processors,
+    reporter,
+    defaults,
+    rucksack;
 
-var processors = {
+$postcss = require('postcss');
+
+processors = {
+  alias: require('postcss-alias'),
   responsiveType: require('postcss-responsive-type'),
   shorthandPosition: require('postcss-position'),
   quantityQueries: require('postcss-quantity-queries'),
-  alias: require('postcss-alias'),
   inputPseudo: require('postcss-input-style'),
   clearFix: require('postcss-clearfix'),
   fontPath: require('postcss-fontpath'),
@@ -22,16 +28,16 @@ var processors = {
 };
 
 // Error reporting
-var reporter = require('postcss-reporter');
+reporter = require('postcss-reporter');
 
 // Default options
-var defaults = {
+defaults = {
   autoprefixer: false,
   fallbacks: false
 };
 
 // Build PostCSS plugin
-var rucksack = $postcss.plugin('rucksack', function(options) {
+rucksack = $postcss.plugin('rucksack', function(options) {
 
   var postcss = $postcss(),
       plugins = [];
