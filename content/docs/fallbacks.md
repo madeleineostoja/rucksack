@@ -4,7 +4,7 @@ anchor: "fallbacks"
 weight: 12
 addon: true
 ---
-Rucksack can automatically provide fallbacks for many properties on old browsers, making legacy support a breeze.
+Rucksack can pass your styles through [Laggard](https://github.com/seaneking/laggard), which provides legacy fallbacks for many properties, making old browser support a breeze.
 
 This is an optional add-on, and can be toggled on or off with the `fallbacks` option, passed to Rucksack on initialization. By default fallbacks is set to `false`.
 
@@ -16,7 +16,6 @@ rucksack({
   fallbacks: true
 });
 ```
-
 
 ## Opacity
 Generates the appropriate ms filter for achieving transparencies on IE8.
@@ -48,6 +47,21 @@ Generates a hexidecimal fallback to `rgba()` for <IE8
 }
 ```
 
+## Rem units
+Creates a `px` fallback to `rem` unit sizing, calculated from the document root (defined in `html`, `:root`, or falling back to `16px`).
+
+```css
+.foo {
+  font-size: 2rem;
+}
+```
+```css
+.foo {
+  font-size: 32px;
+  font-size: 2rem;
+}
+```
+
 ## Pseudo elements
 Converts `::pseudo` elements to the CSS2-friendly single-colon style.
 
@@ -76,5 +90,20 @@ Creates a `vm` fallback to the `vmin` unit for IE9
 .foo {
   width: 50vm;
   width: 50vmin;
+}
+```
+
+## will-change
+Inserts a 3D acceleration hack to emulate the `will-change` property, using `backface-visibility`.
+
+```css
+.foo {
+  will-change: transform;
+}
+```
+```css
+.foo {
+  backface-visibility: hidden;
+  will-change: transform;
 }
 ```

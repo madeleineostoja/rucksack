@@ -983,7 +983,7 @@ input[type=range]::-moz-focus-outer {
       <guid>https://simplaio.github.io/rucksack/docs/fallbacks/</guid>
       <description>
 
-&lt;p&gt;Rucksack can automatically provide fallbacks for many properties on old browsers, making legacy support a breeze.&lt;/p&gt;
+&lt;p&gt;Rucksack can pass your styles through &lt;a href=&#34;https://github.com/seaneking/laggard&#34;&gt;Laggard&lt;/a&gt;, which provides legacy fallbacks for many properties, making old browser support a breeze.&lt;/p&gt;
 
 &lt;p&gt;This is an optional add-on, and can be toggled on or off with the &lt;code&gt;fallbacks&lt;/code&gt; option, passed to Rucksack on initialization. By default fallbacks is set to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
 
@@ -1025,6 +1025,21 @@ rucksack({
 }
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h2 id=&#34;rem-units:55a54716ffff7e4c378dc72dd3df4c9b&#34;&gt;Rem units&lt;/h2&gt;
+
+&lt;p&gt;Creates a &lt;code&gt;px&lt;/code&gt; fallback to &lt;code&gt;rem&lt;/code&gt; unit sizing, calculated from the document root (defined in &lt;code&gt;html&lt;/code&gt;, &lt;code&gt;:root&lt;/code&gt;, or falling back to &lt;code&gt;16px&lt;/code&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  font-size: 2rem;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  font-size: 32px;
+  font-size: 2rem;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;pseudo-elements:55a54716ffff7e4c378dc72dd3df4c9b&#34;&gt;Pseudo elements&lt;/h2&gt;
 
 &lt;p&gt;Converts &lt;code&gt;::pseudo&lt;/code&gt; elements to the CSS2-friendly single-colon style.&lt;/p&gt;
@@ -1053,6 +1068,21 @@ rucksack({
 &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
   width: 50vm;
   width: 50vmin;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;will-change:55a54716ffff7e4c378dc72dd3df4c9b&#34;&gt;will-change&lt;/h2&gt;
+
+&lt;p&gt;Inserts a 3D acceleration hack to emulate the &lt;code&gt;will-change&lt;/code&gt; property, using &lt;code&gt;backface-visibility&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  will-change: transform;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  backface-visibility: hidden;
+  will-change: transform;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
