@@ -32,7 +32,7 @@ if (opts.version) {
 
 // Pipe out help doc from help.txt
 if (file === 'help' || opts.help) {
-  return fs.createReadStream(path.join(__dirname, '/usage.txt'))
+  return fs.createReadStream(path.join(__dirname, '/help.txt'))
     .pipe(process.stdout)
     .on('close', function() {
        process.exit(1);
