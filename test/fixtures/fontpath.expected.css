@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Test';
-  src: url("/path/to/font/test.eot");
-  src: url("/path/to/font/test.eot?#iefix") format('embedded-opentype'),
-       url("/path/to/font/test.woff") format('woff'),
-       url("/path/to/font/test.ttf") format('truetype'),
-       url("/path/to/font/test.svg") format('svg');
+  src: url("/path/to/font/file.eot");
+  src: url("/path/to/font/file.eot?#iefix") format('embedded-opentype'),
+       url("/path/to/font/file.woff") format('woff'),
+       url("/path/to/font/file.ttf") format('truetype'),
+       url("/path/to/font/file.svg") format('svg');
   font-weight: normal;
   font-style: normal;
 }
