@@ -5,7 +5,7 @@ weight: 12
 addon: true
 ---
 ```css
-.foo{
+.foo {
   transition: all;
 }
 
