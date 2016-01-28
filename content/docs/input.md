@@ -1,5 +1,5 @@
 ---
-title: "Input Pseduo-Elements"
+title: "Input Pseudo-Elements"
 anchor: "input"
 weight: 6
 ---
