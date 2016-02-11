@@ -3,7 +3,7 @@ title: "Quantity Pseudo-Selectors"
 anchor: "quantity-pseudo"
 weight: 4
 ---
-Rucksack adds psuedo-selectors to select and style elements based on their quantity. Use them to build powerful, responsive, content-driven designs.
+Rucksack adds pseudo-selectors to select and style elements based on their quantity. Use them to build powerful, responsive, content-driven designs.
 
 ## :at-least
 Applies if there are a certain number of items or more
