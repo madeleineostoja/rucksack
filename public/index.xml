@@ -427,6 +427,23 @@ upper-font-range: 1280px
     </item>
     
     <item>
+      <title>Quantity Queries</title>
+      <link>https://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
+  color: blue;
+}
+
+li:at-least(5) {
+  color: red;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Shorthand Positioning</title>
       <link>https://simplaio.github.io/rucksack/docs/shorthand-positioning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -487,17 +504,18 @@ upper-font-range: 1280px
     </item>
     
     <item>
-      <title>Quantity Queries</title>
-      <link>https://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
+      <title>Property Aliases</title>
+      <link>https://simplaio.github.io/rucksack/home/alias/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
-  color: blue;
+      <guid>https://simplaio.github.io/rucksack/home/alias/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
+  fs: font-size;
+  br: border-radius;
 }
 
-li:at-least(5) {
-  color: red;
+.foo {
+  fs: 16px;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -511,7 +529,7 @@ li:at-least(5) {
       <guid>https://simplaio.github.io/rucksack/docs/quantity-pseudo/</guid>
       <description>
 
-&lt;p&gt;Rucksack adds psuedo-selectors to select and style elements based on their quantity. Use them to build powerful, responsive, content-driven designs.&lt;/p&gt;
+&lt;p&gt;Rucksack adds pseudo-selectors to select and style elements based on their quantity. Use them to build powerful, responsive, content-driven designs.&lt;/p&gt;
 
 &lt;h2 id=&#34;at-least:0480254488cd73f5063255190d7f32dd&#34;&gt;:at-least&lt;/h2&gt;
 
@@ -562,18 +580,17 @@ li:nth-last-child(n+4) ~ li
     </item>
     
     <item>
-      <title>Property Aliases</title>
-      <link>https://simplaio.github.io/rucksack/home/alias/</link>
+      <title>Input Styling</title>
+      <link>https://simplaio.github.io/rucksack/home/input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://simplaio.github.io/rucksack/home/alias/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
-  fs: font-size;
-  br: border-radius;
+      <guid>https://simplaio.github.io/rucksack/home/input/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::placeholder {
+  color: black;
 }
 
-.foo {
-  fs: 16px;
+input[type=&amp;quot;range&amp;quot;]::thumb {
+  background: blue;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -613,24 +630,7 @@ li:nth-last-child(n+4) ~ li
     </item>
     
     <item>
-      <title>Input Styling</title>
-      <link>https://simplaio.github.io/rucksack/home/input/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplaio.github.io/rucksack/home/input/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::placeholder {
-  color: black;
-}
-
-input[type=&amp;quot;range&amp;quot;]::thumb {
-  background: blue;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Input Pseduo-Elements</title>
+      <title>Input Pseudo-Elements</title>
       <link>https://simplaio.github.io/rucksack/docs/input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -767,6 +767,22 @@ input[type=range]::-moz-focus-outer {
     </item>
     
     <item>
+      <title>Font Src Generation</title>
+      <link>https://simplaio.github.io/rucksack/home/font-src/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simplaio.github.io/rucksack/home/font-src/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
+  font-family: &#39;My Font&#39;;
+  font-path: &#39;/my/font/file&#39;;
+  font-weight: normal;
+  font-style: normal;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Native Clearfix</title>
       <link>https://simplaio.github.io/rucksack/docs/clearfix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -809,22 +825,6 @@ input[type=range]::-moz-focus-outer {
 }
 .bar {
   zoom: 1;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Font Src Generation</title>
-      <link>https://simplaio.github.io/rucksack/home/font-src/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplaio.github.io/rucksack/home/font-src/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
-  font-family: &#39;My Font&#39;;
-  font-path: &#39;/my/font/file&#39;;
-  font-weight: normal;
-  font-style: normal;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>

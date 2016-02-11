@@ -27,15 +27,11 @@
   </url>
   
   <url>
-    <loc>https://simplaio.github.io/rucksack/docs/shorthand-positioning/</loc>
-  </url>
-  
-  <url>
     <loc>https://simplaio.github.io/rucksack/home/quantity-pseudo/</loc>
   </url>
   
   <url>
-    <loc>https://simplaio.github.io/rucksack/docs/quantity-pseudo/</loc>
+    <loc>https://simplaio.github.io/rucksack/docs/shorthand-positioning/</loc>
   </url>
   
   <url>
@@ -43,11 +39,15 @@
   </url>
   
   <url>
-    <loc>https://simplaio.github.io/rucksack/docs/alias/</loc>
+    <loc>https://simplaio.github.io/rucksack/docs/quantity-pseudo/</loc>
   </url>
   
   <url>
     <loc>https://simplaio.github.io/rucksack/home/input/</loc>
+  </url>
+  
+  <url>
+    <loc>https://simplaio.github.io/rucksack/docs/alias/</loc>
   </url>
   
   <url>
@@ -59,11 +59,11 @@
   </url>
   
   <url>
-    <loc>https://simplaio.github.io/rucksack/docs/clearfix/</loc>
+    <loc>https://simplaio.github.io/rucksack/home/font-src/</loc>
   </url>
   
   <url>
-    <loc>https://simplaio.github.io/rucksack/home/font-src/</loc>
+    <loc>https://simplaio.github.io/rucksack/docs/clearfix/</loc>
   </url>
   
   <url>
@@ -75,11 +75,11 @@
   </url>
   
   <url>
-    <loc>https://simplaio.github.io/rucksack/docs/hexrgba/</loc>
+    <loc>https://simplaio.github.io/rucksack/home/easings/</loc>
   </url>
   
   <url>
-    <loc>https://simplaio.github.io/rucksack/home/easings/</loc>
+    <loc>https://simplaio.github.io/rucksack/docs/hexrgba/</loc>
   </url>
   
   <url>
@@ -91,11 +91,11 @@
   </url>
   
   <url>
-    <loc>https://simplaio.github.io/rucksack/docs/fallbacks/</loc>
+    <loc>https://simplaio.github.io/rucksack/home/autoprefixing/</loc>
   </url>
   
   <url>
-    <loc>https://simplaio.github.io/rucksack/home/autoprefixing/</loc>
+    <loc>https://simplaio.github.io/rucksack/docs/fallbacks/</loc>
   </url>
   
   <url>
