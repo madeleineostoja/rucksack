@@ -155,7 +155,7 @@ _Shorthand `@font-face` src sets (becomes [FontSpring syntax][fontspring])_
 _Whole library of modern easing functions_
 ```css
 .foo {
-  transition: all 250ms ease-out-elastic;
+  transition: all 250ms ease-out-cubic;
 }
 ```
 
