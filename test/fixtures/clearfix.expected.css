@@ -1,12 +1,12 @@
 .foo:after {
   content: '';
-  display: table;
+  display: block;
   clear: both;
 }
 
 .bar:before,
 .bar:after {
-  content: '';
+  content: ' ';
   display: table;
 }
 
