@@ -1,4 +1,3 @@
-/*eslint no-unused-expressions: 0, block-scoped-var: 0, no-undef: 0*/
 'use strict';
 
 var postcss = require('postcss'),
@@ -20,10 +19,10 @@ var test = function(fixture, opts, done) {
     .then(function (result) {
       expect(result.css).to.eql(expected);
       expect(result.warnings()).to.be.empty;
-    done();
-  }).catch(function (error) {
-    done(error);
-  });
+      done();
+    }).catch(function (error) {
+      done(error);
+    });
 
 };
 
@@ -36,11 +35,11 @@ var cli = function(cmd, callback) {
       err = '';
 
   ps = spawn(process.execPath, [
-      path.resolve(__dirname, '../bin/cmd.js')
+    path.resolve(__dirname, '../bin/cmd.js')
   ].concat(cmd));
 
   ps.stdout.on('data', function(buffer) {
-     out += buffer;
+    out += buffer;
   });
 
   ps.stderr.on('data', function(buffer) {
@@ -71,35 +70,35 @@ describe('Rucksack', function () {
 
   // Core plugins
   it('sets aliases', function(done) {
-   test('alias', {}, done);
+    test('alias', {}, done);
   });
 
   it('applies clear:fix', function(done) {
-   test('clearfix', {}, done);
+    test('clearfix', {}, done);
   });
 
   it('applies easings', function(done) {
-   test('easings', {}, done);
+    test('easings', {}, done);
   });
 
   it('sets font-path', function(done) {
-   test('fontpath', {}, done);
+    test('fontpath', {}, done);
   });
 
   it('expands rgba(hex,a)', function(done) {
-   test('hexrgba', {}, done);
+    test('hexrgba', {}, done);
   });
 
   it('expands position shorthands', function(done) {
-   test('position', {}, done);
+    test('position', {}, done);
   });
 
   it('applies quanity queries', function(done) {
-   test('quantity', {}, done);
+    test('quantity', {}, done);
   });
 
   it('does responsive type', function(done) {
-   test('responsive-type', {}, done);
+    test('responsive-type', {}, done);
   });
 
   it('adds new input pseudo-elements', function(done) {
@@ -108,11 +107,11 @@ describe('Rucksack', function () {
 
   // Addons
   it('applies fallbacks', function(done) {
-   test('laggard', { fallbacks: true }, done);
+    test('laggard', { fallbacks: true }, done);
   });
 
   it('autoprefixes', function(done) {
-   test('autoprefixer', { autoprefixer: true }, done);
+    test('autoprefixer', { autoprefixer: true }, done);
   });
 
   // CLI tool

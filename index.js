@@ -75,7 +75,7 @@ module.exports.process = function(css, options) {
 
   // return a css string if inline/no sourcemap.
   if (options.map === null || options.map === true || options.map && options.map.inline) {
-      return result.css;
+    return result.css;
   }
 
   // otherwise return an object of css & map

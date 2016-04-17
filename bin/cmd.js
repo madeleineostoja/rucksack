@@ -35,7 +35,7 @@ if (file === 'help' || opts.help) {
   return fs.createReadStream(path.join(__dirname, '/help.txt'))
     .pipe(process.stdout)
     .on('close', function() {
-       process.exit(1);
+      process.exit(1);
     });
 }
 
