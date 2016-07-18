@@ -105,6 +105,14 @@ describe('Rucksack', function () {
     test('input', {}, done);
   });
 
+  it('sets short-property', function(done) {
+    test('shortproperty', {}, done);
+  });
+
+  it('sets base-shape', function(done) {
+    test('baseshape', {}, done);
+  });
+
   // Addons
   it('applies fallbacks', function(done) {
     test('laggard', { fallbacks: true }, done);

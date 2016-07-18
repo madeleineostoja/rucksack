@@ -1,0 +1,8 @@
+.foo{
+  size: 48px;
+  text: red bold center uppercase 1.25em 1.5 .05em;
+}
+.bar{
+  font-size: 1.25em 2;
+  color: #fff #000;
+}

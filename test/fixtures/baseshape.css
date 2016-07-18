@@ -1,0 +1,9 @@
+.foo{
+  rect: 30px 20px #f00;
+}
+.bar{
+  circle: 50px #f00;
+}
+.baz{
+  triangle: 5px top #f00;
+}
