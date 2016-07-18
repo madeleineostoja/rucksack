@@ -18,6 +18,8 @@ processors = {
   fontPath: require('postcss-fontpath'),
   hexRGBA: require('postcss-hexrgba'),
   easings: require('postcss-easings'),
+  shortProperty: require('postcss-short'),
+  baseShape: require('postcss-shape'),
   fallbacks: require('laggard'),
   autoprefixer: require('autoprefixer')
 };
