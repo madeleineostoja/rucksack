@@ -218,10 +218,6 @@ Automatically insert legacy fallbacks for modern properties - via [laggard][lagg
 }
 ```
 
-###### Reporter
-
-If you set this option to `true`, it will enable [postcss-reporter](https://github.com/postcss/postcss-reporter), which shows helpful error and warning messages from other plugin in your console.
-
 --
 
 **Read the full docs at http://simplaio.github.io/rucksack**
@@ -246,7 +242,9 @@ Core features (default to `true`):
 Addons (default to `false`):
 - `fallbacks`
 - `autoprefixer`
-- `reporter`
+
+###### Error reporting
+Enable reporting, which outputs helpful error and warning messages from the plugins used inside Rucksack to your console, with the `reporter` option. Defaults to `false`.
 
 ```js
 // Set in build tool, etc.
