@@ -59,34 +59,12 @@ li:at-least(5) {
     </item>
     
     <item>
-      <title>Property Aliases</title>
-      <link>https://simplaio.github.io/rucksack/home/alias/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplaio.github.io/rucksack/home/alias/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
-  fs: font-size;
-  br: border-radius;
-}
-
-.foo {
-  fs: 16px;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Input Styling</title>
+      <title>Advanced Input Styling</title>
       <link>https://simplaio.github.io/rucksack/home/input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://simplaio.github.io/rucksack/home/input/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::placeholder {
-  color: black;
-}
-
-input[type=&amp;quot;range&amp;quot;]::thumb {
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input[type=&amp;quot;range&amp;quot;]::thumb {
   background: blue;
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -130,6 +108,25 @@ input[type=&amp;quot;range&amp;quot;]::thumb {
       <guid>https://simplaio.github.io/rucksack/home/hexrgba/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
   color: rgba(#fff, 0.8);
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Property Aliases</title>
+      <link>https://simplaio.github.io/rucksack/home/alias/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simplaio.github.io/rucksack/home/alias/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
+  fs: font-size;
+  fw: font-weight;
+}
+
+.foo {
+  fs: 16px;
+  fw: bold;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>

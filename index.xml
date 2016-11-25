@@ -288,6 +288,10 @@ stylus(css).use(
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;#autoprefixing&#34;&gt;&lt;code&gt;autoprefixer&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&#34;error-reporting:e4e1609209f0cd02c1d50b647b7ad7b2&#34;&gt;Error reporting&lt;/h2&gt;
+
+&lt;p&gt;Enable reporting, which outputs verbose errors and messages from all of the plugins used inside Rucksack to your console, with the &lt;code&gt;reporter&lt;/code&gt; flag. Defaults to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -427,23 +431,6 @@ upper-font-range: 1280px
     </item>
     
     <item>
-      <title>Quantity Queries</title>
-      <link>https://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
-  color: blue;
-}
-
-li:at-least(5) {
-  color: red;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Shorthand Positioning</title>
       <link>https://simplaio.github.io/rucksack/docs/shorthand-positioning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -504,18 +491,17 @@ li:at-least(5) {
     </item>
     
     <item>
-      <title>Property Aliases</title>
-      <link>https://simplaio.github.io/rucksack/home/alias/</link>
+      <title>Quantity Queries</title>
+      <link>https://simplaio.github.io/rucksack/home/quantity-pseudo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://simplaio.github.io/rucksack/home/alias/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
-  fs: font-size;
-  br: border-radius;
+      <guid>https://simplaio.github.io/rucksack/home/quantity-pseudo/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;li:at-most(4) {
+  color: blue;
 }
 
-.foo {
-  fs: 16px;
+li:at-least(5) {
+  color: red;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -580,50 +566,13 @@ li:nth-last-child(n+4) ~ li
     </item>
     
     <item>
-      <title>Input Styling</title>
+      <title>Advanced Input Styling</title>
       <link>https://simplaio.github.io/rucksack/home/input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://simplaio.github.io/rucksack/home/input/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::placeholder {
-  color: black;
-}
-
-input[type=&amp;quot;range&amp;quot;]::thumb {
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input[type=&amp;quot;range&amp;quot;]::thumb {
   background: blue;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Property Aliases</title>
-      <link>https://simplaio.github.io/rucksack/docs/alias/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplaio.github.io/rucksack/docs/alias/</guid>
-      <description>
-
-&lt;p&gt;Rucksack allows you to set aliases for long property names and save some of those precious keystrokes. To set an alias simply add it to the &lt;code&gt;@alias&lt;/code&gt; rule in the format of &lt;code&gt;[alias]: [property];&lt;/code&gt;. Aliases can be used anywhere, including inside other properties. Aliases are global in a stylesheet, so it&amp;rsquo;s a good idea to have just a single &lt;code&gt;@alias&lt;/code&gt; rule in your project and specify all aliases in one place.&lt;/p&gt;
-
-&lt;h2 id=&#34;input:3b3d2541cd37edc022b27d62280cdf2f&#34;&gt;Input&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
-  fs: font-size;
-  bg: background;
-}
-
-.foo {
-  fs: 16px;
-  transition: bg 200ms ease;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;output:3b3d2541cd37edc022b27d62280cdf2f&#34;&gt;Output&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  font-size: 16px;
-  transition: background 200ms ease;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
@@ -640,48 +589,6 @@ input[type=&amp;quot;range&amp;quot;]::thumb {
 &lt;p&gt;Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers. Currently the only element supported is the range input (and &lt;code&gt;::placeholder&lt;/code&gt; if you enable automatic vendor prefixing), more will be added as browser vendors open up their APIs.&lt;/p&gt;
 
 &lt;p&gt;Note that the rules in the output generated (see below) are duplicated, since if a browser finds a single selector it doesn&amp;rsquo;t understand in a group the whole group is ignored (see &lt;a href=&#34;http://www.w3.org/TR/selectors/#Conformance&#34;&gt;Selectors Level 3&lt;/a&gt;).&lt;/p&gt;
-
-&lt;h2 id=&#34;placeholders:0fa58901273a043169cc0dfabb934c88&#34;&gt;Placeholders&lt;/h2&gt;
-
-&lt;p&gt;Via &lt;a href=&#34;#autoprefixing&#34;&gt;automatic prefixing&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Style placeholders with the &lt;code&gt;::placeholder&lt;/code&gt; pseudo-element. It can be applied to any input element, or at the root of your stylesheet for global styling.&lt;/p&gt;
-
-&lt;p&gt;Input&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::placeholder {
-  color: black;
-  opacity: 0.8;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Output&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::-webkit-input-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input:-moz-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input::-moz-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input:-ms-input-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input::placeholder {
-  color: black;
-  opacity: 0.8;
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;range-elements:0fa58901273a043169cc0dfabb934c88&#34;&gt;Range Elements&lt;/h2&gt;
 
@@ -767,22 +674,6 @@ input[type=range]::-moz-focus-outer {
     </item>
     
     <item>
-      <title>Font Src Generation</title>
-      <link>https://simplaio.github.io/rucksack/home/font-src/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplaio.github.io/rucksack/home/font-src/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
-  font-family: &#39;My Font&#39;;
-  font-path: &#39;/my/font/file&#39;;
-  font-weight: normal;
-  font-style: normal;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Native Clearfix</title>
       <link>https://simplaio.github.io/rucksack/docs/clearfix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -825,6 +716,71 @@ input[type=range]::-moz-focus-outer {
 }
 .bar {
   zoom: 1;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Font Src Generation</title>
+      <link>https://simplaio.github.io/rucksack/home/font-src/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simplaio.github.io/rucksack/home/font-src/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
+  font-family: &#39;My Font&#39;;
+  font-path: &#39;/my/font/file&#39;;
+  font-weight: normal;
+  font-style: normal;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Font Src Expansion</title>
+      <link>https://simplaio.github.io/rucksack/docs/font-src/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simplaio.github.io/rucksack/docs/font-src/</guid>
+      <description>
+
+&lt;p&gt;Rucksack provides a shortcut method to generate bulletproof &lt;code&gt;src&lt;/code&gt; sets in &lt;code&gt;@font-face&lt;/code&gt;, with a new &lt;code&gt;font-path&lt;/code&gt; property. Just set the path to your font files in &lt;code&gt;font-path&lt;/code&gt;, and it will output a src set based on the &lt;a href=&#34;http://blog.fontspring.com/2011/02/further-hardening-of-the-bulletproof-syntax/&#34;&gt;FontSpring syntax&lt;/a&gt;. Note that &lt;code&gt;font-path&lt;/code&gt; must be to the font &lt;em&gt;file&lt;/em&gt;, not just the directory containing the files.&lt;/p&gt;
+
+&lt;h2 id=&#34;input:f2abd75841bca483d201861228f32bc3&#34;&gt;Input&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
+  font-family: &#39;My Font&#39;;
+  font-path: &#39;/my/font/file&#39;;
+  font-weight: normal;
+  font-style: normal;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;output:f2abd75841bca483d201861228f32bc3&#34;&gt;Output&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@font-face {
+  font-family: &#39;My Font&#39;;
+  src: url(&amp;quot;/my/font/file.eot&amp;quot;);
+  src: url(&amp;quot;/my/font/file.eot?#iefix&amp;quot;) format(&#39;embedded-opentype&#39;),
+       url(&amp;quot;/my/font/file.woff&amp;quot;) format(&#39;woff&#39;),
+       url(&amp;quot;/my/font/file.ttf&amp;quot;) format(&#39;truetype&#39;),
+       url(&amp;quot;/my/font/file.svg&amp;quot;) format(&#39;svg&#39;);
+  font-weight: normal;
+  font-style: normal;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hex RGBA Shortcuts</title>
+      <link>https://simplaio.github.io/rucksack/home/hexrgba/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simplaio.github.io/rucksack/home/hexrgba/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  color: rgba(#fff, 0.8);
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>

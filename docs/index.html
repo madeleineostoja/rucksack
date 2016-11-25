@@ -90,8 +90,6 @@
           
             <li><a class="sidebar__nav__item" href="#quantity-pseudo">Quantity Pseudo-Selectors</a></li>
           
-            <li><a class="sidebar__nav__item" href="#alias">Property Aliases</a></li>
-          
             <li><a class="sidebar__nav__item" href="#input">Input Pseudo-Elements</a></li>
           
             <li><a class="sidebar__nav__item" href="#clearfix">Native Clearfix</a></li>
@@ -99,6 +97,8 @@
             <li><a class="sidebar__nav__item" href="#font-src">Font Src Expansion</a></li>
           
             <li><a class="sidebar__nav__item" href="#hexrgba">Hex RGBA Shortcuts</a></li>
+          
+            <li><a class="sidebar__nav__item" href="#alias">Property Aliases</a></li>
           
             <li><a class="sidebar__nav__item" href="#easings">All The Easings</a></li>
           
@@ -398,6 +398,10 @@ stylus(css).use(
 <li><p><a href="#autoprefixing"><code>autoprefixer</code></a></p></li>
 </ul>
 
+<h2 id="error-reporting:e4e1609209f0cd02c1d50b647b7ad7b2">Error reporting</h2>
+
+<p>Enable reporting, which outputs verbose errors and messages from all of the plugins used inside Rucksack to your console, with the <code>reporter</code> flag. Defaults to <code>false</code>.</p>
+
 
         </article>
       
@@ -622,39 +626,6 @@ li:nth-last-child(n+4) ~ li
         </article>
       
         <article class="content__section">
-          <a name="alias"></a>
-
-          <h1 class="content__section__title">Property Aliases <a href="#alias" class="content__section__anchor">#</a></h1>
-
-          
-
-<p>Rucksack allows you to set aliases for long property names and save some of those precious keystrokes. To set an alias simply add it to the <code>@alias</code> rule in the format of <code>[alias]: [property];</code>. Aliases can be used anywhere, including inside other properties. Aliases are global in a stylesheet, so it&rsquo;s a good idea to have just a single <code>@alias</code> rule in your project and specify all aliases in one place.</p>
-
-<h2 id="input:3b3d2541cd37edc022b27d62280cdf2f">Input</h2>
-
-<pre><code class="language-css">@alias {
-  fs: font-size;
-  bg: background;
-}
-
-.foo {
-  fs: 16px;
-  transition: bg 200ms ease;
-}
-</code></pre>
-
-<h2 id="output:3b3d2541cd37edc022b27d62280cdf2f">Output</h2>
-
-<pre><code class="language-css">.foo {
-  font-size: 16px;
-  transition: background 200ms ease;
-}
-</code></pre>
-
-
-        </article>
-      
-        <article class="content__section">
           <a name="input"></a>
 
           <h1 class="content__section__title">Input Pseudo-Elements <a href="#input" class="content__section__anchor">#</a></h1>
@@ -664,48 +635,6 @@ li:nth-last-child(n+4) ~ li
 <p>Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers. Currently the only element supported is the range input (and <code>::placeholder</code> if you enable automatic vendor prefixing), more will be added as browser vendors open up their APIs.</p>
 
 <p>Note that the rules in the output generated (see below) are duplicated, since if a browser finds a single selector it doesn&rsquo;t understand in a group the whole group is ignored (see <a href="http://www.w3.org/TR/selectors/#Conformance">Selectors Level 3</a>).</p>
-
-<h2 id="placeholders:0fa58901273a043169cc0dfabb934c88">Placeholders</h2>
-
-<p>Via <a href="#autoprefixing">automatic prefixing</a>.</p>
-
-<p>Style placeholders with the <code>::placeholder</code> pseudo-element. It can be applied to any input element, or at the root of your stylesheet for global styling.</p>
-
-<p>Input</p>
-
-<pre><code class="language-css">input::placeholder {
-  color: black;
-  opacity: 0.8;
-}
-</code></pre>
-
-<p>Output</p>
-
-<pre><code class="language-css">input::-webkit-input-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input:-moz-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input::-moz-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input:-ms-input-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input::placeholder {
-  color: black;
-  opacity: 0.8;
-}
-</code></pre>
 
 <h2 id="range-elements:0fa58901273a043169cc0dfabb934c88">Range Elements</h2>
 
@@ -882,6 +811,51 @@ input[type=range]::-moz-focus-outer {
 
 <pre><code class="language-css">.foo {
   color: rgba(255,255,255, 0.8);
+}
+</code></pre>
+
+
+        </article>
+      
+        <article class="content__section">
+          <a name="alias"></a>
+
+          <h1 class="content__section__title">Property Aliases <a href="#alias" class="content__section__anchor">#</a></h1>
+
+          
+
+<p>Rucksack allows you to set aliases for long property names and save some of those precious keystrokes. To set an alias simply add it to the <code>@alias</code> rule in the format of <code>[alias]: [property];</code>. Aliases are global in a stylesheet, so it&rsquo;s a good idea to have just a single <code>@alias</code> rule in your project and specify all aliases in one place.</p>
+
+<h2 id="input:3b3d2541cd37edc022b27d62280cdf2f">Input</h2>
+
+<pre><code class="language-css">@alias {
+  fs: font-size;
+  fw: font-weight;
+}
+
+.foo {
+  fs: 16px;
+  fw: bold;
+}
+</code></pre>
+
+<h2 id="output:3b3d2541cd37edc022b27d62280cdf2f">Output</h2>
+
+<pre><code class="language-css">.foo {
+  font-size: 16px;
+  font-weight: bold
+}
+</code></pre>
+
+<p><strong>Note:</strong> Using aliases inside propety values is not supported</p>
+
+<pre><code class="language-css">@alias {
+  op: opacity;
+}
+
+.foo {
+  /* Not supported! */
+  transition: op 300ms ease;
 }
 </code></pre>
 

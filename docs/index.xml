@@ -288,6 +288,10 @@ stylus(css).use(
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;#autoprefixing&#34;&gt;&lt;code&gt;autoprefixer&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&#34;error-reporting:e4e1609209f0cd02c1d50b647b7ad7b2&#34;&gt;Error reporting&lt;/h2&gt;
+
+&lt;p&gt;Enable reporting, which outputs verbose errors and messages from all of the plugins used inside Rucksack to your console, with the &lt;code&gt;reporter&lt;/code&gt; flag. Defaults to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -512,39 +516,6 @@ li:nth-last-child(n+4) ~ li
     </item>
     
     <item>
-      <title>Property Aliases</title>
-      <link>https://simplaio.github.io/rucksack/docs/alias/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplaio.github.io/rucksack/docs/alias/</guid>
-      <description>
-
-&lt;p&gt;Rucksack allows you to set aliases for long property names and save some of those precious keystrokes. To set an alias simply add it to the &lt;code&gt;@alias&lt;/code&gt; rule in the format of &lt;code&gt;[alias]: [property];&lt;/code&gt;. Aliases can be used anywhere, including inside other properties. Aliases are global in a stylesheet, so it&amp;rsquo;s a good idea to have just a single &lt;code&gt;@alias&lt;/code&gt; rule in your project and specify all aliases in one place.&lt;/p&gt;
-
-&lt;h2 id=&#34;input:3b3d2541cd37edc022b27d62280cdf2f&#34;&gt;Input&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
-  fs: font-size;
-  bg: background;
-}
-
-.foo {
-  fs: 16px;
-  transition: bg 200ms ease;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;output:3b3d2541cd37edc022b27d62280cdf2f&#34;&gt;Output&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
-  font-size: 16px;
-  transition: background 200ms ease;
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Input Pseudo-Elements</title>
       <link>https://simplaio.github.io/rucksack/docs/input/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -555,48 +526,6 @@ li:nth-last-child(n+4) ~ li
 &lt;p&gt;Rucksack adds new pseudo-elements that allow you to easily style the inner elements of HTML5 inputs across browsers. Currently the only element supported is the range input (and &lt;code&gt;::placeholder&lt;/code&gt; if you enable automatic vendor prefixing), more will be added as browser vendors open up their APIs.&lt;/p&gt;
 
 &lt;p&gt;Note that the rules in the output generated (see below) are duplicated, since if a browser finds a single selector it doesn&amp;rsquo;t understand in a group the whole group is ignored (see &lt;a href=&#34;http://www.w3.org/TR/selectors/#Conformance&#34;&gt;Selectors Level 3&lt;/a&gt;).&lt;/p&gt;
-
-&lt;h2 id=&#34;placeholders:0fa58901273a043169cc0dfabb934c88&#34;&gt;Placeholders&lt;/h2&gt;
-
-&lt;p&gt;Via &lt;a href=&#34;#autoprefixing&#34;&gt;automatic prefixing&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Style placeholders with the &lt;code&gt;::placeholder&lt;/code&gt; pseudo-element. It can be applied to any input element, or at the root of your stylesheet for global styling.&lt;/p&gt;
-
-&lt;p&gt;Input&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::placeholder {
-  color: black;
-  opacity: 0.8;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Output&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;input::-webkit-input-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input:-moz-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input::-moz-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input:-ms-input-placeholder {
-  color: black;
-  opacity: 0.8;
-}
-
-input::placeholder {
-  color: black;
-  opacity: 0.8;
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;range-elements:0fa58901273a043169cc0dfabb934c88&#34;&gt;Range Elements&lt;/h2&gt;
 
@@ -773,6 +702,51 @@ input[type=range]::-moz-focus-outer {
 
 &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
   color: rgba(255,255,255, 0.8);
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Property Aliases</title>
+      <link>https://simplaio.github.io/rucksack/docs/alias/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simplaio.github.io/rucksack/docs/alias/</guid>
+      <description>
+
+&lt;p&gt;Rucksack allows you to set aliases for long property names and save some of those precious keystrokes. To set an alias simply add it to the &lt;code&gt;@alias&lt;/code&gt; rule in the format of &lt;code&gt;[alias]: [property];&lt;/code&gt;. Aliases are global in a stylesheet, so it&amp;rsquo;s a good idea to have just a single &lt;code&gt;@alias&lt;/code&gt; rule in your project and specify all aliases in one place.&lt;/p&gt;
+
+&lt;h2 id=&#34;input:3b3d2541cd37edc022b27d62280cdf2f&#34;&gt;Input&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
+  fs: font-size;
+  fw: font-weight;
+}
+
+.foo {
+  fs: 16px;
+  fw: bold;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;output:3b3d2541cd37edc022b27d62280cdf2f&#34;&gt;Output&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.foo {
+  font-size: 16px;
+  font-weight: bold
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Using aliases inside propety values is not supported&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@alias {
+  op: opacity;
+}
+
+.foo {
+  /* Not supported! */
+  transition: op 300ms ease;
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
