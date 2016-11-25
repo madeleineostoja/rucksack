@@ -28,7 +28,8 @@ reporter = require('postcss-reporter');
 // Default options
 defaults = {
   autoprefixer: false,
-  fallbacks: false
+  fallbacks: false,
+  reporter: false
 };
 
 // Build PostCSS plugin
@@ -53,7 +54,7 @@ rucksack = $postcss.plugin('rucksack', function(options) {
     }
   });
 
-  plugins.push(reporter);
+  options.reporter && plugins.push(reporter);
 
   // Build PostCSS bundle
   plugins.forEach(function(plugin){
