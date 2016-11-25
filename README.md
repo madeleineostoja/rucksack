@@ -30,7 +30,7 @@ $ npm install --save rucksack-css
 
 ### Usage
 
-###### Gulp
+#### Gulp
 Use [gulp-rucksack][gulp-rucksack]
 
 ```js
@@ -44,7 +44,7 @@ gulp.task('rucksack', function() {
 });
 ```
 
-###### Grunt
+#### Grunt
 Use [grunt-rucksack][grunt-rucksack]
 
 ```js
@@ -63,7 +63,7 @@ grunt.initConfig({
 grunt.registerTask('default', ['rucksack']);
 ```
 
-###### Broccoli
+#### Broccoli
 Use [broccoli-rucksack][broccoli-rucksack]
 
 ```js
@@ -71,14 +71,14 @@ var rucksack = require('broccoli-rucksack');
 tree = rucksack(tree, [options]);
 ```
 
-###### CLI
+#### CLI
 Process CSS directly on the command line
 
 ```sh
 $ rucksack src/style.css style.css [options]
 ```
 
-###### PostCSS
+#### PostCSS
 Rucksack is built on PostCSS, and can be used as a PostCSS plugin.
 
 ```js
@@ -94,7 +94,7 @@ postcss([ rucksack() ])
 ```
  See the [PostCSS Docs][postcss] for examples for your environment.
 
-###### Stylus
+#### Stylus
 Rucksack can be used as a Stylus plugin with [PostStylus][poststylus]
 
 ```js
@@ -187,11 +187,11 @@ _CSS property aliases_
 
 ### Optional Extras
 
-###### Autoprefixing
+#### Autoprefixing
 Automatically apply vendor prefixes to relevant properties based on data from [CanIUse][caniuse] - via [autoprefixer][autoprefixer].
 
 
-###### Legacy Fallbacks
+#### Legacy Fallbacks
 Automatically insert legacy fallbacks for modern properties - via [laggard][laggard].
 ```css
 /* before */
@@ -243,7 +243,7 @@ Addons (default to `false`):
 - `fallbacks`
 - `autoprefixer`
 
-###### Error reporting
+#### Error reporting
 Enable reporting, which outputs helpful error and warning messages from the plugins used inside Rucksack to your console, with the `reporter` option. Defaults to `false`.
 
 ```js
