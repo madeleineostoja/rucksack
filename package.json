@@ -38,7 +38,7 @@
     "laggard": "^0.1.0",
     "minimist": "^1.1.2",
     "postcss": "^5.0.0",
-    "postcss-alias": "^0.2.2",
+    "postcss-alias": "^1.0.0",
     "postcss-clearfix": "^1.0.0",
     "postcss-color-rgba-fallback": "^2.0.0",
     "postcss-easings": "^0.3.0",
