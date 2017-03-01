@@ -1,0 +1,18 @@
+.foo {
+  width: 48px;
+  height: 48px;
+  color: red;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  line-height: 1.5;
+  letter-spacing: .05em; 
+}
+
+.bar {
+  font-size: 1.25em;
+  line-height: 2;
+  color: #fff;
+  background-color: #000; 
+}

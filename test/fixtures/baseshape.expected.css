@@ -1,0 +1,21 @@
+.foo {
+  width: 30px;
+  height: 20px;
+  background-color: #f00;
+}
+
+.bar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f00;
+}
+
+.baz {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  border-width: 5px;
+  border-bottom-color: #f00;
+}
