@@ -1,6 +1,6 @@
 {
   "name": "rucksack-css",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "A little bag of CSS superpowers",
   "main": "index.js",
   "scripts": {
