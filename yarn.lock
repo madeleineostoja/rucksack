@@ -590,8 +590,8 @@ jsonify@~0.0.0:
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
 
 laggard@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/laggard/-/laggard-2.0.0.tgz#296403cbf693a24a98c16be0d95b47cb7968bd3f"
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/laggard/-/laggard-2.0.1.tgz#b34e87a5687788b9537e34c1b0560fed8f8c0cd9"
   dependencies:
     minimist "^1.2.0"
     pixrem "^4.0.1"
