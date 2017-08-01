@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /*eslint no-console: 0, no-undef: 0*/
 
+'use strict';
+
 const fs = require('fs');
 const read = require('read-file-stdin');
 const write = require('write-file-stdout');
