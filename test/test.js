@@ -1,14 +1,12 @@
-'use strict';
+const postcss = require('postcss');
+const expect = require('chai').expect;
+const fs = require('fs');
+const path = require('path');
+const spawn = require('child_process').spawn;
+const rucksack = require('../');
 
-var postcss = require('postcss'),
-    expect = require('chai').expect,
-    fs = require('fs'),
-    path = require('path'),
-    spawn = require('child_process').spawn,
-    rucksack = require('../');
-
-var test = function(fixture, opts, done) {
-  var input = fixture + '.css',
+function test(fixture, opts, done) {
+  let input = fixture + '.css',
       expected = fixture + '.expected.css';
 
   input = fs.readFileSync(path.join(__dirname, 'fixtures', input), 'utf8');
@@ -16,21 +14,19 @@ var test = function(fixture, opts, done) {
 
   postcss([ rucksack(opts) ])
     .process(input)
-    .then(function (result) {
+    .then(result => {
       expect(result.css).to.eql(expected);
       expect(result.warnings()).to.be.empty;
       done();
-    }).catch(function (error) {
+    }).catch(error => {
       done(error);
     });
-
 };
 
-
-var cli = function(cmd, callback) {
+function cli(cmd, callback) {
   process.chdir(__dirname);
 
-  var ps,
+  let ps,
       out = '',
       err = '';
 
@@ -38,27 +34,21 @@ var cli = function(cmd, callback) {
     path.resolve(__dirname, '../bin/cmd.js')
   ].concat(cmd));
 
-  ps.stdout.on('data', function(buffer) {
-    out += buffer;
-  });
-
-  ps.stderr.on('data', function(buffer) {
-    err += buffer;
-  });
-
+  ps.stdout.on('data', buffer => out += buffer);
+  ps.stderr.on('data', buffer => err += buffer);
   ps.on('exit', function(code) {
     callback.call(this, err, out, code);
   });
 };
 
-var cliTest = function(fixture, args, done) {
-  var input = fixture + '.css',
+function cliTest(fixture, args, done) {
+  let input = fixture + '.css',
       expected = fixture + '.expected.css';
 
   input = path.join(__dirname, 'fixtures', input);
   expected = path.join(__dirname, 'fixtures', expected);
 
-  cli([input, args], function(err, out, code) {
+  cli([input, args], (err, out, code) => {
     expect(out).to.eql(fs.readFileSync(expected, 'utf8'));
     expect(err).to.be.empty;
     expect(code).to.eql(0);
@@ -66,62 +56,28 @@ var cliTest = function(fixture, args, done) {
   });
 };
 
-describe('Rucksack', function () {
+describe('Rucksack', () => {
 
-  // Core plugins
-  it('sets aliases', function(done) {
-    test('alias', {}, done);
+  describe('core features', () => {
+    it('sets aliases', done => test('alias', {}, done));
+    it('applies clear:fix', done => test('clearfix', {}, done));
+    it('applies easings', done => test('easings', {}, done));
+    it('sets font-path', done => test('fontpath', {}, done));
+    it('expands rgba(hex,a)', done => test('hexrgba', {}, done));
+    it('expands position shorthands', done => test('position', {}, done));
+    it('applies quanity queries', done => test('quantity', {}, done));
+    it('does responsive type', done => test('responsive-type', {}, done));
+    it('adds new input pseudo-elements', done => test('input', {}, done));
   });
 
-  it('applies clear:fix', function(done) {
-    test('clearfix', {}, done);
-  });
+  describe('addons', () => {
+    it('applies fallbacks', done => test('laggard', { fallbacks: true }, done));
+    it('autoprefixes', done => test('autoprefixer', { autoprefixer: true }, done));
+  })
 
-  it('applies easings', function(done) {
-    test('easings', {}, done);
+  describe('cli', () => {
+    it('processes css on the command line', done => cliTest('position', '', done));
+    it('handles options on the command line', done => cliTest('cliopts', '--autoprefixer', done));
   });
-
-  it('sets font-path', function(done) {
-    test('fontpath', {}, done);
-  });
-
-  it('expands rgba(hex,a)', function(done) {
-    test('hexrgba', {}, done);
-  });
-
-  it('expands position shorthands', function(done) {
-    test('position', {}, done);
-  });
-
-  it('applies quanity queries', function(done) {
-    test('quantity', {}, done);
-  });
-
-  it('does responsive type', function(done) {
-    test('responsive-type', {}, done);
-  });
-
-  it('adds new input pseudo-elements', function(done) {
-    test('input', {}, done);
-  });
-
-  // Addons
-  it('applies fallbacks', function(done) {
-    test('laggard', { fallbacks: true }, done);
-  });
-
-  it('autoprefixes', function(done) {
-    test('autoprefixer', { autoprefixer: true }, done);
-  });
-
-  // CLI tool
-  it('processes css on the command line', function(done) {
-    cliTest('position', '', done);
-  });
-
-  it('handles options on the command line', function(done) {
-    cliTest('cliopts', '--autoprefixer', done);
-  });
-
 
 });

@@ -4,8 +4,3 @@ input[type="range"]::thumb {
   height: 8px;
   border-radius: 999px;
 }
-
-input[type="range"]::track {
-  background: #9d9d9d;
-  height: 3px;
-}

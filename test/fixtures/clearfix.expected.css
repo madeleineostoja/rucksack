@@ -1,19 +1,5 @@
 .foo:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.bar:before,
-.bar:after {
-  content: ' ';
-  display: table;
-}
-
-.bar:after {
-  clear: both;
-}
-
-.bar {
-  zoom: 1;
+    content: '';
+    display: block;
+    clear: both;
 }

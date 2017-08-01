@@ -39,7 +39,6 @@ if (FILE === 'help' || OPTS.help) {
 }
 
 read(FILE, (err, buf) => {
-
   if (err) {
     throw err;
   }
@@ -51,6 +50,5 @@ read(FILE, (err, buf) => {
   if (OUT) {
     OPTS.to = OUT;
   }
-
   write(OUT, rucksack.process(String(buf), OPTS));
 });
