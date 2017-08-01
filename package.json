@@ -39,7 +39,7 @@
   "homepage": "https://github.com/simplaio/rucksack",
   "dependencies": {
     "autoprefixer": "^7.1.2",
-    "laggard": "^0.1.0",
+    "laggard": "^2.0.0",
     "minimist": "^1.1.2",
     "postcss": "^6.0.8",
     "postcss-alias": "^2.0.0",
