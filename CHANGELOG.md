@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/simplaio/rucksack/tree/HEAD)
-
-[Full Changelog](https://github.com/simplaio/rucksack/compare/v0.9.1...HEAD)
+## [v1.0.0](https://github.com/simplaio/rucksack/tree/v1.0.0) (2017-08-01)
+[Full Changelog](https://github.com/simplaio/rucksack/compare/v0.9.1...v1.0.0)
 
 **Closed issues:**
 
