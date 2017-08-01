@@ -1,85 +1,97 @@
-'use strict';
+const postcss = require('postcss');
 
-var $postcss,
-    processors,
-    reporter,
-    defaults,
-    rucksack;
+const PLUGINS = [
+        {
+          option: 'alias',
+          module: require('postcss-alias')
+        },
+        {
+          option: 'responsiveType',
+          module: require('postcss-responsive-type')
+        },
+        {
+          option: 'shorthandPosition',
+          module: require('postcss-position')
+        },
+        {
+          option: 'quantityQueries',
+          module: require('postcss-quantity-queries')
+        },
+        {
+          option: 'inputPseudo',
+          module: require('postcss-input-style')
+        },
+        {
+          option: 'clearFix',
+          module: require('postcss-clearfix')
+        },
+        {
+          option: 'fontPath',
+          module: require('postcss-fontpath')
+        },
+        {
+          option: 'hexRGBA',
+          module: require('postcss-hexrgba')
+        },
+        {
+          option: 'easings',
+          module: require('postcss-easings')
+        },
+        {
+          option: 'fallbacks',
+          module: require('laggard')
+        },
+        {
+          option: 'autoprefixer',
+          module: require('autoprefixer')
+        },
+        {
+          option: 'reporter',
+          module: require('postcss-reporter')
+        }
+      ],
+      DEFAULTS = {
+        alias: true,
+        responsiveType: true,
+        shorthandPosition: true,
+        quantityQueries: true,
+        inputPseudo: true,
+        clearFix: true,
+        fontPath: true,
+        hexRGBA: true,
+        easings: true,
+        fallbacks: true,
+        autoprefixer: true,
+        reporter: true,
+        autoprefixer: false,
+        fallbacks: false,
+        reporter: false
+      };
 
-$postcss = require('postcss');
+// Export plugin bundle
+module.exports = postcss.plugin('rucksack', opts => {
+  opts = opts || {};
 
-processors = {
-  alias: require('postcss-alias'),
-  responsiveType: require('postcss-responsive-type'),
-  shorthandPosition: require('postcss-position'),
-  quantityQueries: require('postcss-quantity-queries'),
-  inputPseudo: require('postcss-input-style'),
-  clearFix: require('postcss-clearfix'),
-  fontPath: require('postcss-fontpath'),
-  hexRGBA: require('postcss-hexrgba'),
-  easings: require('postcss-easings'),
-  fallbacks: require('laggard'),
-  autoprefixer: require('autoprefixer')
-};
+  let config = Object.assign({}, DEFAULTS, opts),
+      bundle = postcss();
 
-// Error reporting
-reporter = require('postcss-reporter');
-
-// Default options
-defaults = {
-  autoprefixer: false,
-  fallbacks: false,
-  reporter: false
-};
-
-// Build PostCSS plugin
-rucksack = $postcss.plugin('rucksack', function(options) {
-
-  var postcss = $postcss(),
-      plugins = [];
-
-  options = options || {};
-
-  Object.keys(defaults).forEach(function(opt){
-    if (!options.hasOwnProperty(opt)){
-      options[opt] = defaults[opt];
-    }
+  PLUGINS.forEach(plugin => {
+    config[plugin.option] && bundle.use(plugin.module);
   });
 
-  Object.keys(processors).forEach(function(feature){
-    var processor = processors[feature];
-
-    if (options[feature] !== false) {
-      plugins.push(processor);
-    }
-  });
-
-  options.reporter && plugins.push(reporter);
-
-  // Build PostCSS bundle
-  plugins.forEach(function(plugin){
-    postcss.use(plugin);
-  });
-
-  return postcss;
-
+  return bundle;
 });
 
-// Export new PostCSS processor, bundled with plugins
-module.exports = rucksack;
+// Support sourcemaps
+module.exports.process = (css, opts) => {
+  opts = opts || {};
+  opts.map = opts.map || (opts.sourcemap ? true : null);
 
-module.exports.process = function(css, options) {
-  options = options || {};
-  options.map = options.map || (options.sourcemap ? true : null);
+  let result = postcss([ rucksack(opts) ]).process(css, opts);
 
-  var result = $postcss([rucksack(options)]).process(css, options);
-
-  // return a css string if inline/no sourcemap.
-  if (options.map === null || options.map === true || options.map && options.map.inline) {
+  if (opts.map === null || opts.map === true || opts.map && opts.map.inline) {
     return result.css;
   }
 
-  // otherwise return an object of css & map
   return result;
-
 };

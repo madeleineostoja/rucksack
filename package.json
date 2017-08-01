@@ -3,6 +3,10 @@
   "version": "0.9.1",
   "description": "A little bag of CSS superpowers",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha test --reporter nyan",
+    "posttest": "eslint ."
+  },
   "keywords": [
     "rucksack",
     "postcss",
@@ -59,9 +63,5 @@
     "chai": "^4.1.0",
     "eslint": "^4.3.0",
     "mocha": "^3.5.0"
-  },
-  "scripts": {
-    "test": "mocha test --reporter nyan",
-    "posttest": "eslint ."
   }
 }
