@@ -1,4 +1,5 @@
 .foo {
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
 }

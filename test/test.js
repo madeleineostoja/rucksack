@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const postcss = require('postcss');
 const expect = require('chai').expect;
 const fs = require('fs');
@@ -77,7 +79,6 @@ describe('Rucksack', () => {
 
   describe('cli', () => {
     it('processes css on the command line', done => cliTest('position', '', done));
-    it('handles options on the command line', done => cliTest('cliopts', '--autoprefixer', done));
   });
 
 });
