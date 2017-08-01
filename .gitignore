@@ -1,4 +1,6 @@
-node_modules/
-npm-debug.log
-bower_components/
+# Deps
+node_modules
+
+# Runtime
+*.log
 .DS_Store
