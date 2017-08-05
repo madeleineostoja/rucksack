@@ -17,13 +17,6 @@ Rucksack makes CSS development less painful, with the features and shortcuts it 
 ### Contents
 
 - [Install](#install)
-- [Usage](#usage)
-  - [Gulp](#gulp)
-  - [Grunt](#grunt)
-  - [Broccoli](#broccoli)
-  - [CLI](#cli)
-  - [PostCSS](#postcss)
-  - [Stylus](#stylus)
 - [Features](#features)
   - [Responsive typography](#responsive-typography)
   - [Shorthand positioning syntax](#shorthand-positioning-syntax)
@@ -37,6 +30,13 @@ Rucksack makes CSS development less painful, with the features and shortcuts it 
 - [Addons](#addons)
   - [Autoprefixer](#autoprefixer)
   - [Legacy Fallbacks](#legacy-fallbacks)
+- [Usage](#usage)
+  - [Gulp](#gulp)
+  - [Grunt](#grunt)
+  - [Broccoli](#broccoli)
+  - [CLI](#cli)
+  - [PostCSS](#postcss)
+  - [Stylus](#stylus)
 - [Options](#options)
 
 
@@ -52,91 +52,6 @@ $ yarn add rucksack-css --dev
 ```sh
 $ npm i rucksack-css --save-dev
 ```
-
-## Usage
-
-Rucksack can be used as a PostCSS plugin, direclty on the command line, and has helpers available for most build tools. 
-
-#### Gulp
-
-Use [gulp-rucksack][gulp-rucksack]
-
-```js
-const gulp = require('gulp');
-const rucksack = require('gulp-rucksack');
-
-gulp.task('rucksack', () => {
-  return gulp.src('src/style.css')
-    .pipe(rucksack())
-    .pipe(gulp.dest('style.css'));
-});
-```
-
-#### Grunt
-
-Use [grunt-rucksack][grunt-rucksack]
-
-```js
-require('load-grunt-tasks')(grunt);
-
-grunt.initConfig({
-	rucksack: {
-		compile: {
-			files: {
-				'style.css': 'src/style.css'
-			}
-		}
-	}
-});
-
-grunt.registerTask('default', ['rucksack']);
-```
-
-#### Broccoli
-
-Use [broccoli-rucksack][broccoli-rucksack]
-
-```js
-const rucksack = require('broccoli-rucksack');
-
-tree = rucksack(tree, [options]);
-```
-
-#### CLI
-
-Process CSS directly on the command line
-
-```sh
-$ rucksack src/style.css style.css [options]
-```
-
-#### PostCSS
-
-Rucksack is built on PostCSS, and can be used as a PostCSS plugin
-
-```js
-const postcss = require('postcss');
-const rucksack = require('rucksack-css');
-
-postcss([ rucksack() ])
-  .process(css, { from: 'src/style.css', to: 'style.css' })
-  .then(result => {
-      fs.writeFileSync('style.css', result.css);
-      if ( result.map ) fs.writeFileSync('style.css.map', result.map);
-  });
-```
-
-See the [PostCSS Docs][postcss] for examples for your environment.
-
-#### Stylus
-
-Rucksack can be used as a Stylus plugin with [PostStylus][poststylus]
-
-```js
-stylus(css).use(poststylus('rucksack-css'))
-```
-
-See the [PostStylus Docs][poststylus] for more examples for your environment.
 
 ## Features
 
@@ -251,6 +166,91 @@ Automatically apply vendor prefixes to relevant properties based on data from [C
 
 Automatically generate CSS fallbacks for legacy browsers, via [laggard][laggard].
 
+## Usage
+
+Rucksack can be used as a PostCSS plugin, direclty on the command line, and has helpers available for most build tools. 
+
+#### Gulp
+
+Use [gulp-rucksack][gulp-rucksack]
+
+```js
+const gulp = require('gulp');
+const rucksack = require('gulp-rucksack');
+
+gulp.task('rucksack', () => {
+  return gulp.src('src/style.css')
+    .pipe(rucksack())
+    .pipe(gulp.dest('style.css'));
+});
+```
+
+#### Grunt
+
+Use [grunt-rucksack][grunt-rucksack]
+
+```js
+require('load-grunt-tasks')(grunt);
+
+grunt.initConfig({
+  rucksack: {
+    compile: {
+      files: {
+        'style.css': 'src/style.css'
+      }
+    }
+  }
+});
+
+grunt.registerTask('default', ['rucksack']);
+```
+
+#### Broccoli
+
+Use [broccoli-rucksack][broccoli-rucksack]
+
+```js
+const rucksack = require('broccoli-rucksack');
+
+tree = rucksack(tree, [options]);
+```
+
+#### CLI
+
+Process CSS directly on the command line
+
+```sh
+$ rucksack src/style.css style.css [options]
+```
+
+#### PostCSS
+
+Rucksack is built on PostCSS, and can be used as a PostCSS plugin
+
+```js
+const postcss = require('postcss');
+const rucksack = require('rucksack-css');
+
+postcss([ rucksack() ])
+  .process(css, { from: 'src/style.css', to: 'style.css' })
+  .then(result => {
+      fs.writeFileSync('style.css', result.css);
+      if ( result.map ) fs.writeFileSync('style.css.map', result.map);
+  });
+```
+
+See the [PostCSS Docs][postcss] for examples for your environment.
+
+#### Stylus
+
+Rucksack can be used as a Stylus plugin with [PostStylus][poststylus]
+
+```js
+stylus(css).use(poststylus('rucksack-css'))
+```
+
+See the [PostStylus Docs][poststylus] for more examples for your environment.
+
 ## Options
 
 All features in Rucksack can be toggled by passing options on initialization. By default core features are set to `true`, and optional
@@ -270,7 +270,6 @@ Option              | Type    | Default | Description
 `fallbacks`         | Boolean | `false` | Whether to enable CSS fallbacks addon                               
 `autoprefixer`      | Boolean | `false` | Whether to enable autoprefixer addon                                
 `reporter`          | Boolean | `false` | Whether to enable error reporting from plugins used inside Rucksack 
-
 
 ***
 
