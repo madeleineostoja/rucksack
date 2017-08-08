@@ -17,18 +17,18 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/simplaio/rucksack.git"
+    "url": "https://github.com/seaneking/rucksack.git"
   },
-  "author": "Sean King <sean@simpla.io>",
+  "author": "Sean King <sean@seanking.org>",
   "maintainers": [
     {
       "name": "Sean King",
-      "email": "sean@simpla.io",
+      "email": "sean@seanking.org",
       "web": "https://twitter.com/seaneking"
     }
   ],
   "bugs": {
-    "url": "https://github.com/simplaio/rucksack/issues"
+    "url": "https://github.com/seaneking/rucksack/issues"
   },
   "bin": {
     "rucksack": "./bin/cmd.js"
@@ -36,7 +36,7 @@
   "engines": {
     "node": ">= 4"
   },
-  "homepage": "https://github.com/simplaio/rucksack",
+  "homepage": "https://www.rucksackcss.org",
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "laggard": "^2.0.0",
