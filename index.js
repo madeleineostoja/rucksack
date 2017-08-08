@@ -4,10 +4,6 @@ const postcss = require('postcss');
 
 const PLUGINS = [
     {
-      option: 'alias',
-      module: require('postcss-alias')
-    },
-    {
       option: 'responsiveType',
       module: require('postcss-responsive-type')
     },
@@ -53,7 +49,6 @@ const PLUGINS = [
     }
   ],
   DEFAULTS = {
-    alias: true,
     responsiveType: true,
     shorthandPosition: true,
     quantityQueries: true,

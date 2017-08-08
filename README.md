@@ -26,7 +26,6 @@ Rucksack makes CSS development less painful, with the features and shortcuts it 
   - [Hex shortcuts for RGBA](#hex-shortcuts-for-rgba)
   - [More easing functions](#more-easing-functions)
   - [Quantity pseudo-selectors](#quantity-pseudo-selectors)
-  - [CSS property aliases](#css-property-aliases)
 - [Addons](#addons)
   - [Autoprefixer](#autoprefixer)
   - [Legacy Fallbacks](#legacy-fallbacks)
@@ -142,20 +141,6 @@ li:between(4,6) {
 }
 ```
 
-#### CSS property aliases
-
-```css
-@alias {
-  fs: font-size;
-  bg: background;
-}
-
-.foo {
-  fs: 16px;
-  bg: #fff;
-}
-```
-
 ## Addons
 
 #### Autoprefixer
@@ -261,7 +246,6 @@ Option              | Type    | Default | Description
 `responsiveType`    | Boolean | `true`  | Whether to enable responsive typography                             
 `shorthandPosition` | Boolean | `true`  | Whether to enable shorthand position properties                     
 `quantityQueries`   | Boolean | `true`  | Whether to enable quantity query psuedo selectors                   
-`alias`             | Boolean | `true`  | Whether to enable to enable property aliases                        
 `inputPseudo`       | Boolean | `true`  | Whether to enable whether to enable extra input pseudo elements     
 `clearFix`          | Boolean | `true`  | Whether to enable native clear fix                                  
 `fontPath`          | Boolean | `true`  | Whether to enable font `src` set generation                         

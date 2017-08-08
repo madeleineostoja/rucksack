@@ -1,13 +1,15 @@
 {
   "env": {
     "node": true,
+    "mocha": true,
     "es6": true
   },
   "extends": "eslint:recommended",
   "rules": {
     "indent": [
       "error",
-      2
+      2,
+      { "VariableDeclarator": 2 }
     ],
     "linebreak-style": [
       "error",

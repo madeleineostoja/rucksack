@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 'use strict';
 
 const postcss = require('postcss');
@@ -63,7 +61,6 @@ function cliTest(fixture, args, done) {
 describe('Rucksack', () => {
 
   describe('core features', () => {
-    it('sets aliases', done => test('alias', {}, done));
     it('applies clear:fix', done => test('clearfix', {}, done));
     it('applies easings', done => test('easings', {}, done));
     it('sets font-path', done => test('fontpath', {}, done));

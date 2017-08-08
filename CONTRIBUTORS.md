@@ -26,7 +26,6 @@ _[1] Laggard includes other 3rd party plugins, see it's CONTRIBUTORS file for mo
 
 [postcss-responsive-type]: https://github.com/seaneking/postcss-responsive-type
 [postcss-position]: https://github.com/seaneking/postcss-position
-[postcss-alias]: https://github.com/seaneking/postcss-alias
 [postcss-clearfix]: https://github.com/seaneking/postcss-clearfix
 [postcss-input-style]: https://github.com/seaneking/postcss-input-style
 [postcss-fontpath]: https://github.com/seaneking/postcss-fontpath
