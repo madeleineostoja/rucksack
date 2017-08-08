@@ -1,5 +1,5 @@
 <p align="center">
- <img src="https://rucksackcss.org/docs/logo.png" alt="rucksack logo" height="325" />
+ <img src="https://rucksackcss.org/img/logo.png" alt="rucksack logo" height="325" />
 </p>
 
 <p align="center">
