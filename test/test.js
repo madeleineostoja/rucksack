@@ -23,7 +23,7 @@ function test(fixture, opts, done) {
     }).catch(error => {
       done(error);
     });
-};
+}
 
 function cli(cmd, callback) {
   process.chdir(__dirname);
@@ -41,7 +41,7 @@ function cli(cmd, callback) {
   ps.on('exit', function(code) {
     callback.call(this, err, out, code);
   });
-};
+}
 
 function cliTest(fixture, args, done) {
   let input = fixture + '.css',
@@ -56,7 +56,7 @@ function cliTest(fixture, args, done) {
     expect(code).to.eql(0);
     done();
   });
-};
+}
 
 describe('Rucksack', () => {
 
@@ -74,7 +74,7 @@ describe('Rucksack', () => {
   describe('addons', () => {
     it('applies fallbacks', done => test('laggard', { fallbacks: true }, done));
     it('autoprefixes', done => test('autoprefixer', { autoprefixer: true }, done));
-  })
+  });
 
   describe('cli', () => {
     it('processes css on the command line', done => cliTest('position', '', done));

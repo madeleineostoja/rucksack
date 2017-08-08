@@ -4,7 +4,7 @@
   "description": "A little bag of CSS superpowers",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test --reporter nyan",
+    "test": "mocha test",
     "posttest": "eslint ."
   },
   "keywords": [

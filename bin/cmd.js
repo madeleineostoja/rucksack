@@ -10,15 +10,15 @@ const minimist = require('minimist');
 const rucksack = require('../');
 
 const OPTS = minimist(process.argv.slice(2), {
-    boolean: [ 's', 'autoprefixer', 'fallbacks' ],
-    alias: {
-      h: 'help',
-      s: 'sourcemap',
-      v: 'version'
-    }
-  }),
-  FILE = OPTS._[0],
-  OUT = OPTS._[1];
+      boolean: [ 's', 'autoprefixer', 'fallbacks' ],
+      alias: {
+        h: 'help',
+        s: 'sourcemap',
+        v: 'version'
+      }
+    }),
+    FILE = OPTS._[0],
+    OUT = OPTS._[1];
 
 // Fetch verion from package.json
 if (OPTS.version) {
