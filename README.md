@@ -1,5 +1,5 @@
 <p align="center">
- <img src="http://simplaio.github.io/rucksack/logo.png" alt="rucksack logo" height="325" />
+ <img src="https://rucksackcss.org/docs/logo.png" alt="rucksack logo" height="325" />
 </p>
 
 <p align="center">
@@ -12,7 +12,7 @@ A little bag of CSS superpowers, built on [PostCSS][postcss].
 
 Rucksack makes CSS development less painful, with the features and shortcuts it should have come with out of the box.
 
-**Read the full docs at [simplaio.github.io](https://simplaio.github.io/rucksack)**
+**Read the full docs at [rucksackcss.org/docs](https://rucksackcss.org/docs)**
 
 ### Contents
 
