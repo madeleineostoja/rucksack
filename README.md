@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
+  <a href="https://travis-ci.org/simplaio/rucksack"><img src="https://travis-ci.org/seaneking/rucksack.svg?branch=master" alt="Build satus" /></a> 
+  <a href="https://www.npmjs.com/package/rucksack-css"><img src="https://img.shields.io/npm/dm/rucksack-css.svg" alt="Downloads" /></a> 
   <a href="https://npmjs.org/package/rucksack-css"><img src="https://img.shields.io/npm/v/rucksack-css.svg" alt="NPM version" /></a>
-  <a href="https://www.npmjs.com/package/rucksack-css"><img src="https://img.shields.io/npm/dm/rucksack-css.svg" alt="Downloads" /></a>
-  <a href="https://travis-ci.org/simplaio/rucksack"><img src="https://travis-ci.org/seaneking/rucksack.svg?branch=master" alt="Build satus" /></a>
 </p>
 
 A little bag of CSS superpowers, built on [PostCSS][postcss].
