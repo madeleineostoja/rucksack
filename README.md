@@ -260,9 +260,9 @@ Option              | Type    | Default | Description
 MIT © [Sean King][sean]
 
 [postcss]: https://github.com/postcss/postcss
-[gulp-rucksack]: https://github.com/simplaio/gulp-rucksack
-[grunt-rucksack]: https://github.com/simplaio/grunt-rucksack
-[broccoli-rucksack]: https://github.com/simplaio/broccoli-rucksack
+[gulp-rucksack]: https://github.com/seaneking/gulp-rucksack
+[grunt-rucksack]: https://github.com/seaneking/grunt-rucksack
+[broccoli-rucksack]: https://github.com/seaneking/broccoli-rucksack
 [poststylus]: https://github.com/seaneking/poststylus
 [type-demo]: https://rucksackcss.org/img/type-demo.gif
 [caniuse]: http://caniuse.com
