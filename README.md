@@ -264,7 +264,7 @@ MIT © [Sean King][sean]
 [grunt-rucksack]: https://github.com/simplaio/grunt-rucksack
 [broccoli-rucksack]: https://github.com/simplaio/broccoli-rucksack
 [poststylus]: https://github.com/seaneking/poststylus
-[type-demo]: http://simplaio.github.io/rucksack/img/type-demo.gif
+[type-demo]: https://rucksackcss.org/img/type-demo.gif
 [caniuse]: http://caniuse.com
 [autoprefixer]: https://github.com/postcss/autoprefixer
 [laggard]: https://github.com/seaneking/laggard
