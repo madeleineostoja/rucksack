@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/simplaio/rucksack"><img src="https://travis-ci.org/seaneking/rucksack.svg?branch=master" alt="Build satus" /></a> 
-  <a href="https://www.npmjs.com/package/rucksack-css"><img src="https://img.shields.io/npm/dm/rucksack-css.svg" alt="Downloads" /></a> 
+  <a href="https://travis-ci.org/simplaio/rucksack"><img src="https://travis-ci.org/seaneking/rucksack.svg?branch=master" alt="Build satus" /></a>
+  <a href="https://www.npmjs.com/package/rucksack-css"><img src="https://img.shields.io/npm/dm/rucksack-css.svg" alt="Downloads" /></a>
   <a href="https://npmjs.org/package/rucksack-css"><img src="https://img.shields.io/npm/v/rucksack-css.svg" alt="NPM version" /></a>
 </p>
 
@@ -41,15 +41,11 @@ Rucksack makes CSS development less painful, with the features and shortcuts it 
 
 ## Install
 
-Rucksack is available on NPM under `rucksack-css`, install it with Yarn or NPM
-
-```sh
-$ yarn add rucksack-css --dev
-```
+Rucksack is available on NPM under `rucksack-css`
 
 
 ```sh
-$ npm i rucksack-css --save-dev
+$ npm i rucksack-css -D
 ```
 
 ## Features
@@ -153,64 +149,97 @@ Automatically generate CSS fallbacks for legacy browsers, via [laggard][laggard]
 
 ## Usage
 
-Rucksack can be used as a PostCSS plugin, direclty on the command line, and has helpers available for most build tools. 
+Rucksack is built on [PostCSS][postcss], and can be used in most build tools and stacks easily.
 
 #### Gulp
 
-Use [gulp-rucksack][gulp-rucksack]
+Use [gulp-postcss][gulp-postcss]
 
 ```js
 const gulp = require('gulp');
-const rucksack = require('gulp-rucksack');
+const postcss = require('gulp-postcss');
+const rucksack = require('rucksack-css');
 
 gulp.task('rucksack', () => {
-  return gulp.src('src/style.css')
-    .pipe(rucksack())
-    .pipe(gulp.dest('style.css'));
+  return gulp.src('src/*.css')
+    .pipe(postcss([ rucksack() ]))
+    .pipe(gulp.dest('dist'));
 });
+```
+
+#### Webpack
+
+Use [postcss-loader][postcss-loader]
+
+`postcss.config.js`
+
+```js
+module.exports = {
+  plugins: {
+    'rucksack-css': {},
+  }
+};
+```
+
+`webpack.config.js`
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'postcss-loader' ]
+      }
+    ]
+  }
+};
 ```
 
 #### Grunt
 
-Use [grunt-rucksack][grunt-rucksack]
+Use [grunt-postcss][grunt-postcss]
 
 ```js
-require('load-grunt-tasks')(grunt);
-
 grunt.initConfig({
-  rucksack: {
-    compile: {
-      files: {
-        'style.css': 'src/style.css'
-      }
+  postcss: {
+    options: {
+      processors: [
+        require('rucksack-css')()
+      ]
+    },
+    dist: {
+      src: 'css/*.css'
     }
   }
 });
-
-grunt.registerTask('default', ['rucksack']);
-```
-
-#### Broccoli
-
-Use [broccoli-rucksack][broccoli-rucksack]
-
-```js
-const rucksack = require('broccoli-rucksack');
-
-tree = rucksack(tree, [options]);
 ```
 
 #### CLI
 
-Process CSS directly on the command line
+Use Rucksack on the command line with [postcss-cli][postcss-cli]
 
 ```sh
-$ rucksack src/style.css style.css [options]
+$ npm i postcss-cli -g
 ```
 
-#### PostCSS
+`postcss.config.js`
 
-Rucksack is built on PostCSS, and can be used as a PostCSS plugin
+```js
+module.exports = {
+  use: [ 'rucksack-css' ]
+};
+```
+
+```sh
+$ postcss "input.css" -o 'output.css'
+```
+
+> **Note:** Rucksack currently ships with its own CLI tool, this will be deprecated in favor of using the more powerful PostCSS CLI directly in Rucksack 2
+
+#### Javascript API
+
+Since Rucksack is just a PostCSS plugin, you can also use it in JS/Node directly, via the PostCSS API
 
 ```js
 const postcss = require('postcss');
@@ -241,28 +270,29 @@ See the [PostStylus Docs][poststylus] for more examples for your environment.
 All features in Rucksack can be toggled by passing options on initialization. By default core features are set to `true`, and optional
 addons are set to `false`
 
-Option              | Type    | Default | Description                                                         
+Option              | Type    | Default | Description
 ------------------- | ------- | ------- | -----------
-`responsiveType`    | Boolean | `true`  | Whether to enable responsive typography                             
-`shorthandPosition` | Boolean | `true`  | Whether to enable shorthand position properties                     
-`quantityQueries`   | Boolean | `true`  | Whether to enable quantity query psuedo selectors                   
-`inputPseudo`       | Boolean | `true`  | Whether to enable whether to enable extra input pseudo elements     
-`clearFix`          | Boolean | `true`  | Whether to enable native clear fix                                  
-`fontPath`          | Boolean | `true`  | Whether to enable font `src` set generation                         
-`hexRGBA`           | Boolean | `true`  | Whether to enable hex RGBA shortcuts                                
-`easings`           | Boolean | `true`  | Whether to enable extra easing functions                            
-`fallbacks`         | Boolean | `false` | Whether to enable CSS fallbacks addon                               
-`autoprefixer`      | Boolean | `false` | Whether to enable autoprefixer addon                                
-`reporter`          | Boolean | `false` | Whether to enable error reporting from plugins used inside Rucksack 
+`responsiveType`    | Boolean | `true`  | Whether to enable responsive typography
+`shorthandPosition` | Boolean | `true`  | Whether to enable shorthand position properties
+`quantityQueries`   | Boolean | `true`  | Whether to enable quantity query psuedo selectors
+`inputPseudo`       | Boolean | `true`  | Whether to enable whether to enable extra input pseudo elements
+`clearFix`          | Boolean | `true`  | Whether to enable native clear fix
+`fontPath`          | Boolean | `true`  | Whether to enable font `src` set generation
+`hexRGBA`           | Boolean | `true`  | Whether to enable hex RGBA shortcuts
+`easings`           | Boolean | `true`  | Whether to enable extra easing functions
+`fallbacks`         | Boolean | `false` | Whether to enable CSS fallbacks addon
+`autoprefixer`      | Boolean | `false` | Whether to enable autoprefixer addon
+`reporter`          | Boolean | `false` | Whether to enable error reporting from plugins used inside Rucksack
 
 ***
 
 MIT © [Sean King][sean]
 
 [postcss]: https://github.com/postcss/postcss
-[gulp-rucksack]: https://github.com/seaneking/gulp-rucksack
-[grunt-rucksack]: https://github.com/seaneking/grunt-rucksack
-[broccoli-rucksack]: https://github.com/seaneking/broccoli-rucksack
+[postcss-loader]: https://github.com/postcss/postcss-loader
+[gulp-postcss]: https://github.com/postcss/gulp-postcss
+[grunt-postcss]: https://github.com/seaneking/grunt-rucksack
+[postcss-cli]: https://github.com/postcss/postcss-cli
 [poststylus]: https://github.com/seaneking/poststylus
 [type-demo]: https://rucksackcss.org/img/type-demo.gif
 [caniuse]: http://caniuse.com
