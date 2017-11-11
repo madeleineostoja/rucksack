@@ -291,7 +291,7 @@ MIT © [Sean King][sean]
 [postcss]: https://github.com/postcss/postcss
 [postcss-loader]: https://github.com/postcss/postcss-loader
 [gulp-postcss]: https://github.com/postcss/gulp-postcss
-[grunt-postcss]: https://github.com/seaneking/grunt-rucksack
+[grunt-postcss]: https://github.com/nDmitry/grunt-postcss
 [postcss-cli]: https://github.com/postcss/postcss-cli
 [poststylus]: https://github.com/seaneking/poststylus
 [type-demo]: https://rucksackcss.org/img/type-demo.gif
