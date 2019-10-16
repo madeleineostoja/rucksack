@@ -274,7 +274,7 @@ Option              | Type    | Default | Description
 ------------------- | ------- | ------- | -----------
 `responsiveType`    | Boolean | `true`  | Whether to enable responsive typography
 `shorthandPosition` | Boolean | `true`  | Whether to enable shorthand position properties
-`quantityQueries`   | Boolean | `true`  | Whether to enable quantity query psuedo selectors
+`quantityQueries`   | Boolean | `true`  | Whether to enable quantity query pseudo selectors
 `inputPseudo`       | Boolean | `true`  | Whether to enable whether to enable extra input pseudo elements
 `clearFix`          | Boolean | `true`  | Whether to enable native clear fix
 `fontPath`          | Boolean | `true`  | Whether to enable font `src` set generation
