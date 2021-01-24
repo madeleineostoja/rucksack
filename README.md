@@ -8,6 +8,10 @@
   <a href="https://npmjs.org/package/rucksack-css"><img src="https://img.shields.io/npm/v/rucksack-css.svg" alt="NPM version" /></a>
 </p>
 
+| ℹ️ Rucksack has a successor! |
+|:---------------------------|
+| **[Satchel](https://www.satchel.style)** is thew new Rucksack, built on CSS-in-JS |
+
 A little bag of CSS superpowers, built on [PostCSS][postcss].
 
 Rucksack makes CSS development less painful, with the features and shortcuts it should have come with out of the box.
@@ -286,16 +290,16 @@ Option              | Type    | Default | Description
 
 ***
 
-MIT © [Sean King][sean]
+MIT © [Madeleine Ostoja][madi]
 
 [postcss]: https://github.com/postcss/postcss
 [postcss-loader]: https://github.com/postcss/postcss-loader
 [gulp-postcss]: https://github.com/postcss/gulp-postcss
 [grunt-postcss]: https://github.com/nDmitry/grunt-postcss
 [postcss-cli]: https://github.com/postcss/postcss-cli
-[poststylus]: https://github.com/seaneking/poststylus
+[poststylus]: https://github.com/madeleineostoja/poststylus
 [type-demo]: https://rucksackcss.org/img/type-demo.gif
 [caniuse]: http://caniuse.com
 [autoprefixer]: https://github.com/postcss/autoprefixer
-[laggard]: https://github.com/seaneking/laggard
-[sean]: https://twitter.com/seaneking
+[laggard]: https://github.com/madeleineostoja/laggard
+[madi]: https://twitter.com/madeleineostoja
